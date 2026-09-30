@@ -1,0 +1,13 @@
+# Coordinated free email allowance with Sarsa — 30 September 2026
+
+The owner explicitly authorised this narrow Project003 improvement while finishing Project004. No booking rules, customer records, account credentials, UI, scheduler or hosting configuration changes are included.
+
+Project003 reserves at most80 attempts per UTC day, with verification limited to60 to preserve20 places for saved notifications. Its conservative dated ledger limits reservations to2400 across at least31 days. Project004 retains its existing20/day and600/31-day limits. Combined configured shares are100/day and3000/month; unrelated sends and inbound mail still consume the same provider account and remain subject to Resend's authoritative Free limits.
+
+Both existing sender paths use the same PostgreSQL advisory lock. Reservations commit before sending; an uncertain provider result still consumes its reservation. Daily counts survive rollout. Monthly exhaustion postpones saved work until sufficient dated buckets expire; it creates no duplicate queue, new provider, database table or activation switch. Verification wording refers to the sending allowance, since exhaustion can now be daily or monthly. Expired bucket cleanup uses the existing rate-limit cleanup.
+
+Live read-only checks identified the correct Project003 production database, migration016,18 provider-identified delivery jobs and11 saved verification sends. Existing daily counters had already expired. Resend independently reported106 shared monthly sends and12 daily sends, with no inbound traffic. A transaction seeded106 as a conservative historical monthly baseline, using the same lock and a greatest-existing-count update. This deliberately includes Project004's past sends rather than pretending deleted historical counters give complete Project003 accounting. No daily count, customer record or provider message was changed. The baseline expires1 November2026 at00:00UTC.
+
+Validation:11 isolated-PostgreSQL budget checks cover daily notification headroom, monthly exhaustion/retry, concurrent last daily/monthly reservations, midnight locking, rollback, preserved rollout counters, historical baseline and no challenge/send when exhausted. The production frontend build passes with its existing large-bundle warning. This is local source/SQL proof; source publication and production deployment must be recorded separately. The connected Vercel team does not expose this project's host, so do not substitute another Vercel account/project.
+
+The existing September11 email-allowance report is historical. This report supersedes its100/80 allocation and missing monthly handling. Provider acceptance remains distinct from actual inbox delivery.
