@@ -68,7 +68,7 @@ class EmailVerification:
                 conn.execute("DELETE FROM email_verifications WHERE email=%s AND purpose=%s", (email, purpose))
         if not allowed:
             if budget_reset:
-                raise RuleViolation("Verification emails have reached the daily allowance. Please try later or call +91 85277 90801.", 429, "email_allowance")
+                raise RuleViolation("Email verification has reached its sending allowance. Please try later or call +91 85277 90801.", 429, "email_allowance")
             raise RuleViolation("Too many code requests. Please wait before requesting another.", 429)
         try:
             send_accepted = self.send_code(email, code, purpose, challenge_id)
