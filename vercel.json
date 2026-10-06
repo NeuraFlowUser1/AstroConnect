@@ -47,5 +47,6 @@
   ],
   "proxy": {
     "entrypoint": "proxy.js"
-  }
+  },
+  "installCommand": "npm ci"
 }
