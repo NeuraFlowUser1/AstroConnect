@@ -15,6 +15,14 @@
   },
   "rewrites": [
     {
+      "source": "/api/company/resources/callback",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/api/studio/resources/callback",
+      "destination": "/api/index.py"
+    },
+    {
       "source": "/company/:path*",
       "destination": "/api/index.py"
     },

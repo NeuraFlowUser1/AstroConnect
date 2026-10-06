@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "installation_id": "daccb464-1036-4d35-be47-8ef0f3c4a516",
+  "environment": "production",
+  "repository": "NeuraFlowUser1/AstroConnect",
+  "cron": "8,23,38,53 * * * *"
+}
