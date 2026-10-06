@@ -1,117 +1,63 @@
-import { execFileSync, spawnSync } from 'node:child_process'
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs'
-import { dirname, resolve } from 'node:path'
-import process from 'node:process'
-import { fileURLToPath } from 'node:url'
+// Existing npm aliases delegate to contained shared tests. No factory runtime.
+import {existsSync,readdirSync,mkdirSync,writeFileSync} from 'node:fs';
+import {resolve,dirname} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
 
-const mode = process.argv[2]
-if (!['fast', 'release', 'production'].includes(mode)) {
-  console.error('Use: node scripts/verify.mjs fast|release|production')
-  process.exit(2)
+const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
+const nativeInputs=['BOOKING_SQL_TEST_TARGET','BOOKING_CHROME_EXECUTABLE','BOOKING_AGE_BINARY'];
+export function safeEnvironment(mode,source,project=root){
+ const env={...source};
+ for(const name of Object.keys(env))if(/^(?:BOOKING_|ASTRO_|VITE_|PG|DATABASE_URL|GOOGLE_|RAZORPAY_|RESEND_|DOCKER_|ABS_MEASURE_|NODE_OPTIONS|PYTHONPATH|PYTHONHOME|PYTHONOPTIMIZE)/.test(name))delete env[name];
+ env.PYTHONDONTWRITEBYTECODE='1';env.PYTHONPATH=resolve(project,'appointment-system/engine');
+ env.BOOKING_NODE_EXECUTABLE=process.execPath;
+ env.BOOKING_MINIFLARE_MODULE=resolve(project,'node_modules/miniflare/dist/src/index.js');
+ if(mode==='release'){
+  if(!['abs-implementation-pg16','abs-implementation-pg18'].includes(source.BOOKING_SQL_TEST_TARGET))throw Error('release_requires_owned_isolated_SQL_target');
+  for(const name of nativeInputs){if(!source[name])throw Error('release_requires_explicit_native_input:'+name);env[name]=source[name];}
+  env.DOCKER_HOST='unix:///var/run/docker.sock';
+  env.BOOKING_LEGACY_SQL_PROOF='owned';env.BOOKING_TEST_PROJECT=project;
+  env.BOOKING_WEBSITE_PROOF_PROJECT=project;env.BOOKING_WEBSITE_PROOF_SITE=project;
+  env.BOOKING_BROWSER_NODE_MODULES=resolve(project,'node_modules');
+ }
+ return env;
 }
-
-const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
-const resultsDirectory = resolve(root, 'verification-results')
-mkdirSync(resultsDirectory, { recursive: true })
-const python = process.env.ASTRO_TEST_PYTHON || (existsSync(resolve(root, '.venv/bin/python')) ? resolve(root, '.venv/bin/python') : 'python3')
-const startedAt = new Date()
-const groups = []
-let failed = false
-
-const git = (...args) => {
-  try { return execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim() }
-  catch { return 'unavailable' }
+export function commandPlan(mode,source=process.env,project=root){
+ if(!['fast','release','production'].includes(mode))throw Error('Use fast, release or production');
+ const env=safeEnvironment(mode,source,project),packageRoot=resolve(project,'appointment-system');
+ if(mode==='production')return [{name:'official-domain read-only and refusal-only checks',command:process.execPath,
+  args:[resolve(project,'scripts/production-smoke.mjs')],cwd:project,env}];
+ const python=source.ASTRO_TEST_PYTHON||'python3';
+ const tests=readdirSync(resolve(packageRoot,'tests')).filter(name=>name.endsWith('.test.mjs')).sort().map(name=>'tests/'+name);
+ if(tests.length===0)throw Error('Contained Node test selection is empty');
+ return [
+  {name:'lint',command:'npm',args:['run','lint'],cwd:project,env},
+  {name:'production build',command:'npm',args:['run','build'],cwd:project,env},
+  {name:'contained common Python checks',command:python,args:[resolve(project,'scripts/run-contained-tests.py'),mode,
+   resolve(project,'verification-results/contained-'+mode+'.json')],cwd:packageRoot,env},
+  {name:'contained common Node checks',command:process.execPath,args:['--test','--experimental-test-isolation=none',...tests],cwd:packageRoot,env},
+ ];
 }
-
-function run(name, command, args, options = {}) {
-  if (failed) {
-    groups.push({ name, status: 'not_run', duration_seconds: 0 })
-    return
-  }
-  const start = Date.now()
-  console.log(`\n=== ${name} ===`)
-  const outcome = spawnSync(command, args, {
-    cwd: root,
-    env: options.replaceEnvironment || { ...process.env, ...options.env },
-    stdio: 'inherit',
-    timeout: options.timeout || 15 * 60 * 1000,
-  })
-  const status = outcome.status === 0 ? 'passed' : 'failed'
-  groups.push({ name, status, duration_seconds: Number(((Date.now() - start) / 1000).toFixed(3)) })
-  if (outcome.error) console.error(`${name}: ${outcome.error.message}`)
-  if (status === 'failed') failed = true
+const saveReport=(project,mode,report)=>{
+ const output=resolve(project,'verification-results');mkdirSync(output,{recursive:true});writeFileSync(resolve(output,mode+'-latest.json'),JSON.stringify(report,null,2)+'\n');
+};
+export function main(mode,source=process.env,execute=spawnSync,save=saveReport,project=root){
+ const plan=commandPlan(mode,source,project),groups=[];
+ if(mode==='release')for(const name of ['BOOKING_CHROME_EXECUTABLE','BOOKING_AGE_BINARY'])if(!existsSync(source[name]))throw Error('Native executable missing:'+name);
+ let failed=false;
+ for(const job of plan){
+  if(failed){groups.push({name:job.name,status:'not_run'});continue;}
+  const result=execute(job.command,job.args,{cwd:job.cwd,env:job.env,stdio:'inherit',timeout:45*60*1000});
+  const passed=result.status===0&&!result.error;groups.push({name:job.name,status:passed?'passed':'failed'});failed=!passed;
+ }
+ const report={mode,passed:!failed,qualification:false,groups,coverage_measured:false,
+  scope:mode==='fast'?'Common tests with native SQL/browser/crypto/historical fixture flags absent; actual skips remain in test output.':
+   mode==='release'?'Common tests against explicitly owned disconnected fixtures; target/native skips remain in actual output. This command is not the exhaustive reviewed release gate.':
+   'Read-only website requests and unsigned refusals; no customer operation or provider dispatch.',
+  hosted_or_provider_acceptance_complete:false};
+ save(project,mode,report);
+ console.log(JSON.stringify(report));return failed?1:0;
 }
-
-function safeTestEnvironment(extra = {}) {
-  const environment = { ...process.env }
-  for (const key of Object.keys(environment)) {
-    if (/^(?:ASTRO_|VITE_|DATABASE_URL|PG|GOOGLE_|RAZORPAY_|RESEND_)/.test(key)) delete environment[key]
-  }
-  for (const key of ['ASTRO_POSTGRES_BIN', 'LD_LIBRARY_PATH']) {
-    if (process.env[key]) environment[key] = process.env[key]
-  }
-  return { ...environment, ...extra }
+if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
+ try{process.exitCode=main(process.argv[2]);}catch(error){console.error(error.message);process.exitCode=2;}
 }
-
-const nodeTests = readdirSync(resolve(root, 'tests'))
-  .filter(name => /\.test\.(?:js|mjs)$/.test(name))
-  .sort()
-  .map(name => `tests/${name}`)
-
-if (mode === 'production') {
-  const origin = process.env.ASTRO_PRODUCTION_ORIGIN || 'https://astroadvicebykundansingh.com'
-  const productionEnvironment = safeTestEnvironment({ ASTRO_PRODUCTION_ORIGIN: origin })
-  run('official-domain read-only and refusal-only smoke', process.execPath, ['tests/production-smoke.mjs'], {
-    replaceEnvironment: productionEnvironment,
-    timeout: 3 * 60 * 1000,
-  })
-  run('official booking read-only browser contract', process.execPath, ['tests/browser-booking-contracts.cjs'], {
-    replaceEnvironment: {
-      ...productionEnvironment,
-      ASTRO_BROWSER_BASE: origin,
-      ASTRO_BROWSER_OUTPUT: resolve(resultsDirectory, 'production-booking'),
-    },
-    timeout: 5 * 60 * 1000,
-  })
-} else {
-  run('lint', 'npm', ['run', 'lint'], { replaceEnvironment: safeTestEnvironment() })
-  run('production build', 'npm', ['run', 'build'], { replaceEnvironment: safeTestEnvironment({ VITE_API_MODE: 'same-origin', VITE_API_URL: '' }) })
-  run('Node and Worker contracts', process.execPath, ['--test', ...nodeTests], { replaceEnvironment: safeTestEnvironment() })
-  run('backend no-database contracts', python,
-    ['scripts/run-backend-tests.py', '--mode', 'fast', '--result', resolve(resultsDirectory, 'backend-fast.json')],
-    { replaceEnvironment: safeTestEnvironment() })
-
-  if (mode === 'release') {
-    run('isolated PostgreSQL integration', 'bash', ['scripts/run-postgres-tests.sh', resolve(resultsDirectory, 'backend-release.json')],
-      { replaceEnvironment: safeTestEnvironment({ ASTRO_TEST_PYTHON: python }), timeout: 5 * 60 * 1000 })
-    run('real Cloudflare runtime contract', process.execPath, ['tests/inquiry-worker-runtime.mjs'], { replaceEnvironment: safeTestEnvironment() })
-    run('browser, responsive and accessibility certification', process.execPath, ['scripts/run-browser-tests.mjs'],
-      { replaceEnvironment: safeTestEnvironment({
-        ASTRO_TEST_PYTHON: python,
-        ASTRO_BROWSER_CERTIFICATION_ROOT: process.env.ASTRO_BROWSER_CERTIFICATION_ROOT || resolve(resultsDirectory, 'browser'),
-      }), timeout: 12 * 60 * 1000 })
-    run('tracked-secret safety check', process.execPath, ['scripts/check-tracked-secrets.mjs'], { replaceEnvironment: safeTestEnvironment() })
-    run('Node dependency advisories', 'npm', ['audit', '--audit-level=high'], { replaceEnvironment: safeTestEnvironment(), timeout: 2 * 60 * 1000 })
-    run('Python dependency advisories', python, ['-m', 'pip_audit', '-r', 'requirements.txt', '--progress-spinner', 'off'],
-      { replaceEnvironment: safeTestEnvironment(), timeout: 3 * 60 * 1000 })
-  }
-}
-
-const report = {
-  schema_version: 1,
-  application: 'astro-advice-by-kundan-singh',
-  mode,
-  commit: git('rev-parse', 'HEAD'),
-  worktree_dirty: git('status', '--porcelain') !== '',
-  started_at: startedAt.toISOString(),
-  finished_at: new Date().toISOString(),
-  environment: mode === 'production' ? 'official-domain-read-only' : 'local-isolated',
-  provider_calls: mode === 'production' ? 'read-only website requests plus unsigned refusal checks; no provider dispatch' : 'simulated or disabled',
-  groups,
-  passed: !failed,
-}
-const reportPath = resolve(resultsDirectory, `${mode}-latest.json`)
-writeFileSync(reportPath, JSON.stringify(report, null, 2) + '\n')
-console.log(`\nVerification ${report.passed ? 'PASSED' : 'FAILED'}: ${reportPath}`)
-for (const group of groups) console.log(`- ${group.status.padEnd(7)} ${group.name}`)
-process.exit(report.passed ? 0 : 1)

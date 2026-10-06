@@ -1,6 +1,13 @@
+> **Current replacement release:** use [the contained release and operating guide](appointment-system-release.md).
+> Both live common databases are at migration 034 with booking OFF authority preserved,
+> and the fresh official stored-backup/restore/retention chain is accepted. Worker/public
+> website and resource/account acceptance remain separate. The dated original material
+> below describes the previous engine and is historical; removed file paths and old
+> setup/backup commands are not current operating instructions.
+
 # Astro Advice booking system — plain-language operating guide
 
-This is the permanent operating guide for `astroadvicebykundansingh.com`. It contains no passwords or secret values.
+This is the historical operating guide, superseded by `appointment-system-release.md` for `astroadvicebykundansingh.com`. It contains no passwords or secret values.
 
 ## What happens when a customer books
 

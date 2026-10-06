@@ -1,6 +1,13 @@
+> **Current replacement release:** use [the contained release and operating guide](appointment-system-release.md).
+> Both live common databases are at migration 034 with booking OFF authority preserved,
+> and the fresh official stored-backup/restore/retention chain is accepted. Worker/public
+> website and resource/account acceptance remain separate. The dated original material
+> below describes the previous engine and is historical; removed file paths and old
+> setup/backup commands are not current operating instructions.
+
 # Project plans and operating documents
 
-Start here after a break or context reset. This page lists the current authority; dated evidence remains available for audit but is not a to-do list.
+Start here after a break or context reset. This page lists the historical authority, superseded by `appointment-system-release.md`; dated evidence remains available for audit but is not a to-do list.
 
 ## Current position — 2026-09-15
 
@@ -22,7 +29,7 @@ Do not create a competing checklist for work already owned by one of these plans
 ## Current technical references
 
 - [Architecture](../architecture.md)
-- [Backend setup and operation](../src/backend/README.md)
+- Backend setup and operation (historical path `../src/backend/README.md`)
 - [Booking implementation contracts](PLAN-001-implementation-contracts.md)
 - [No-card hosting alignment](PLAN-001-no-card-hosting-review.md)
 - [Historical requirements and decisions](../BOOKING_ROADMAP.md)
