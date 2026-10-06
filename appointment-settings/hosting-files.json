@@ -1,6 +1,8 @@
 {
   "version": 1,
   "files": [
+    ".python-version",
+    ".vercelignore",
     "api/index.py",
     "appointment-settings/booking-browser.json",
     "appointment-settings/business-settings.json",
@@ -23,6 +25,7 @@
     "public/icons.svg",
     "public/robots.txt",
     "public/sitemap.xml",
+    "pyproject.toml",
     "requirements.txt",
     "src/App.css",
     "src/App.jsx",
@@ -123,6 +126,7 @@
     "src/lib/useBooking.js",
     "src/lib/useEnquiry.js",
     "src/main.jsx",
+    "uv.lock",
     "vercel.json",
     "vite.config.js",
     "workers/inquiry-delivery/wrangler.jsonc"

@@ -1,18 +1,18 @@
-# Defence in depth. Use the reviewed allowlisted staging command for manual builds.
-.git
-.archive
-.impeccable
-.agents
-.codex
-.venv
-venv
-docs
-tests
-scripts
-workers
+# Keep the complete, verified appointment-system package intact.
+/.git
+/.archive
+/.impeccable
+/.agent
+/.agents
+/.codex
+/.venv
+/venv
+/docs
+/tests
+/scripts
+/workers
 **/.wrangler
 **/.dev.vars*
-**/tests
 **/__pycache__
 **/*.pyc
 **/.env*
@@ -25,5 +25,4 @@ workers
 **/*.db
 **/*.zip
 **/*.dump
-*.md
-src/backend/README.md
+/src/backend/README.md
