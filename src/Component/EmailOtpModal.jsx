@@ -5,7 +5,7 @@ import {ShieldCheck,Mail,RefreshCw,X,ArrowRight} from 'lucide-react'
 // Presentation only: the common enquiry coordinator owns persistence and verification.
 export default function EmailOtpModal({isOpen,onClose,email,flow}) {
   const [otp,setOtp]=useState(['','','','','',''])
-  const inputRefs=useRef([]),dialogRef=useRef(null)
+  const inputRefs=useRef([]),dialogRef=useRef(null),onCloseRef=useRef(onClose)
   const countdown=flow.resendWait,loading=flow.busy,verifying=flow.busy
   const canResend=!!flow.receipt&&flow.receipt.state!=='received'&&flow.receipt.sends_remaining>0&&flow.resendWait===0&&!flow.waiting&&!flow.blocked
   const error=flow.error
@@ -15,14 +15,15 @@ export default function EmailOtpModal({isOpen,onClose,email,flow}) {
   useEffect(()=>{
     setOtp(['','','','','',''])
     if(!isOpen)return
-    const timer=setTimeout(()=>inputRefs.current[0]?.focus(),200)
+    const timer=setTimeout(()=>{if(!dialogRef.current?.contains(document.activeElement))inputRefs.current[0]?.focus()},200)
     return()=>clearTimeout(timer)
   },[isOpen,flow.receipt?.generation])
+  useEffect(()=>{onCloseRef.current=onClose},[onClose])
   useEffect(()=>{
     if(!isOpen)return
     const previousFocus=document.activeElement
     const key=event=>{
-      if(event.key==='Escape'){event.preventDefault();onClose();return}
+      if(event.key==='Escape'){event.preventDefault();onCloseRef.current();return}
       if(event.key!=='Tab')return
       const controls=Array.from(dialogRef.current?.querySelectorAll('button:not(:disabled), input:not(:disabled)')||[])
       const first=controls[0],last=controls[controls.length-1]
@@ -31,7 +32,7 @@ export default function EmailOtpModal({isOpen,onClose,email,flow}) {
     }
     document.addEventListener('keydown',key)
     return()=>{document.removeEventListener('keydown',key);if(previousFocus?.isConnected)previousFocus.focus()}
-  },[isOpen,onClose])
+  },[isOpen])
   const handleOtpChange=(index,value)=>{
     if(!/^\d*$/.test(value))return
     setOtp(previous=>previous.map((digit,i)=>i===index?value.slice(-1):digit))
