@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+
+import {BookingLink as Link,BookingCopy} from '../lib/BookingProduct.jsx';
 import { Calendar, Phone, Award, Users, Globe, Star, Shield, Sparkles, FileText, Briefcase, Heart, Home as HomeIcon, Hash, Gem, Moon, ChevronLeft, ChevronRight, ChevronDown, BookOpen, ShieldCheck, LineChart, Flower2, UserCheck, Send, Mail, MapPin, HelpCircle, Loader2, Pause, Play } from "lucide-react";
 import { motion, AnimatePresence, MotionConfig, useInView, useReducedMotion } from "framer-motion";
 import "./Home.css";
 import { publicServiceById } from "../data/publicServices";
-import EmailOtpModal from './EmailOtpModal';
-import { sendVerification, submitInquiry } from '../lib/formApi'
+import EmailOtpModal, {EnquiryResume} from './EmailOtpModal';
+import {useEnquiry} from '../lib/useEnquiry.js'
 
 import logoImg from "../assets/logos/Nav-Logo.webp";
 import featureBg from "../assets/images/Feature.webp";
@@ -541,11 +542,13 @@ export default function Home() {
     selectedService: "",
     comment: ""
   })
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const inquiryRequest = useRef(null)
-  const [serverError, setServerError] = useState("")
+  const flow=useEnquiry('contact')
+  const isSubmitted=flow.receipt?.state==='received'
+  const [localError,setServerError]=useState("")
+  const serverError=localError||flow.error
   const [showOtpModal, setShowOtpModal] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
+  useEffect(()=>{if(flow.started&&flow.receipt?.state!=='received')setShowOtpModal(true)},[flow.started,flow.receipt?.state])
+  const submitting=flow.busy||flow.blocked||flow.waiting>0
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -581,51 +584,10 @@ export default function Home() {
       return
     }
 
-    // Wait for accepted email delivery before inviting the visitor to enter a code.
-    if (submitting) return
-    setSubmitting(true)
-    
-    try {
-      await sendVerification(formData.email, 'contact')
-      setShowOtpModal(true)
-    } catch (err) {
-      setServerError(err.message)
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
-  const executeHomeQuerySubmit = async (verificationToken) => {
-    // Keep the visitor's details until the server confirms durable storage.
-    setShowOtpModal(false)
-    setSubmitting(true)
-    setServerError("")
-    
-    // A failed or uncertain response must not become a success screen.
-    try {
-      await submitInquiry('/api/contact', {
-        source: 'home',
-        name: formData.name,
-        email: formData.email,
-        phone: "N/A",
-        dob: formData.dob || "N/A",
-        subject: formData.selectedService,
-        message: formData.comment || "No message comment provided.",
-        verification_token: verificationToken,
-      }, inquiryRequest)
-      setIsSubmitted(true)
-      setFormData({
-        name: "",
-        dob: "",
-        email: "",
-        selectedService: "",
-        comment: ""
-      })
-    } catch (err) {
-      setServerError(err.message)
-    } finally {
-      setSubmitting(false)
-    }
+    if(submitting)return
+    setShowOtpModal(true)
+    await flow.start({source:'home',name:formData.name,email:formData.email,phone:'',dob:formData.dob,
+      subject:formData.selectedService,message:formData.comment||'Please contact me about this service.'})
   }
 
    return (
@@ -1277,7 +1239,7 @@ export default function Home() {
                   Ready to Transform Your Life?
                 </span>
                 <p className="text-xs sm:text-sm text-[#D8CFEB] leading-relaxed max-w-xl font-sans">
-                  Book your consultation today and take the first step toward a better tomorrow.
+                  <BookingCopy off="Send the practice a question about the guidance you are looking for.">Book your consultation today and take the first step toward a better tomorrow.</BookingCopy>
                 </p>
               </div>
             </div>
@@ -1563,6 +1525,7 @@ export default function Home() {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleFormSubmit} className="space-y-4 z-10 relative">
+                  <EnquiryResume flow={flow} onResume={() => setShowOtpModal(true)} />
                     {/* Header info */}
                     <div className="space-y-1">
                       <span className="text-[11px] sm:text-xs tracking-[0.2em] font-bold text-[#D3AF54]/85 uppercase font-sans block">
@@ -1729,11 +1692,10 @@ export default function Home() {
 
       {/* Email OTP Verification Modal */}
       <EmailOtpModal
-        isOpen={showOtpModal}
+        isOpen={showOtpModal&&!isSubmitted} flow={flow}
         onClose={() => setShowOtpModal(false)}
         email={formData.email}
         purpose="contact"
-        onVerified={executeHomeQuerySubmit}
       />
 
     </div>

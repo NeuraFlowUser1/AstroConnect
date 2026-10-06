@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+
+import {BookingLink as Link} from '../lib/BookingProduct.jsx';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion'
 import aboutImg from '../assets/images/About.png'
 import './About.css'

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
-import { Link, useLocation, useSearchParams } from 'react-router-dom'
+import { useLocation, useSearchParams } from 'react-router-dom';
+import {BookingLink as Link} from '../lib/BookingProduct.jsx';
 import { ArrowDown, ArrowRight, Calendar, MessageCircle } from 'lucide-react'
 import { publicServices } from '../data/publicServices'
 import { ServiceArtwork, ServiceFocus, ServiceIcon, ServicePrice } from './ServicePresentation'

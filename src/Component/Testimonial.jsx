@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import {BookingLink as Link} from '../lib/BookingProduct.jsx'
 import { useReducedMotion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Calendar, ArrowDown, ArrowRight, Quote } from 'lucide-react'
 import { featuredReviews, consultationStories, reviewFilters, reviews } from '../data/testimonialContent'

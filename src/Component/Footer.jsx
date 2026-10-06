@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+
+import {BookingNavigationLink as Link} from '../lib/BookingProduct.jsx';
 import { Phone, CalendarClock } from "lucide-react";
 import { motion } from 'framer-motion'
 import logoImg from "../assets/logos/Nav-Logo.webp";

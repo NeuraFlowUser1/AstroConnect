@@ -1,0 +1,11 @@
+/* Functional receipt form: existing dark/gold palette, 44px controls, 16px gap. */
+.booking-access { max-width:760px; margin:0 auto; padding:40px 24px; color:#f8f5ec; font-size:16px; line-height:1.5; }
+.booking-access h1 { font-size:28px; font-weight:600; line-height:1.25; margin:0 0 12px; }
+.booking-access form { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:16px; margin-top:24px; }
+.booking-access label { display:grid; gap:6px; font-size:14px; }
+.booking-access input { min-width:0; width:100%; min-height:44px; border:1px solid #7a7184; border-radius:8px; background:#171321; color:#fff; padding:8px 12px; font:inherit; font-size:16px; }
+.booking-access button { justify-self:start; min-height:44px; border-radius:8px; background:#d7b14b; color:#110d1a; padding:10px 20px; font:inherit; font-weight:600; }
+.booking-access button:disabled { opacity:.65; }
+.booking-access :is(input,button):focus-visible { outline:3px solid #f4d887; outline-offset:3px; }
+.booking-access p[role] { margin-top:16px; overflow-wrap:anywhere; }
+@media(max-width:600px) { .booking-access form { grid-template-columns:minmax(0,1fr); } .booking-access h1 { font-size:25px; } }

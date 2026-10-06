@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
+import {BookingNavigationLink as Link} from '../lib/BookingProduct.jsx';
 import { Menu, X, ChevronDown, Calendar, Phone, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import logoImg from "../assets/logos/Nav-Logo.webp";

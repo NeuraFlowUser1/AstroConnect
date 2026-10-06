@@ -501,3 +501,8 @@
   .studio-calendar input, .studio-calendar select { font-size: 16px; }
   .studio-calendar h2 { font-size: 20px; }
 }
+
+/* Support caller: reuse existing 44px controls, 16px text and brand buttons. */
+.studio-support form { display:grid; gap:12px; margin:16px 0; }
+.studio-support label { display:grid; gap:6px; font-size:16px; line-height:1.5; }
+.studio-support button { justify-self:start; }

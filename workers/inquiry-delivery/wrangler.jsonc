@@ -1,23 +1,67 @@
 {
   "name": "astro-advice-inquiry-delivery",
   "account_id": "162c1ab1ba0619c1c78d9495f3260f18",
-  "vars": {
-    "ASTRO_API_ORIGIN": "https://astroadvicebykundansingh.com"
-  },
-  "main": "worker.mjs",
+  "main": "../../appointment-system/worker/index.mjs",
   "compatibility_date": "2026-09-11",
-  "workers_dev": false,
+  "workers_dev": true,
   "preview_urls": false,
-  "triggers": { "crons": ["*/15 * * * *"] },
-  "queues": {
-    "consumers": [{
-      "queue": "astroadvice-by-kundan-snigh-inquiries",
-      "max_batch_size": 1,
-      "max_batch_timeout": 1,
-      "max_retries": 5,
-      "retry_delay": 60,
-      "max_concurrency": 1
-    }]
+  "vars": {
+    "BOOKING_INSTALLATION_ID": "daccb464-1036-4d35-be47-8ef0f3c4a516",
+    "BOOKING_PROJECT_ID": "003",
+    "BOOKING_ENVIRONMENT": "production",
+    "BOOKING_PUBLIC_ORIGIN": "https://astroadvicebykundansingh.com",
+    "BOOKING_RELEASE_DIGEST": "7bebd5420cd35fd18933bada99f43dcf77e3afea0f4f6465abc9c2dbf2969c2c"
   },
-  "observability": { "enabled": true }
+  "triggers": {
+    "crons": [
+      "*/15 * * * *"
+    ]
+  },
+  "queues": {
+    "producers": [
+      {
+        "binding": "BOOKING_WAKE_QUEUE",
+        "queue": "astroadvice-by-kundan-snigh-inquiries"
+      }
+    ],
+    "consumers": [
+      {
+        "queue": "astroadvice-by-kundan-snigh-inquiries",
+        "max_batch_size": 1,
+        "max_batch_timeout": 1,
+        "max_retries": 5,
+        "retry_delay": 60,
+        "max_concurrency": 1
+      }
+    ]
+  },
+  "observability": {
+    "enabled": true
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BOOKING_PRODUCT_STATE",
+        "class_name": "BookingProductState"
+      },
+      {
+        "name": "BOOKING_RECOVERY_STATE",
+        "class_name": "BookingRecoveryState"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "booking-product-sqlite-v1",
+      "new_sqlite_classes": [
+        "BookingProductState"
+      ]
+    },
+    {
+      "tag": "appointment-recovery-sqlite-v1",
+      "new_sqlite_classes": [
+        "BookingRecoveryState"
+      ]
+    }
+  ]
 }

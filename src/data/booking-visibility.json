@@ -1,0 +1,39 @@
+{
+  "project": "003",
+  "prefix": "ASTRO",
+  "origin": "https://astroadvicebykundansingh.com",
+  "workerOrigin": "https://astro-advice-inquiry-delivery.neuraflowindia.workers.dev",
+  "hosts": [
+    "astroadvicebykundansingh.com",
+    "www.astroadvicebykundansingh.com"
+  ],
+  "publicPaths": [
+    "/",
+    "/about",
+    "/contact",
+    "/testimonials",
+    "/services",
+    "/services/vedic-astrology",
+    "/services/numerology",
+    "/services/vastu",
+    "/services/laal-kitaab",
+    "/services/prashna-kundali",
+    "/services/name-change",
+    "/booking",
+    "/privacy-policy",
+    "/terms-and-conditions",
+    "/refund-policy"
+  ],
+  "bookingPaths": [
+    "/booking"
+  ],
+  "privateShellPaths": [
+    "/booking/receipt",
+    "/studio/calendar",
+    "/booking/access"
+  ],
+  "backendPages": [],
+  "receiptStorageKey": "astro:receipt:booking",
+  "receiptFormat": "astro",
+  "copyVersion": 1
+}

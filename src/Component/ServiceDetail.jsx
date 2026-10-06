@@ -1,13 +1,14 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { useParams, Link, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom';
+import {BookingLink as Link,BookingOnly} from '../lib/BookingProduct.jsx';
 import { motion, AnimatePresence } from 'framer-motion'
 import { Calendar, Clock, Shield, Sparkles, ArrowLeft, Star, Gem, CheckCircle, ArrowRight, Home, Sofa, Bed, Utensils, Bath, Briefcase, Heart, RefreshCw, Globe, User, BookOpen, Compass, Send, Phone, MapPin, MessageSquare, Mail } from 'lucide-react'
-import EmailOtpModal from './EmailOtpModal'
+import EmailOtpModal, {EnquiryResume} from './EmailOtpModal'
 import NameChangeService from './NameChangeService'
 import { publicServiceById } from '../data/publicServices'
 import './ServiceDetail.css'
 
-import { sendVerification, submitInquiry } from '../lib/formApi'
+import {useEnquiry} from '../lib/useEnquiry.js'
 
 import sunIcon from '../assets/planets/sun.webp'
 import moonIcon from '../assets/planets/moon.webp'
@@ -56,10 +57,10 @@ const itemVariants = {
 };
 
 function ServiceBookingStrip({ serviceId, title = 'Ready to discuss this consultation?' }) {
-  return <section className="service-detail-cta" aria-label={`Book ${publicServiceById[serviceId]?.title || 'a consultation'}`}>
+  return <BookingOnly><section className="service-detail-cta" aria-label={`Book ${publicServiceById[serviceId]?.title || 'a consultation'}`}>
     <div><h2>{title}</h2><p>Choose a suitable day and time. The consultation type will already be selected.</p></div>
     <Link to={`/booking?service=${serviceId}`}><Calendar aria-hidden="true" />Book an Appointment</Link>
-  </section>;
+  </section></BookingOnly>;
 }
 
 const serviceDetails = {
@@ -1687,7 +1688,7 @@ export default function ServiceDetail() {
 
 
 function PrashnaKundaliDetail({ details, navigate }) {
-  const inquiryRequest = useRef(null);
+  const flow=useEnquiry('prashna');
   const [hoveredIdx, setHoveredIdx] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -1696,11 +1697,13 @@ function PrashnaKundaliDetail({ details, navigate }) {
     location: '',
     question: ''
   });
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [serverError, setServerError] = useState("");
+  const submitted=flow.receipt?.state==='received';
+  const loading=flow.busy||flow.blocked||flow.waiting>0;
+  const [localError,setServerError]=useState("")
+  const serverError=localError||flow.error;
   const [attemptedSubmit, setAttemptedSubmit] = useState(false);
-  const [showOtpModal, setShowOtpModal] = useState(false);
+  const [showOtpModal, setShowOtpModal] = useState(false)
+  useEffect(()=>{if(flow.started&&flow.receipt?.state!=='received')setShowOtpModal(true)},[flow.started,flow.receipt?.state]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -1767,44 +1770,10 @@ function PrashnaKundaliDetail({ details, navigate }) {
       return;
     }
 
-    // Only show verification after the code request is accepted.
-    if (loading) return;
-    setLoading(true);
-    setServerError("");
-
-    // Surface delivery failures without clearing the visitor's details.
-    try {
-      await sendVerification(formData.email, 'prashna');
-      setShowOtpModal(true);
-    } catch (err) {
-      setServerError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const executePrashnaSubmit = async (verificationToken) => {
-    // Wait for accepted storage, not merely successful email verification.
-    setShowOtpModal(false);
-    setLoading(true);
-    setServerError("");
-
-    // Failed submissions remain visible and can be retried safely.
-    try {
-      await submitInquiry('/api/prashna', {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        location: formData.location,
-        question: formData.question,
-        verification_token: verificationToken,
-      }, inquiryRequest);
-      setSubmitted(true);
-    } catch (err) {
-      setServerError(err.message);
-    } finally {
-      setLoading(false);
-    }
+    if(loading)return;
+    setShowOtpModal(true);
+    await flow.start({source:'prashna',kind:'prashna',service_interest:'prashna-kundali',name:formData.name,
+      email:formData.email,phone:formData.phone.trim().startsWith('+')?formData.phone.trim():'+91'+formData.phone.replace(/[\s()-]/g,''),location:formData.location,subject:'Prashna Kundali question',message:formData.question});
   };
 
   const pillars = [
@@ -2059,8 +2028,8 @@ function PrashnaKundaliDetail({ details, navigate }) {
                 Thank you, {formData.name}. Your question has been saved for review. This inquiry does not book or pay for a consultation. For anything urgent, please call +91 85277 90801.
               </p>
               <button 
-                onClick={() => {
-                  setSubmitted(false);
+                disabled={flow.busy} onClick={async() => {
+                  if(!await flow.restart())return;
                   setFormData({ name: '', email: '', phone: '', location: '', question: '' });
                   setAttemptedSubmit(false);
                   setServerError("");
@@ -2072,6 +2041,7 @@ function PrashnaKundaliDetail({ details, navigate }) {
             </motion.div>
           ) : (
             <form id="prashna-form" onSubmit={handleSubmit} className="space-y-4 text-left">
+                  <EnquiryResume flow={flow} onResume={() => setShowOtpModal(true)} />
               {serverError && (
                 <motion.div 
                   initial={{ opacity: 0, y: -10 }}
@@ -2220,11 +2190,10 @@ function PrashnaKundaliDetail({ details, navigate }) {
 
       {/* Email OTP Verification Modal */}
       <EmailOtpModal
-        isOpen={showOtpModal}
+        isOpen={showOtpModal&&!submitted} flow={flow}
         onClose={() => setShowOtpModal(false)}
         email={formData.email}
         purpose="prashna"
-        onVerified={executePrashnaSubmit}
       />
 
     </div>

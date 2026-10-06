@@ -3,30 +3,49 @@
   "framework": "vite",
   "buildCommand": "VITE_API_MODE=same-origin VITE_API_URL= npm run build",
   "outputDirectory": "dist",
-  "regions": ["sin1"],
+  "regions": [
+    "sin1"
+  ],
   "functions": {
     "api/index.py": {
-      "maxDuration": 30,
-      "excludeFiles": "{.archive/**,.impeccable/**,docs/**,tests/**,scripts/**,src/assets/**,src/Component/**,public/**,dist/**,node_modules/**,**/__pycache__/**,**/.env*,src/backend/tests/**}"
+      "maxDuration": 120,
+      "excludeFiles": "{.archive/**,.impeccable/**,docs/**,tests/**,scripts/**,src/**,public/**,dist/**,node_modules/**,workers/**,build-support/**,server-support/**,**/__pycache__/**,**/.env*}"
     }
   },
   "rewrites": [
+    {
+      "source": "/company/:path*",
+      "destination": "/api/index.py"
+    },
     {
       "source": "/api/:path*",
       "destination": "/api/index.py"
     },
     {
-      "source": "/:path*",
-      "destination": "/index.html"
+      "source": "/studio/:path*",
+      "destination": "/api/index.py"
+    },
+    {
+      "source": "/enquiries-studio/:path*",
+      "destination": "/api/index.py"
     }
   ],
   "headers": [
     {
       "source": "/api/:path*",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store" },
-        { "key": "X-Vercel-Enable-Rewrite-Caching", "value": "0" }
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        },
+        {
+          "key": "X-Vercel-Enable-Rewrite-Caching",
+          "value": "0"
+        }
       ]
     }
-  ]
+  ],
+  "proxy": {
+    "entrypoint": "proxy.js"
+  }
 }

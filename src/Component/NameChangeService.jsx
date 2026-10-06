@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import {BookingLink as Link} from '../lib/BookingProduct.jsx'
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react'
 import { publicServiceById } from '../data/publicServices'
 import { ServiceArtwork, ServiceFocus, ServiceIcon, ServicePrice } from './ServicePresentation'

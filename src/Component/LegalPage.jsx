@@ -1,3 +1,4 @@
+import {BookingOnly,BookingCopy} from '../lib/BookingProduct.jsx';
 import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Lock, Eye, Database, AlertCircle, CheckCircle2, Scale, Clock } from 'lucide-react'
@@ -79,17 +80,17 @@ export default function LegalPage({ policy }) {
                     <span>3. How Your Information Is Used</span>
                   </h2>
                   <p className="text-slate-300">
-                    Your details are used solely for: (a) casting planetary positions and analyzing astrological charts; (b) scheduling your consultation session; (c) responding to inquiries; and (d) sending verification codes, consultation updates and Google Meet links when online booking is available.
+                    <BookingCopy off="Your details are used to respond to enquiries and provide consultations arranged directly with the practice. Information from existing appointments is retained as needed to complete those services and handle support requests.">Your details are used solely for: (a) casting planetary positions and analyzing astrological charts; (b) scheduling your consultation session; (c) responding to inquiries; and (d) sending verification codes, consultation updates and Google Meet links.</BookingCopy>
                   </p>
                 </div>
 
-                <section className="space-y-2">
+                <BookingOnly><section className="space-y-2">
                   <h2 className="font-serif font-bold text-base text-[#D3AF54]">4. Google Account & Calendar Connection</h2>
                   <p>The studio owner can sign in with Google and separately choose to connect their calendar. We use their Google account identifier and verified email to restrict access to the private studio page. With permission, the calendar connection reads calendar settings and supports creating, checking and cancelling consultation events and Google Meet links on the connected calendar. It does not import personal calendar appointments into the website.</p>
                   <p>Connection credentials are stored on our server, with the long-lived Google access credential encrypted. Calendar identifiers, appointment references and meeting links are kept with the records needed to operate the service. When appointment invitations are sent, the participants receive the relevant appointment details through Google and our email provider; birth details and private consultation notes are not included in calendar event descriptions.</p>
                   <p>Google account and calendar data are not sold or used for advertising. Access is limited to providing and supporting this connection, security and legal obligations. You can withdraw access through <a href="https://myaccount.google.com/connections" target="_blank" rel="noopener noreferrer">your Google Account connections</a> and contact us to request deletion of stored connection data. Withdrawing access stops future access but does not itself delete existing calendar events or records.</p>
                   <p>We retain information for the purposes described here, including service delivery, security and applicable record-keeping requirements. Contact us to request access, correction or deletion; any records that must be retained will be explained when handling your request.</p>
-                </section>
+                </section></BookingOnly>
 
                 <div className="space-y-2">
                   <h2 className="font-serif font-bold text-base text-[#D3AF54]">

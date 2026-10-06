@@ -1,3 +1,5 @@
+import {productState} from './lib/productState.js';
+import {startWhenBookingOn} from '../appointment-system/browser/conditional-work.mjs';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
@@ -12,8 +14,15 @@ if (window.location.hash.startsWith('#/') && !window.location.hash.startsWith('#
   }
 }
 
+async function mountWebsite(){
+// State is proved before any booking component mounts; failure starts safely off.
+await productState.refresh({force:true});
+productState.start();
+startWhenBookingOn(productState,()=>import('./lib/bookingBrowser.mjs').then(module=>module.bookingBrowser.recovery));
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
   </StrictMode>,
 )
+}
+mountWebsite();

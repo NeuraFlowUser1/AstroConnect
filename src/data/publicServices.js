@@ -5,7 +5,7 @@ import lalKitab from '../assets/images/Laal Kitaab Remedies.webp'
 import prashna from '../assets/images/Prashna Kundli.webp'
 import nameChange from '../assets/images/Name-Change.png'
 import catalogue from './consultationCatalogue.json'
-import { formatFee } from '../lib/bookingPolicy'
+import {money as formatFee} from '../../appointment-system/browser/display-formatting.mjs'
 
 // Keep public artwork/copy separate; confirmed prices come from the catalogue
 // shared with the booking server. Payment amounts are still calculated server-side.

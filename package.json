@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node build-support/public-page-modes.mjs",
     "lint": "oxlint",
     "preview": "vite preview",
     "verify:fast": "node scripts/verify.mjs fast",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
+    "@vercel/functions": "3.9.9",
     "framer-motion": "^12.42.2",
     "lucide-react": "^1.25.0",
     "react": "^19.2.7",
@@ -30,9 +31,21 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
-    "miniflare": "5.20260911.1-alpha",
+    "@vitest/coverage-istanbul": "5.0.3",
+    "istanbul-lib-coverage": "3.2.2",
+    "istanbul-lib-instrument": "6.0.3",
+    "jsdom": "30.1.1",
+    "miniflare": "4.20260730.0",
     "oxlint": "^1.71.0",
     "playwright": "1.63.0",
-    "vite": "^8.1.1"
+    "vite": "^8.1.1",
+    "vitest": "5.0.3"
+  },
+  "overrides": {
+    "workerd": "1.20261001.1",
+    "miniflare": {
+      "undici": "7.29.1",
+      "sharp": "0.35.4"
+    }
   }
 }

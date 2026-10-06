@@ -13,13 +13,14 @@ import {
   MessageSquare,
   HelpCircle
 } from 'lucide-react'
-import EmailOtpModal from './EmailOtpModal'
+import EmailOtpModal, {EnquiryResume} from './EmailOtpModal'
 import './Contact.css'
 import gmailLogo from "../assets/logos/gmail.webp"
 import mapsLogo from "../assets/logos/google-maps.webp"
 import waLogo from "../assets/logos/whatsapp.webp"
 
-import { sendVerification, submitInquiry } from '../lib/formApi'
+import {useEnquiry} from '../lib/useEnquiry.js'
+import {useBookingProduct} from '../lib/BookingProduct.jsx'
 
 const faqs = [
   {
@@ -41,8 +42,9 @@ const faqs = [
 ];
 
 function Contact() {
+  const {enabled}=useBookingProduct()
   const helpFormRef = useRef(null)
-  const inquiryRequest = useRef(null)
+  const flow=useEnquiry('contact')
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -51,12 +53,14 @@ function Contact() {
     message: ""
   })
   
-  const [submitted, setSubmitted] = useState(false)
+  const submitted=flow.receipt?.state==='received'
   const [attemptedSubmit, setAttemptedSubmit] = useState(false)
-  const [serverError, setServerError] = useState("")
+  const [localError,setServerError]=useState("")
+  const serverError=localError||flow.error
   const [currentWhatsappUrl, setCurrentWhatsappUrl] = useState("")
   const [showOtpModal, setShowOtpModal] = useState(false)
-  const [submitting, setSubmitting] = useState(false)
+  useEffect(()=>{if(flow.started&&flow.receipt?.state!=='received')setShowOtpModal(true)},[flow.started,flow.receipt?.state])
+  const submitting=flow.busy||flow.blocked||flow.waiting>0
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -133,53 +137,11 @@ function Contact() {
       return
     }
 
-    // Open verification only after the email provider accepts the code request.
-    if (submitting) return
-    setSubmitting(true)
-    try {
-      await sendVerification(formData.email, 'contact')
-      setShowOtpModal(true)
-    } catch (err) {
-      setServerError(err.message)
-    } finally {
-      setSubmitting(false)
-    }
-  }
-
-  const executeContactSubmit = async (verificationToken) => {
-    // Close the verification modal; keep the form visible until storage succeeds.
-    setShowOtpModal(false)
-    setSubmitting(true)
-    setServerError("")
-
-    // This is a separate, customer-initiated WhatsApp action, not an automatic send.
-    const messageText = `✦ New Inquiry from Astrology Website ✦\n\n` +
-      `👤 Name: ${formData.name.trim()}\n` +
-      `📧 Email: ${formData.email.trim()}\n` +
-      `📱 Phone: ${formData.phone.trim()}\n` +
-      `📌 Subject: ${formData.subject}\n` +
-      `💬 Message: ${formData.message.trim()}`
-
-    const encodedText = encodeURIComponent(messageText)
-    const whatsappUrl = `https://wa.me/918527790801?text=${encodedText}`
-    setCurrentWhatsappUrl(whatsappUrl)
-
-    // A confirmation means the server has durably accepted this inquiry.
-    try {
-      await submitInquiry('/api/contact', {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        subject: formData.subject,
-        message: formData.message || 'Please contact me about this inquiry.',
-        verification_token: verificationToken,
-      }, inquiryRequest)
-      setSubmitted(true)
-    } catch (err) {
-      setServerError(err.message)
-    } finally {
-      setSubmitting(false)
-    }
+    if(submitting)return
+    setCurrentWhatsappUrl('https://wa.me/918527790801?text='+encodeURIComponent('Enquiry from '+formData.name.trim()+': '+formData.message.trim()))
+    setShowOtpModal(true)
+    await flow.start({source:'contact',name:formData.name,email:formData.email,phone:formData.phone.trim().startsWith('+')?formData.phone.trim():'+91'+formData.phone.replace(/[\s()-]/g,''),
+      subject:formData.subject,message:formData.message||'Please contact me about this inquiry.'})
   }
 
   const handleCopyText = (text, type) => {
@@ -367,7 +329,7 @@ function Contact() {
                 <div className="max-w-xs mx-auto pt-2 flex flex-col gap-2.5">
                   {/* WhatsApp backup live-chat direct link */}
                   <a 
-                    href={currentWhatsappUrl}
+                    href={currentWhatsappUrl||'https://wa.me/918527790801'}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 text-xs shadow w-full uppercase tracking-wider font-sans cursor-pointer hover:scale-[1.02]"
@@ -381,8 +343,8 @@ function Contact() {
                 
                 <button 
                   type="button" 
-                  onClick={() => {
-                    setSubmitted(false)
+                  disabled={flow.busy} onClick={async() => {
+                    if(!await flow.restart())return
                     setAttemptedSubmit(false)
                     setCurrentWhatsappUrl("")
                     setFormData({ name: "", email: "", phone: "", subject: "General Inquiry", message: "" })
@@ -394,6 +356,7 @@ function Contact() {
               </div>
             ) : (
               <form onSubmit={handleContactSubmit} className="contact-message-form text-left flex flex-col justify-between h-full">
+                  <EnquiryResume flow={flow} onResume={() => setShowOtpModal(true)} />
                 {serverError && (
                   <div role="alert" className="p-3 bg-red-50 border border-red-300 rounded-xl text-red-900 text-sm text-center font-sans leading-relaxed">
                     ⚠️ {serverError}
@@ -545,7 +508,8 @@ function Contact() {
           </div>
 
           <div className="mt-4 space-y-2.5 max-w-2xl mx-auto transition-all duration-300">
-            {faqs.map((faq, idx) => {
+            {faqs.map((item, idx) => {
+              const faq=!enabled&&idx===1?{q:'How do I arrange a consultation?',a:'Please call the practice to discuss a suitable time and meeting arrangements.'}:item
               const isOpen = openFaqIndex === idx;
               return (
                 <div key={idx} className="border border-slate-200 rounded-xl bg-white text-left overflow-hidden shadow-sm">
@@ -572,11 +536,10 @@ function Contact() {
 
       {/* Email OTP Verification Modal */}
       <EmailOtpModal
-        isOpen={showOtpModal}
+        isOpen={showOtpModal&&!submitted} flow={flow}
         onClose={() => setShowOtpModal(false)}
         email={formData.email}
         purpose="contact"
-        onVerified={executeContactSubmit}
       />
 
     </div>
