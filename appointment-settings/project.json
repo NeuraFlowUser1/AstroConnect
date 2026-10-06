@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "installation_id": "daccb464-1036-4d35-be47-8ef0f3c4a516",
+  "project_id": "003",
+  "label": "AstroAdvice by Kundan Singh",
+  "environment": "production",
+  "origin": "https://astroadvicebykundansingh.com",
+  "aliases": [
+    "https://www.astroadvicebykundansingh.com"
+  ],
+  "database_targets": {
+    "web": {
+      "host": "ep-morning-boat-b3bcu6uq-pooler.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_web",
+      "port": 5432,
+      "pooling": true
+    },
+    "staff": {
+      "host": "ep-morning-boat-b3bcu6uq-pooler.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_staff",
+      "port": 5432,
+      "pooling": true
+    },
+    "company": {
+      "host": "ep-morning-boat-b3bcu6uq-pooler.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_company",
+      "port": 5432,
+      "pooling": true
+    },
+    "worker": {
+      "host": "ep-morning-boat-b3bcu6uq-pooler.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_worker",
+      "port": 5432,
+      "pooling": true
+    },
+    "maintenance": {
+      "host": "ep-morning-boat-b3bcu6uq.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_maintenance",
+      "port": 5432,
+      "pooling": false
+    },
+    "backup": {
+      "host": "ep-morning-boat-b3bcu6uq.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_backup",
+      "port": 5432,
+      "pooling": false
+    },
+    "migration": {
+      "host": "ep-morning-boat-b3bcu6uq.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "neondb_owner",
+      "port": 5432,
+      "pooling": false
+    },
+    "journal": {
+      "host": "ep-morning-boat-b3bcu6uq-pooler.c-4.ap-southeast-1.aws.neon.tech",
+      "database": "neondb",
+      "role": "appointment_journal",
+      "port": 5432,
+      "pooling": true
+    }
+  },
+  "owners": {
+    "client_email": "astroadvicebyks@gmail.com",
+    "agency_email": "neuraflowindia@gmail.com"
+  },
+  "sender": {
+    "name": "Astro Advice",
+    "email": "bookings@mail.astroadvicebykundansingh.com",
+    "reply_to": "astroadvicebyks@gmail.com"
+  },
+  "providers": {
+    "payment": "razorpay",
+    "calendar": "google",
+    "email": "resend",
+    "sms": null
+  },
+  "worker": {
+    "name": "astro-advice-inquiry-delivery",
+    "origin": "https://astro-advice-inquiry-delivery.neuraflowindia.workers.dev"
+  },
+  "surfaces": [
+    {
+      "path": "/",
+      "class": "general"
+    },
+    {
+      "path": "/about",
+      "class": "general"
+    },
+    {
+      "path": "/api/company",
+      "class": "company"
+    },
+    {
+      "path": "/api/enquiries",
+      "class": "enquiry"
+    },
+    {
+      "path": "/api/enquiry-studio",
+      "class": "enquiry"
+    },
+    {
+      "path": "/api/internal",
+      "class": "worker"
+    },
+    {
+      "path": "/api/webhooks",
+      "class": "provider"
+    },
+    {
+      "path": "/booking",
+      "class": "booking"
+    },
+    {
+      "path": "/booking-help",
+      "class": "booking"
+    },
+    {
+      "path": "/booking/access",
+      "class": "booking"
+    },
+    {
+      "path": "/booking/receipt",
+      "class": "booking"
+    },
+    {
+      "path": "/company",
+      "class": "company"
+    },
+    {
+      "path": "/contact",
+      "class": "enquiry"
+    },
+    {
+      "path": "/enquiries-studio",
+      "class": "enquiry"
+    },
+    {
+      "path": "/privacy-policy",
+      "class": "general"
+    },
+    {
+      "path": "/refund-policy",
+      "class": "general"
+    },
+    {
+      "path": "/services",
+      "class": "general"
+    },
+    {
+      "path": "/services/laal-kitaab",
+      "class": "general"
+    },
+    {
+      "path": "/services/name-change",
+      "class": "general"
+    },
+    {
+      "path": "/services/numerology",
+      "class": "general"
+    },
+    {
+      "path": "/services/prashna-kundali",
+      "class": "general"
+    },
+    {
+      "path": "/services/vastu",
+      "class": "general"
+    },
+    {
+      "path": "/services/vedic-astrology",
+      "class": "general"
+    },
+    {
+      "path": "/studio",
+      "class": "booking"
+    },
+    {
+      "path": "/studio/calendar",
+      "class": "booking"
+    },
+    {
+      "path": "/terms-and-conditions",
+      "class": "general"
+    },
+    {
+      "path": "/testimonials",
+      "class": "general"
+    }
+  ]
+}
