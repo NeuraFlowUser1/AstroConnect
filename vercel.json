@@ -9,7 +9,8 @@
   "functions": {
     "api/index.py": {
       "maxDuration": 120,
-      "excludeFiles": "{.archive/**,.impeccable/**,docs/**,tests/**,scripts/**,src/**,public/**,dist/**,node_modules/**,workers/**,build-support/**,server-support/**,**/__pycache__/**,**/.env*}"
+      "excludeFiles": "{.archive/**,.impeccable/**,docs/**,tests/**,scripts/**,src/**,public/**,dist/**,node_modules/**,workers/**,build-support/**,server-support/**,**/__pycache__/**,**/.env*}",
+      "includeFiles": "appointment-system/tools/checks/package-lock.json"
     }
   },
   "rewrites": [
