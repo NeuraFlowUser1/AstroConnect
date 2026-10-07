@@ -1,0 +1,11 @@
+.abs-date-picker.abs-theme-astro,.abs-booking-picker.abs-theme-astro{--abs-bg:#181122;--abs-text:#fff;--abs-border:#ab7a5780;--abs-action:#d3af54;--abs-error:#ffb8af;--abs-font:Outfit,system-ui,sans-serif}
+.abs-theme-astro .abs-field-label{color:#f4e6be;font-weight:500;font-size:14px}
+.astro-birth-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}.astro-birth-fields>.space-y-1{grid-column:1/-1}
+.astro-booking-form label{font-size:14px;line-height:1.45}.astro-booking-form label span{font-size:inherit}
+.astro-booking-form input:not([type=checkbox]):not([type=radio]),.astro-booking-form select,.astro-booking-form textarea{font-size:16px;min-height:44px}
+.astro-booking-form .relative>svg{top:14px}
+.astro-booking-form :is(input,select,textarea,button):focus-visible{outline:2px solid #d3af54;outline-offset:3px}
+.astro-booking-receipt{background:#181122;color:#fff;border-radius:16px;max-width:960px;margin:32px auto;padding:32px 24px;font-family:Outfit,system-ui,sans-serif}
+.astro-booking-receipt>button{font-size:16px;min-height:44px;margin:24px 12px 0 0;padding:10px 16px;border:1px solid #ab7a5780;border-radius:10px;color:#181122;background:#d3af54}
+.astro-booking-receipt>p,.astro-booking-receipt>a{color:#d8cfeb;font-size:16px;line-height:1.5}
+@media(max-width:767px){.astro-booking-receipt{margin:20px 16px;padding:24px 16px}.astro-booking-receipt>button{width:100%}}
