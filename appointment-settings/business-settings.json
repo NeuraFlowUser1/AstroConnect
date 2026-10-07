@@ -1,172 +1,159 @@
 {
+  "meeting": "google_meet",
   "version": 1,
-  "timezone": "Asia/Kolkata",
   "services": [
     {
       "id": "vedic-astrology",
       "name": "Vedic Astrology",
       "enabled": true,
-      "duration_minutes": 30,
       "pricing": {
         "kind": "fixed",
         "amount_paise": 210000,
         "maximum_questions": 1
       },
-      "required_preparation": [
-        "birth_date"
-      ]
+      "duration_minutes": 30,
+      "required_preparation": []
     },
     {
       "id": "numerology",
       "name": "General Numerology",
       "enabled": true,
-      "duration_minutes": 30,
       "pricing": {
         "kind": "fixed",
         "amount_paise": 310000,
         "maximum_questions": 1
       },
-      "required_preparation": [
-        "birth_date"
-      ]
+      "duration_minutes": 30,
+      "required_preparation": []
     },
     {
       "id": "vastu",
       "name": "Vastu Consultation",
       "enabled": true,
-      "duration_minutes": 30,
       "pricing": {
         "kind": "fixed",
         "amount_paise": 510000,
         "maximum_questions": 1
       },
-      "required_preparation": [
-        "birth_date"
-      ]
+      "duration_minutes": 30,
+      "required_preparation": []
     },
     {
       "id": "laal-kitaab",
       "name": "Laal Kitaab Remedies",
       "enabled": true,
-      "duration_minutes": 30,
       "pricing": {
         "kind": "fixed",
         "amount_paise": 110000,
         "maximum_questions": 1
       },
-      "required_preparation": [
-        "birth_date"
-      ]
+      "duration_minutes": 30,
+      "required_preparation": []
     },
     {
       "id": "prashna-kundali",
       "name": "Prashna Kundali",
       "enabled": true,
-      "duration_minutes": 30,
       "pricing": {
         "kind": "per_question",
         "amount_paise": 110000,
         "maximum_questions": 10
       },
-      "required_preparation": [
-        "birth_date"
-      ]
+      "duration_minutes": 30,
+      "required_preparation": []
     },
     {
       "id": "name-change",
       "name": "Name Change Consultation",
       "enabled": true,
-      "duration_minutes": 30,
       "pricing": {
         "kind": "fixed",
         "amount_paise": 510000,
         "maximum_questions": 1
       },
-      "required_preparation": [
-        "birth_date"
-      ]
+      "duration_minutes": 30,
+      "required_preparation": []
     }
   ],
-  "weekly_windows": [
-    {
-      "weekday": 0,
-      "start": "10:00",
-      "end": "12:00"
-    },
-    {
-      "weekday": 0,
-      "start": "15:00",
-      "end": "18:00"
-    },
-    {
-      "weekday": 1,
-      "start": "10:00",
-      "end": "12:00"
-    },
-    {
-      "weekday": 1,
-      "start": "15:00",
-      "end": "18:00"
-    },
-    {
-      "weekday": 2,
-      "start": "10:00",
-      "end": "12:00"
-    },
-    {
-      "weekday": 2,
-      "start": "15:00",
-      "end": "18:00"
-    },
-    {
-      "weekday": 3,
-      "start": "10:00",
-      "end": "12:00"
-    },
-    {
-      "weekday": 3,
-      "start": "15:00",
-      "end": "18:00"
-    },
-    {
-      "weekday": 4,
-      "start": "10:00",
-      "end": "12:00"
-    },
-    {
-      "weekday": 4,
-      "start": "15:00",
-      "end": "18:00"
-    },
-    {
-      "weekday": 5,
-      "start": "10:00",
-      "end": "12:00"
-    },
-    {
-      "weekday": 5,
-      "start": "15:00",
-      "end": "18:00"
-    }
-  ],
-  "slot_step_minutes": 30,
-  "notice_minutes": 30,
-  "horizon_days": 10,
-  "buffer_before_minutes": 0,
-  "buffer_after_minutes": 0,
-  "booking_verification": {
-    "email": true,
-    "sms": false
-  },
-  "required_contacts": [
-    "email",
-    "phone"
-  ],
-  "meeting": "google_meet",
+  "timezone": "Asia/Kolkata",
   "email_budget": {
     "daily": 80,
     "rolling": 2400,
     "verification_daily": 60,
     "verification_rolling": 1800
-  }
+  },
+  "horizon_days": 10,
+  "notice_minutes": 30,
+  "weekly_windows": [
+    {
+      "end": "12:00",
+      "start": "10:00",
+      "weekday": 0
+    },
+    {
+      "end": "18:00",
+      "start": "15:00",
+      "weekday": 0
+    },
+    {
+      "end": "12:00",
+      "start": "10:00",
+      "weekday": 1
+    },
+    {
+      "end": "18:00",
+      "start": "15:00",
+      "weekday": 1
+    },
+    {
+      "end": "12:00",
+      "start": "10:00",
+      "weekday": 2
+    },
+    {
+      "end": "18:00",
+      "start": "15:00",
+      "weekday": 2
+    },
+    {
+      "end": "12:00",
+      "start": "10:00",
+      "weekday": 3
+    },
+    {
+      "end": "18:00",
+      "start": "15:00",
+      "weekday": 3
+    },
+    {
+      "end": "12:00",
+      "start": "10:00",
+      "weekday": 4
+    },
+    {
+      "end": "18:00",
+      "start": "15:00",
+      "weekday": 4
+    },
+    {
+      "end": "12:00",
+      "start": "10:00",
+      "weekday": 5
+    },
+    {
+      "end": "18:00",
+      "start": "15:00",
+      "weekday": 5
+    }
+  ],
+  "required_contacts": [
+    "phone"
+  ],
+  "slot_step_minutes": 30,
+  "booking_verification": {
+    "sms": false,
+    "email": false
+  },
+  "buffer_after_minutes": 0,
+  "buffer_before_minutes": 0
 }
