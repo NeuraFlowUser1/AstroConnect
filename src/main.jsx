@@ -18,7 +18,7 @@ async function mountWebsite(){
 // State is proved before any booking component mounts; failure starts safely off.
 await productState.refresh({force:true});
 productState.start();
-startWhenBookingOn(productState,()=>import('./lib/bookingBrowser.mjs').then(module=>module.bookingBrowser.recovery));
+startWhenBookingOn(()=>import('./lib/bookingBrowser.mjs').then(({bookingBrowser})=>()=>bookingBrowser.recovery.start()),{state:productState});
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
