@@ -1,11 +1,13 @@
 import React, {useState,useEffect} from 'react'
 import {motion,useScroll,useTransform} from 'framer-motion'
-import {Send,MapPin,User,Mail,Phone,ChevronLeft,ChevronRight,ShieldCheck,RefreshCw} from 'lucide-react'
+import {Send,MapPin,User,Mail,Phone,RefreshCw} from 'lucide-react'
 import {useSearchParams} from 'react-router-dom'
 import {useBooking} from '../lib/useBooking.js'
 import {dateRange,localDate,money as formatFee,timeLabel} from '../../appointment-system/browser/booking/protocol.mjs'
 import {createVerificationFields} from '../../appointment-system/browser/booking/verification-fields.mjs'
 const VerificationFields=createVerificationFields(React)
+import {DateField,BirthTimeField,ReceiptFields} from '../lib/booking-ui.jsx'
+import '../lib/booking-experience.css'
 
 /**
  * CelestialDivider Component
@@ -66,14 +68,12 @@ function Appointment_Booking() {
     bookingDate:state.day,bookingSlot:state.slot?.starts_at||''}
   const totalFee=state.quote?.amount_paise??(selectedService?selectedService.pricing.amount_paise*state.questions:0)
   const checkout=state.receipt,submitted=checkout?.appointment_state==='confirmed'
-  const loading=state.busy||state.phase==='payment',recoveryChecking=!!state.credential&&!checkout
+  const loading=state.busy||state.phase==='payment',unavailable=!flow.available,recoveryChecking=!!state.credential&&!checkout
   const errorMsg=state.error,paymentMessage=state.error
   const availabilityLoading=state.loadingPolicy||state.slotsStatus==='loading'
   const availabilityError=state.slotsStatus==='error'?state.error:''
-  const bookingBlocked=loading||state.phase==='blocked'||!state.policy||!state.slot||!state.ack||!!state.credential||
+  const bookingBlocked=loading||unavailable||!state.policyFresh||!state.slotsFresh||state.phase==='blocked'||!state.policy||!state.slot||!state.ack||!!state.credential||
     (state.policy.policy.booking_verification.email&&!state.verification)
-  const [currentYear,setCurrentYear]=useState(Number(today.slice(0,4)))
-  const [currentMonth,setCurrentMonth]=useState(Number(today.slice(5,7))-1)
   const [remainingSeconds,setRemainingSeconds]=useState(0)
   useEffect(()=>{
     if(!checkout){setRemainingSeconds(0);return}
@@ -81,24 +81,6 @@ function Appointment_Booking() {
     const tick=()=>setRemainingSeconds(Math.max(0,Math.ceil((remaining-performance.now()+anchor)/1000)))
     tick();const timer=setInterval(tick,1000);return()=>clearInterval(timer)
   },[checkout])
-  useEffect(()=>{
-    if(!policy)return
-    const month=`${currentYear}-${String(currentMonth+1).padStart(2,'0')}`
-    if(month<policy.first_date.slice(0,7)||month>policy.last_date.slice(0,7)){
-      setCurrentYear(Number(policy.first_date.slice(0,4)));setCurrentMonth(Number(policy.first_date.slice(5,7))-1)
-    }
-  },[policy?.first_date,policy?.last_date,currentYear,currentMonth])
-  const monthNames=['January','February','March','April','May','June','July','August','September','October','November','December']
-  const daysOfWeek=['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
-  const getDaysInMonth=(year,month)=>new Date(year,month+1,0).getDate()
-  const getFirstDayOfMonth=(year,month)=>new Date(year,month,1).getDay()
-  const dayValue=day=>`${currentYear}-${String(currentMonth+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`
-  const moveMonth=amount=>{const date=new Date(currentYear,currentMonth+amount,1);setCurrentYear(date.getFullYear());setCurrentMonth(date.getMonth())}
-  const handlePrevMonth=()=>moveMonth(-1),handleNextMonth=()=>moveMonth(1)
-  const selectDate=day=>dispatch({type:'edit',name:'day',value:dayValue(day)})
-  const isToday=day=>dayValue(day)===today,isDateSelected=day=>dayValue(day)===state.day
-  // Dates are navigation only. The server supplies every offered appointment time.
-  const isPastDay=day=>!policy||dayValue(day)<policy.first_date||dayValue(day)>policy.last_date||loading
   const handleInputChange=event=>{
     const {name,value}=event.target
     const fields={name:'full_name',email:'email',phone:'phone',birthDate:'birth_date',birthTime:'birth_time',birthPlace:'birth_place',notes:'notes'}
@@ -118,7 +100,7 @@ function Appointment_Booking() {
       {/* ========================================================= */}
       {/* 1. HEADER SECTION (Warm Ivory bg-[#F4F1E3])               */}
       {/* ========================================================= */}
-      <div className="w-full bg-[#F4F1E3] px-6 pt-7 pb-3 lg:pt-4 lg:pb-2 flex flex-col items-center relative z-10 border-b border-[#AB7A57]/10">
+      <div className="w-full bg-[#F4F1E3] px-6 pt-11 pb-3 lg:pt-8 lg:pb-2 flex flex-col items-center relative z-10 border-b border-[#AB7A57]/10">
         
         {/* Decorative backgrounds & rotating zodiac inside header wrapper */}
         <div className="absolute top-20 right-10 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(171,122,87,0.06),transparent_70%)] rounded-full -z-10 pointer-events-none animate-pulse"></div>
@@ -174,65 +156,20 @@ function Appointment_Booking() {
               <a href="/booking-help">Get help with access</a></div>
             </div>
           ) : submitted ? (
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="flex flex-col items-center justify-center text-center py-12 space-y-3"
-            >
-              <div className="w-16 h-16 rounded-full bg-emerald-900/20 border-2 border-emerald-500 flex items-center justify-center text-emerald-500 text-3xl shadow-[0_0_15px_rgba(16,185,129,0.2)] animate-pulse">
-                ✓
-              </div>
-              <h4 className="font-serif text-white font-bold text-xl md:text-2xl">Your appointment is confirmed</h4>
-              <p className="text-sm text-[#D8CFEB] max-w-lg font-sans leading-relaxed">
-                {state.policy?.policy.meeting==='internal'?'Your appointment is confirmed. Please contact the practice for meeting arrangements.':checkout?.meeting_state === 'ready'
-                  ? 'Your online consultation is confirmed. The Google Meet link is below and is also being sent to you by email.'
-                  : checkout?.meeting_state === 'needs_attention'
-                    ? 'Your online consultation is confirmed, but the studio needs to finish your Google Meet invitation. You do not need to pay again; the link will be emailed once ready.'
-                    : 'Payment has been received. We are preparing your Google Meet link and will email it to you as soon as it is ready.'}
-              </p>
-              {checkout?.meet_url && <a href={checkout.meet_url} target="_blank" rel="noreferrer"
-                className="min-h-11 rounded-xl bg-[#D3AF54] px-6 py-2.5 text-sm font-semibold text-[#181122]">Open Google Meet</a>}
-              {checkout?.request_id && <p className="max-w-full break-all text-xs text-white/65">Reference: {checkout.request_id}</p>}
-              <CelestialDivider />
-              {checkout?.meeting_state !== 'ready' && <button type="button" onClick={checkBookingStatus} disabled={loading}
-                className="min-h-11 rounded-xl border border-[#D3AF54]/65 px-5 py-2.5 text-sm font-semibold text-[#F4E6BE] disabled:opacity-60">
-                {loading ? 'Checking…' : 'Check invitation status'}
-              </button>}
-              {checkout.next_actions.includes('choose_new_time')&&<button
-                onClick={resetBooking}
-                className="bg-[#D3AF54] hover:bg-[#D3AF54]/95 text-[#181122] border border-[#D3AF54] px-5 py-2 rounded-xl transition duration-300 font-semibold text-xs sm:text-sm cursor-pointer shadow-md shadow-[#D3AF54]/10"
-              >
-                Book Another Session
-              </button>}
-            </motion.div>
+            <div className="mx-auto max-w-3xl py-8 sm:py-10">
+              <ReceiptFields flow={flow}/>
+              <button type="button" onClick={checkBookingStatus} disabled={loading||unavailable}
+                className="mt-6 min-h-11 rounded-xl border border-[#D3AF54]/65 px-5 py-2.5 text-base font-semibold text-[#F4E6BE] disabled:opacity-60">
+                {loading ? 'Checking…' : 'Check booking status'}
+              </button>
+            </div>
           ) : checkout ? (
             <motion.section
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              aria-labelledby="payment-heading"
               className="mx-auto flex max-w-2xl flex-col gap-5 py-7 sm:py-10"
             >
-              <div className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#D3AF54]/15 text-[#D3AF54]">
-                  <ShieldCheck size={22} />
-                </span>
-                <div className="min-w-0">
-                  <h2 id="payment-heading" className="font-serif text-xl font-semibold text-white sm:text-2xl">
-                    {checkout.appointment_state === 'payment_review' ? 'Your payment is being checked' :
-                      checkout.appointment_state === 'cancelled' ? 'This appointment was cancelled' :
-                        checkout.appointment_state === 'expired' ? 'This reservation has ended' : 'Your time is reserved'}
-                  </h2>
-                  <p className="mt-1 text-sm leading-relaxed text-white/75">
-                    {checkout.appointment_state === 'held'
-                      ? `${checkout.service_name} · ${formatFee(checkout.amount_paise)}`
-                      : checkout.appointment_state === 'payment_review'
-                        ? 'Please do not pay again. The studio can see this exception and will check it.'
-                        : checkout.appointment_state === 'cancelled'
-                          ? 'This appointment is no longer active. Refund to be done manually; please call the studio with any payment question.'
-                          : 'No payment should be made against this expired reservation. Choose a fresh available time.'}
-                  </p>
-                </div>
-              </div>
+              <ReceiptFields flow={flow}/>
 
               {checkout.appointment_state === 'held' && (
                 <div className="flex flex-wrap items-center justify-between gap-4 border-y border-white/10 py-4">
@@ -268,7 +205,6 @@ function Appointment_Booking() {
                   </button>
                 )}
               </div>
-              <p className="break-all text-xs leading-relaxed text-white/55">Booking reference: {checkout.request_id}</p>
             </motion.section>
           ) : (
             <motion.form 
@@ -278,7 +214,7 @@ function Appointment_Booking() {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true, margin: "-100px" }}
-              className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[minmax(0,0.86fr)_minmax(0,1fr)_minmax(0,1.2fr)] gap-4 xl:gap-3 items-start scroll-mt-20 w-full"
+              className="astro-booking-form grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-[minmax(0,0.86fr)_minmax(0,1fr)_minmax(0,1.2fr)] gap-4 xl:gap-3 items-start scroll-mt-20 w-full"
             >
               {/* Error Message Display (Real-time Validation Alert) */}
               {errorMsg && !availabilityError && (
@@ -311,6 +247,7 @@ function Appointment_Booking() {
                         type="text" 
                         id="name"
                         name="name"
+                        autoComplete="name" minLength={2} maxLength={100}
                         required
                         value={formData.name}
                         onChange={handleInputChange}
@@ -322,7 +259,7 @@ function Appointment_Booking() {
 
                   <div className="space-y-1">
                     <label htmlFor="email" className="block text-[11px] font-semibold uppercase tracking-wider text-[#D3AF54]/95">
-                      Email Address <span className="text-[#D3AF54]">*</span>
+                      Email Address {state.policy?.policy.booking_verification.email?<span className="text-[#D3AF54]">*</span>:<span className="text-white/70 normal-case font-normal">(Optional)</span>}
                     </label>
                     <div className="relative">
                       <Mail size={15} className="absolute left-3 top-2.5 text-[#D3AF54]/60" />
@@ -330,7 +267,8 @@ function Appointment_Booking() {
                         type="email" 
                         id="email"
                         name="email"
-                        required
+                        autoComplete="email" maxLength={254}
+                        required={state.policy?.policy.booking_verification.email===true}
                         value={formData.email}
                         onChange={handleInputChange}
                         placeholder="Your email"
@@ -349,6 +287,7 @@ function Appointment_Booking() {
                         type="tel" 
                         id="phone"
                         name="phone"
+                        autoComplete="tel-national" maxLength={30}
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
@@ -366,37 +305,15 @@ function Appointment_Booking() {
                   Birth Details
                 </h3>
                     
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <div className="space-y-1">
-                    <label htmlFor="birthDate" className="block text-[11px] font-semibold uppercase tracking-wider text-[#D3AF54]/95">
-                      Date of Birth <span className="text-[#D3AF54]">*</span>
-                    </label>
-                    <input 
-                      type="date" 
-                      id="birthDate"
-                      name="birthDate"
-                      max={today}
-                      required={selectedService?.required_preparation.includes('birth_date')}
-                      value={formData.birthDate}
-                      onChange={handleInputChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D3AF54] focus:ring-2 focus:ring-[#D3AF54]/15 transition-all duration-300 color-scheme-dark"
-                    />
-                  </div>
-
-                  <div className="space-y-1">
-                    <label htmlFor="birthTime" className="block text-[11px] font-semibold uppercase tracking-wider text-[#D3AF54]/95">
-                      Exact Time of Birth <span className="text-white/50 text-[10px] normal-case font-normal italic">(Optional)</span>
-                    </label>
-                    <input 
-                      type="time" 
-                      id="birthTime"
-                      name="birthTime"
-                      required={selectedService?.required_preparation.includes('birth_time')}
-                      value={formData.birthTime}
-                      onChange={handleInputChange}
-                      className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-xs sm:text-sm text-white focus:outline-none focus:border-[#D3AF54] focus:ring-2 focus:ring-[#D3AF54]/15 transition-all duration-300 color-scheme-dark"
-                    />
-                  </div>
+                <div className="astro-birth-fields gap-3">
+                  <DateField label="Date of birth (Optional)" name="birthDate" value={formData.birthDate}
+                    max={localDate(state.policy?.server_now||new Date(),state.policy?.policy.timezone||'Asia/Kolkata')}
+                    yearJump theme="abs-theme-astro" available={flow.viewAvailable} disabled={loading}
+                    onChange={value=>dispatch({type:'details',name:'birth_date',value})}/>
+                  <BirthTimeField label="Exact time of birth (Optional)" name="birthTime" value={formData.birthTime}
+                    theme="abs-theme-astro" available={flow.viewAvailable} disabled={loading}
+                    required={selectedService?.required_preparation.includes('birth_time')}
+                    onChange={value=>dispatch({type:'details',name:'birth_time',value})}/>
 
                   <div className="space-y-1 sm:col-span-2">
                     <label htmlFor="birthPlace" className="block text-[11px] font-semibold uppercase tracking-wider text-[#D3AF54]/95">
@@ -425,91 +342,12 @@ function Appointment_Booking() {
                 <h3 className="font-serif text-sm sm:text-base font-bold !text-[#D3AF54] border-b border-[#AB7A57]/20 pb-1.5">
                   Select Date
                 </h3>
-                <p className="text-sm leading-relaxed text-white/80">All times are in India Standard Time. Book up to 10 days ahead, Monday–Saturday.</p>
+                <p className="text-sm leading-relaxed text-white/80">Times shown in {state.policy?.policy.timezone||'Asia/Kolkata'}. Select a date to see the available times.</p>
                 {policy && <p className="text-xs leading-relaxed text-white/70">{new Date(`${policy.first_date}T00:00:00+05:30`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })} – {new Date(`${policy.last_date}T00:00:00+05:30`).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })}</p>}
                 
-                <div className="flex flex-col gap-2">
-                  
-                  {/* Visual Calendar taking full width of column */}
-                  <div className="w-full flex flex-col gap-2 relative z-20">
-                      
-                      {/* Calendar Nav Header */}
-                      <div className="flex justify-between items-center pb-1.5 border-b border-white/5">
-                        <h4 className="font-serif text-xs sm:text-sm font-bold !text-[#D3AF54] tracking-wide">
-                          {monthNames[currentMonth]} {currentYear}
-                        </h4>
-                        <div className="flex gap-1.5">
-                          <button 
-                            type="button"
-                            onClick={handlePrevMonth}
-                            aria-label="Previous month"
-                            disabled={!policy || `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}` <= policy.first_date.slice(0, 7)}
-                            className="w-11 h-11 rounded-lg border border-white/10 flex items-center justify-center text-[#D3AF54] hover:bg-white/5 cursor-pointer active:scale-95 transition-all"
-                          >
-                            <ChevronLeft size={14} />
-                          </button>
-                          <button 
-                            type="button"
-                            onClick={handleNextMonth}
-                            aria-label="Next month"
-                            disabled={!policy || `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}` >= policy.last_date.slice(0, 7)}
-                            className="w-11 h-11 rounded-lg border border-white/10 flex items-center justify-center text-[#D3AF54] hover:bg-white/5 cursor-pointer active:scale-95 transition-all"
-                          >
-                            <ChevronRight size={14} />
-                          </button>
-                        </div>
-                      </div>
-
-                      {/* Days of Week Header */}
-                      <div className="grid grid-cols-7 gap-1 text-center text-[11px] sm:text-xs font-bold text-[#D3AF54] uppercase py-0.5">
-                        {daysOfWeek.map((day, idx) => (
-                          <div key={idx} className="py-0.5">{day}</div>
-                        ))}
-                      </div>
-
-                      {/* Calendar Day Cells */}
-                      <div className="grid grid-cols-7 gap-1 text-center mt-0.5">
-                        {/* Empty padding offsets before first day of month */}
-                        {Array.from({ length: getFirstDayOfMonth(currentYear, currentMonth) }).map((_, idx) => (
-                          <div key={`offset-${idx}`} className="aspect-square" />
-                        ))}
-
-                        {/* Day cells */}
-                        {Array.from({ length: getDaysInMonth(currentYear, currentMonth) }).map((_, idx) => {
-                          const day = idx + 1
-                          const isPast = isPastDay(day)
-                          const isSelected = isDateSelected(day)
-                          const isTodayDay = isToday(day)
-
-                          return (
-                            <button
-                              key={`day-${day}`}
-                              data-booking-day={dayValue(day)}
-                              type="button"
-                              disabled={isPast}
-                              onClick={() => selectDate(day)}
-                              className={`min-h-11 lg:min-h-9 rounded-lg flex items-center justify-center text-sm font-medium transition-all cursor-pointer relative ${
-                                isPast
-                                  ? "text-white/20 bg-transparent cursor-not-allowed"
-                                  : isSelected
-                                  ? "bg-[#D3AF54] text-[#181122] font-bold shadow-[0_0_10px_rgba(211,175,84,0.3)] scale-[1.05]"
-                                  : isTodayDay
-                                  ? "border border-[#D3AF54] text-[#D3AF54] hover:bg-[#D3AF54]/10"
-                                  : "text-slate-300 hover:bg-white/5 hover:border-white/20 border border-transparent"
-                              }`}
-                            >
-                              <span>{day}</span>
-                              {isTodayDay && !isSelected && (
-                                <span className="absolute bottom-1 w-1 h-1 rounded-full bg-[#D3AF54] left-1/2 -translate-x-1/2" />
-                              )}
-                            </button>
-                          )
-                        })}
-                      </div>
-                  </div>
-
-                  <input type="hidden" name="bookingDate" required value={formData.bookingDate} />
-                </div>
+                <DateField label="Appointment date" name="bookingDate" required value={formData.bookingDate}
+                  min={policy?.first_date} max={policy?.last_date} disabled={loading||!policy} available={flow.viewAvailable}
+                  theme="abs-theme-astro" onChange={value=>dispatch({type:'edit',name:'day',value})}/>
               </motion.div>
 
               {/* Step 4: Consultation Details Card */}
@@ -571,9 +409,10 @@ function Appointment_Booking() {
                             <button
                               key={slot.value}
                               type="button"
-                              disabled={!isAvailable}
+                              disabled={!isAvailable||!flow.available||!state.slotsFresh}
                               aria-label={`${slot.label}, ${isAvailable ? 'open' : 'unavailable'}`}
                               data-booking-time={slot.starts_at}
+                              aria-pressed={isSelected}
                               onClick={() => dispatch({type:'edit',name:'slot',value:slot})}
                               className={`flex min-h-11 items-center justify-between gap-2 px-2.5 py-2 rounded-xl border text-left transition-all duration-300 ${
                                 !isAvailable
@@ -623,7 +462,7 @@ function Appointment_Booking() {
 
               <div className="col-span-1 lg:col-span-2 xl:col-span-3 space-y-3">
                 <VerificationFields flow={flow} className="space-y-2" inputClassName="rounded border p-2" buttonClassName="rounded border px-3 py-2"/>
-                <label className="flex items-start gap-2"><input type="checkbox" checked={state.ack} disabled={loading} onChange={event=>dispatch({type:'ack',value:event.target.checked})}/><span>I have checked my appointment and contact details and read the <a href="/terms-and-conditions" className="underline">terms</a> and <a href="/refund-policy" className="underline">cancellation policy</a>.</span></label>
+                <label className="flex items-start gap-2"><input type="checkbox" checked={state.ack} disabled={loading||!flow.available} onChange={event=>dispatch({type:'ack',value:event.target.checked})}/><span>I have checked my appointment and contact details and read the <a href="/terms-and-conditions" className="underline">terms</a> and <a href="/refund-policy" className="underline">cancellation policy</a>.</span></label>
               </div>
               {/* Submit Button - Width strictly spans text */}
               <motion.div variants={itemVariants} className="col-span-1 lg:col-span-2 xl:col-span-3 flex justify-center pt-2">

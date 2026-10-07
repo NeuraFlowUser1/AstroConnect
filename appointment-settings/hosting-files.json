@@ -120,6 +120,8 @@
     "src/data/testimonialContent.js",
     "src/index.css",
     "src/lib/BookingProduct.jsx",
+    "src/lib/booking-experience.css",
+    "src/lib/booking-ui.jsx",
     "src/lib/bookingBrowser.mjs",
     "src/lib/paymentRecovery.js",
     "src/lib/productState.js",
