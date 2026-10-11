@@ -2,6 +2,7 @@ import React, {useState,useEffect} from 'react'
 import {motion,useScroll,useTransform} from 'framer-motion'
 import {Send,MapPin,User,Mail,Phone,RefreshCw} from 'lucide-react'
 import {useSearchParams} from 'react-router-dom'
+import {BookingLink} from '../lib/BookingProduct.jsx'
 import {useBooking} from '../lib/useBooking.js'
 import {dateRange,localDate,money as formatFee,timeLabel} from '../../appointment-system/browser/booking/protocol.mjs'
 import {createVerificationFields} from '../../appointment-system/browser/booking/verification-fields.mjs'
@@ -121,6 +122,7 @@ function Appointment_Booking() {
           <p className="mx-auto mt-2 max-w-2xl text-sm leading-relaxed text-[#594C45] sm:text-base">
             {state.policy?.policy.meeting==='google_meet'?'Consultations are scheduled on Google Meet. Links are shared after appointments are booked.':'The practice will confirm the meeting arrangements for your consultation.'}
           </p>
+          <BookingLink className="booking-details-entry" to="/booking/receipt">Already booked? View my booking ↗</BookingLink>
           <div className="w-12 h-[1px] bg-[#D3AF54] mx-auto mt-3 mb-1"></div>
         </motion.div>
       </div>
@@ -153,7 +155,7 @@ function Appointment_Booking() {
               <div><p><RefreshCw size={18} className="animate-spin" /> Checking for an appointment already in progress…</p>
               {errorMsg&&<p role="alert">{errorMsg}</p>}<button type="button" disabled={loading} onClick={flow.check}>Check saved booking</button>
               {flow.canRetryOriginal&&<button type="button" disabled={loading} onClick={flow.retryOriginal}>Retry the same request</button>}
-              <a href="/booking-help">Get help with access</a></div>
+              <BookingLink to="/booking/receipt">View my bookings</BookingLink></div>
             </div>
           ) : submitted ? (
             <div className="mx-auto max-w-3xl py-8 sm:py-10">

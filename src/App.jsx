@@ -28,6 +28,13 @@ function ScrollToTop() {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    const privatePage=['/booking/receipt','/booking-help','/booking/access'].includes(pathname);
+    for(const name of ['robots','googlebot','referrer']){
+      let meta=document.querySelector(`meta[name="${name}"]`);
+      if(!meta){meta=document.createElement('meta');meta.name=name;document.head.append(meta);}
+      meta.content=name==='referrer'?(privatePage?'no-referrer':'strict-origin-when-cross-origin'):
+        (privatePage?'noindex, nofollow':'index, follow');
+    }
   }, [pathname]);
 
   return null;

@@ -20,7 +20,7 @@ import mapsLogo from "../assets/logos/google-maps.webp"
 import waLogo from "../assets/logos/whatsapp.webp"
 
 import {useEnquiry} from '../lib/useEnquiry.js'
-import {useBookingProduct} from '../lib/BookingProduct.jsx'
+import {useBookingProduct,BookingOnly,BookingLink} from '../lib/BookingProduct.jsx'
 
 const faqs = [
   {
@@ -29,7 +29,7 @@ const faqs = [
   },
   {
     q: "How are website bookings conducted?",
-    a: "All appointments booked through this website are online on Google Meet. After payment and confirmation, the meeting link is sent to your email."
+    a: <>Website appointments take place on Google Meet. After payment and confirmation, your saved booking shows the meeting link when it is ready. Email updates are sent if you supplied an email address. <BookingLink className="booking-details-entry" to="/booking/receipt">View my booking ↗</BookingLink></>
   },
   {
     q: "How do I cancel or ask about a refund?",
@@ -170,6 +170,7 @@ function Contact() {
           <p className="text-xs sm:text-sm text-[#181122]/70 font-sans leading-relaxed">
             Have questions or want to request a reading? Reach out to Astrologer Kundan Singh.
           </p>
+          <BookingOnly><BookingLink className="booking-details-entry" to="/booking/receipt">Already booked? View my booking ↗</BookingLink></BookingOnly>
           <div className="w-12 h-[2px] bg-[#D3AF54] mt-3"></div>
         </div>
 

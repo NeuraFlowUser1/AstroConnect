@@ -1,4 +1,13 @@
 > **Current booking release — 8 October 2026:** use [the current operating guide](docs/appointment-system-release.md).
+
+## Current change — 11 October 2026
+
+The approved name-and-phone booking-details replacement is implemented locally, using contained release `54af467afbe152286f1f81f28f904a8b59b51e31111e6a81d93b1d340bd3720a` (576 files; migrations 001–037). Publication is in progress; this document is not a live acceptance claim. Customers use `/booking/receipt` with the full name and phone saved when booking. Old booking-help/access links redirect there. Lookup grants viewing, refresh and a local PDF for a confirmed appointment; it grants no payment, cancellation, rescheduling, email-send or contact-change action. The original saved-browser receipt remains separate. Contact and appointment booking provide the entry links.
+
+Migration 037 retires old code authority in one changeover while preserving audit facts and the existing protected staff correction. Earlier migration files remain unchanged. Sarsa alone receives the agreed visual section/background/navigation/art refinements; its original choreography remains intact. The owner excluded tests and release gates; no fresh test or coverage result is claimed. Necessary website builds and source/rendered-page review are recorded separately.
+
+## Retained earlier release evidence
+
 > Complete package `97ab5d49fc559eb1acdeb7157d4561134d1bad824cca298506f48b2a9d32b49d`:573 files,36 unchanged migrations. The bounded email-feedback correction is published and independently verified on both official websites. Both company switches are effective ON, normal prices are restored, and both exact paid test receipts remain correct. Both existing Git publishing connections have successful automatic-deployment evidence. After the owner reconnected Sarsa's existing repository, its first normal main-branch push deployed successfully without a manual build; protected readback confirms the corrected release on the official domain. The exact internal cause of the earlier silent gap is not established.
 > Fresh Vedic Astrology no-email paid acceptance passes:₹1 captured, confirmed booking, Meet link, parsed PDF, staff notification, both spreadsheets and one requested company-inbox copy. Normal price is restored to₹2,100; other settings remain.
 > The shared email-feedback correction passes93/93 focused checks. Full parent evidence remains verified for unchanged code, with current whole-code coverage above90% and no exclusions. Both builds and contained hosting checks pass. No fresh full-suite or backup-run claim is made for this correction.
