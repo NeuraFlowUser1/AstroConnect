@@ -1,9 +1,4 @@
-> **Current replacement release:** use [the contained release and operating guide](appointment-system-release.md).
-> Both live common databases are at migration 034 with booking OFF authority preserved,
-> and the fresh official stored-backup/restore/retention chain is accepted. Worker/public
-> website and resource/account acceptance remain separate. The dated original material
-> below describes the previous engine and is historical; removed file paths and old
-> setup/backup commands are not current operating instructions.
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
 
 # Astro Advice booking system — plain-language operating guide
 

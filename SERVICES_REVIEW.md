@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Services refinement — 8 September 2026
 
 ## Approved scope and direction
@@ -50,12 +52,12 @@ Final asset: `src/assets/images/Name-Change.png`, created with the built-in imag
 
 Representative screenshots saved with the project:
 
-- [Services, laptop](.impeccable/review/services-laptop.png)
-- [Services, wide desktop](.impeccable/review/services-wide.png)
-- [Services, mobile](.impeccable/review/services-mobile.png)
-- [About expertise, wide desktop](.impeccable/review/about-wide.png)
-- [Name Change detail, laptop](.impeccable/review/name-change-laptop.png)
-- [Keyboard selection and destination](.impeccable/review/services-keyboard.png)
+- Services, laptop (historical path `.impeccable/review/services-laptop.png`; unavailable in this maintained copy)
+- Services, wide desktop (historical path `.impeccable/review/services-wide.png`; unavailable in this maintained copy)
+- Services, mobile (historical path `.impeccable/review/services-mobile.png`; unavailable in this maintained copy)
+- About expertise, wide desktop (historical path `.impeccable/review/about-wide.png`; unavailable in this maintained copy)
+- Name Change detail, laptop (historical path `.impeccable/review/name-change-laptop.png`; unavailable in this maintained copy)
+- Keyboard selection and destination (historical path `.impeccable/review/services-keyboard.png`; unavailable in this maintained copy)
 
 Detailed captures remain at `/tmp/astro-services-r2-{laptop,wide,mobile,compact}-{top,pair1,pair2,pair3,footer}.png`, plus `/tmp/astro-about-r2-*.png`, `/tmp/astro-name-change-r2-*.png` and the final verdict recaptures.
 
@@ -87,4 +89,4 @@ Visual captures covered 1024×768, 1366×768, 1920×1080, 2560×1440, 390×844 a
 
 Keyboard focus on the dark menu is visible; repeated Name Change selections both focused `consultation-name-change` at top 97.25px below an 85px header. All twelve chapter action destinations remain unchanged. Build, whitespace check and focused Services layout detector passed. The Wi-Fi preview returned HTTP 200 after the final build. These are local frontend checks, not booking or physical-device acceptance.
 
-Saved evidence: [inset laptop](.impeccable/review/services-inset-laptop.png), [inset wide pair](.impeccable/review/services-inset-wide.png), [unchanged mobile](.impeccable/review/services-inset-mobile.png), [keyboard menu](.impeccable/review/services-inset-keyboard.png). Detailed captures remain at `/tmp/services-width-r1-*` and `/tmp/services-inset-*`.
+Saved evidence: inset laptop (historical path `.impeccable/review/services-inset-laptop.png`; unavailable in this maintained copy), inset wide pair (historical path `.impeccable/review/services-inset-wide.png`; unavailable in this maintained copy), unchanged mobile (historical path `.impeccable/review/services-inset-mobile.png`; unavailable in this maintained copy), keyboard menu (historical path `.impeccable/review/services-inset-keyboard.png`; unavailable in this maintained copy). Detailed captures remain at `/tmp/services-width-r1-*` and `/tmp/services-inset-*`.

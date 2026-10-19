@@ -1,10 +1,12 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # AstroAdvice Website & Booking Engine - Architecture Documentation
 
 This document provides a simple, comprehensive overview of the technical architecture, directory structure, data flow, and security configurations of the **AstroAdvice** web platform.
 
 ## Current architecture — 2026-09-15
 
-The official website is a React/Vite application and FastAPI service deployed together on Vercel at `astroadvicebykundansingh.com`. [Plan 1](docs/PLAN-001-booking-inquiries-and-client-calendar.md) owns product and operating requirements; [Plan 2](docs/PLAN-002-testing-and-release-certification.md) owns release proof; [the backend guide](src/backend/README.md) owns setup details.
+The official website is a React/Vite application and FastAPI service deployed together on Vercel at `astroadvicebykundansingh.com`. [Plan 1](docs/PLAN-001-booking-inquiries-and-client-calendar.md) owns product and operating requirements; [Plan 2](docs/PLAN-002-testing-and-release-certification.md) owns release proof; the backend guide (historical path `src/backend/README.md`; unavailable in this maintained copy) owns setup details.
 
 - `src/data/consultationCatalogue.json` is the shared six-service catalogue. The server recalculates every amount and applies the Prashna per-question rule; it never trusts an amount submitted by the browser.
 - `src/backend/domain.py` owns India-time booking rules: the ten-day horizon, Monday–Saturday office windows, minimum notice and internal half-hour starts.

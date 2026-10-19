@@ -1,48 +1,23 @@
-> **Current replacement release:** use [the contained release and operating guide](appointment-system-release.md).
-> Both live common databases are at migration 034 with booking OFF authority preserved,
-> and the fresh official stored-backup/restore/retention chain is accepted. Worker/public
-> website and resource/account acceptance remain separate. The dated original material
-> below describes the previous engine and is historical; removed file paths and old
-> setup/backup commands are not current operating instructions.
+# Project 003 — documentation index
 
-# Project plans and operating documents
+Reviewed **19 October 2026**. This is the maintained application's current reading route. The original September plans and old runbooks are retained as history, not the present engine or a request to repeat setup.
 
-Start here after a break or context reset. This page lists the historical authority, superseded by `appointment-system-release.md`; dated evidence remains available for audit but is not a to-do list.
+The [19 October client handoff](project-003/2026-10-19-documentation/README.md) publishes the current outer working status/navigation and relevant historical notices alongside this application. Its manifest distinguishes original working text from link-adapted copies; no private storage or application duplicate is included.
 
-## Current position — 2026-09-15
+| Read | Purpose |
+| --- | --- |
+| [Application README](../README.md) | Actual source, local build, publication and preservation boundaries. |
+| [Current operating/source guide](appointment-system-release.md) | Implemented customer/staff flows, installed version, runtime ownership, dated evidence and parked work. |
+| [Booking details contract](../appointment-system/docs/booking-details.md) | Full saved name + phone, read-only lookup, old-code retirement, privacy and single changeover. |
+| [Booking experience](../appointment-system/docs/booking-experience.md) | Drafts, optional email, accessible selectors, authoritative receipts/PDF/requested-copy behavior. |
+| [Contained setup](../appointment-system/docs/contained-setup.md) | Official project-owned setup; do not rerun completed enrollment or alter saved policy from bootstrap. |
+| [Company recovery](../appointment-system/docs/company-recovery.md) | Protected recovery only when actually needed; no public reset or implicit credential replacement. |
+| [Historical handover commands](../appointment-system/docs/handover-commands.md) | Exact source-layout recognition and fenced conversion when applicable, not normal daily setup. |
 
-- The public website, paid booking journey, private studio tools, Google Calendar/Meet delivery, participant emails, dual Google Sheet copies, Cloudflare recovery and encrypted daily database backup are released on `astroadvicebykundansingh.com`.
-- [Plan 1](PLAN-001-booking-inquiries-and-client-calendar.md) owns the booking/inquiry requirements and operational handover. Its remaining human checks are the second offline decryption-key copy and any newly required real-provider acceptance.
-- [Plan 2](PLAN-002-testing-and-release-certification.md) owns repeatable testing and release proof. The deterministic local test system is implemented; its current checkpoint and acceptance checklist state what has been proved and what still requires hosted or human evidence.
-- [Testing guide](TESTING.md) is the practical runbook for the three certification commands and their meaning.
-- [Studio operating guide](OPERATIONS-001-booking-system.md) explains daily use, attention handling, cancellation and recovery in plain language.
+Source owners: src/App.jsx → src/Component and src/lib; api/index.py → complete appointment-system and sibling appointment-settings; proxy/build-support → guarded hosting; workers/workflows → contained operation. Public service copy belongs in src/data/publicServices.js; protected saved policy and server quotes own current fees/availability.
 
-## Numbered plans
+## Historical decisions and proof
 
-| Number | Plan | Purpose |
-| --- | --- | --- |
-| 1 | [Reliable Booking, Inquiries and Client Calendar](PLAN-001-booking-inquiries-and-client-calendar.md) | What the customer and studio system must do, including provider delivery and operations |
-| 2 | [Testing and Release Certification](PLAN-002-testing-and-release-certification.md) | How each source version is tested locally, in GitHub and on the official domain |
+[Plan1](PLAN-001-booking-inquiries-and-client-calendar.md), [its contracts](PLAN-001-implementation-contracts.md), [Plan2](PLAN-002-testing-and-release-certification.md), [old testing guide](TESTING.md), [old operating guide](OPERATIONS-001-booking-system.md), architecture/roadmap/setup files and dated evidence explain the previous engine. Their obsolete paths, credentials, commands and prelaunch status must not be used as current instructions. Read the current release guide before following any historical task or command.
 
-Do not create a competing checklist for work already owned by one of these plans. Update that plan's **Resume here** section after each meaningful stage.
-
-## Current technical references
-
-- [Architecture](../architecture.md)
-- Backend setup and operation (historical path `../src/backend/README.md`)
-- [Booking implementation contracts](PLAN-001-implementation-contracts.md)
-- [No-card hosting alignment](PLAN-001-no-card-hosting-review.md)
-- [Historical requirements and decisions](../BOOKING_ROADMAP.md)
-- [Provider/account setup](../BOOKING_SETUP.md)
-
-## Latest production evidence
-
-- [Production recovery watchdog — 2026-09-15](evidence/plan-002/2026-09-15-production-watchdog.md)
-- [Encrypted backup and isolated restore — 2026-09-15](evidence/plan-001/2026-09-15-encrypted-backup-and-restore.md)
-- [Email and dual-Sheet mirroring — 2026-09-14](evidence/plan-001/2026-09-14-email-and-sheet-mirroring.md)
-- [Appointments and service refinement — 2026-09-13](evidence/plan-001/2026-09-13-appointments-and-service-polish.md)
-- [Controlled Live payment and cancellation — 2026-09-13](evidence/plan-001/2026-09-13-live-payment-verification.md)
-
-Older files under `docs/evidence/plan-001/` are dated history. They prove only the event and version named in the file; they do not override the current plans or prove continuous health.
-
-Never store credentials, customer records, private meeting links or private workbook links in project documentation.
+The 11 October access change completed publication/database/worker readback with tests expressly excluded. Earlier accepted source/provider/backup results retain their original dates; no whole-website coverage or fresh live-customer acceptance is inferred. Visible chronological note history remains owner-deferred; broader physical-device/native-screen-reader proof remains separate. No new feature, suite or provider release follows from this documentation update.

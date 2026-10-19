@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Booking and inquiry roadmap
 
 Last updated: 2026-09-10.
@@ -8,7 +10,7 @@ Last updated: 2026-09-10.
 
 **The user approved the roadmap and its defaults. The booking foundation and private calendar are implemented and locally tested; the complete live booking system is not yet connected.** Public checkout deliberately remains disabled until verified Razorpay payments are integrated. Existing marketing-page designs are preserved.
 
-Current local preparation evidence is in [the 2026-09-10 checkpoint](docs/evidence/plan-001/2026-09-10-local-preparation.md); [BOOKING_FOUNDATION_REVIEW.md](BOOKING_FOUNDATION_REVIEW.md) retains the earlier baseline. Technical setup is in [the backend runbook](src/backend/README.md). All existing bookings/inquiries are dummy: no live-customer migration is required. Hosting/account setup and live provider delivery remain pending. Do not deploy this intermediate backend as a live paid-booking service.
+Current local preparation evidence is in [the 2026-09-10 checkpoint](docs/evidence/plan-001/2026-09-10-local-preparation.md); [BOOKING_FOUNDATION_REVIEW.md](BOOKING_FOUNDATION_REVIEW.md) retains the earlier baseline. Technical setup is in the backend runbook (historical path `src/backend/README.md`; unavailable in this maintained copy). All existing bookings/inquiries are dummy: no live-customer migration is required. Hosting/account setup and live provider delivery remain pending. Do not deploy this intermediate backend as a live paid-booking service.
 
 This document is the supporting requirement/decision record for booking, inquiries, private availability controls and their integrations. It separates confirmed requirements from recommendations. Keep current facts consistent with Plan 1 and preserve dated history. Never describe a local test as proof of a live integration.
 

@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Plan 1 — No-Pro dependency and implementation alignment review
 
 Reviewed: 2026-09-10. **Planning review completed; implementation and account/provider proof remain pending.** [Plan 1](PLAN-001-booking-inquiries-and-client-calendar.md) is the only execution tracker. Earlier options are preserved in [decision history](PLAN-001-hosting-options-history.md), not active instructions.

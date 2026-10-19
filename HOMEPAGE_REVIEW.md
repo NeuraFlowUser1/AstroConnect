@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Homepage refinement — local design review
 
 Status: refined locally on `design/page-by-page`; awaiting the designer's next review. A local Wi-Fi preview is available; nothing has been pushed, deployed publicly or submitted as a PR. Booking, email verification and backend behavior are outside this visual change.

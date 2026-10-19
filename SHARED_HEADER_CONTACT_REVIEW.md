@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Shared header, Name Change booking and Contact refinements
 
 Completed locally on 2026-09-09. This is a targeted follow-up to the designer's eight requests, not a redesign or publication. Prior homepage, Services, About and Testimonials work is preserved.
@@ -27,10 +29,10 @@ The browser-tool connection dropped after final layout captures. The remaining f
 
 ## Saved evidence
 
-- [Laptop header and service menu](.impeccable/review/rail-final-laptop-menu.png), [large desktop menu](.impeccable/review/rail-final-desktop-menu.png), [mobile menu](.impeccable/review/rail-final-mobile-menu.png).
-- [Laptop Contact panel](.impeccable/review/rail-final-laptop-contact-panel.png), [large desktop Contact panel](.impeccable/review/rail-final-desktop-contact-panel.png), [mobile Contact panel](.impeccable/review/rail-final-mobile-contact-panel.png).
-- [Homepage laptop actions](.impeccable/review/rail-final-laptop-home-actions.png), [desktop actions](.impeccable/review/rail-final-desktop-home-actions.png), [mobile actions](.impeccable/review/rail-final-mobile-home-actions.png).
-- [Name Change service chapter](.impeccable/review/rail-final-name-service.png), [detail pricing](.impeccable/review/rail-final-name-detail.png), [selected booking option](.impeccable/review/rail-final-name-booking.png).
-- [Focused regression results](.impeccable/review/astro-rail-results.json). Temporary regression runner: `/tmp/astro-rail-check.cjs`.
+- Laptop header and service menu (historical path `.impeccable/review/rail-final-laptop-menu.png`; unavailable in this maintained copy), large desktop menu (historical path `.impeccable/review/rail-final-desktop-menu.png`; unavailable in this maintained copy), mobile menu (historical path `.impeccable/review/rail-final-mobile-menu.png`; unavailable in this maintained copy).
+- Laptop Contact panel (historical path `.impeccable/review/rail-final-laptop-contact-panel.png`; unavailable in this maintained copy), large desktop Contact panel (historical path `.impeccable/review/rail-final-desktop-contact-panel.png`; unavailable in this maintained copy), mobile Contact panel (historical path `.impeccable/review/rail-final-mobile-contact-panel.png`; unavailable in this maintained copy).
+- Homepage laptop actions (historical path `.impeccable/review/rail-final-laptop-home-actions.png`; unavailable in this maintained copy), desktop actions (historical path `.impeccable/review/rail-final-desktop-home-actions.png`; unavailable in this maintained copy), mobile actions (historical path `.impeccable/review/rail-final-mobile-home-actions.png`; unavailable in this maintained copy).
+- Name Change service chapter (historical path `.impeccable/review/rail-final-name-service.png`; unavailable in this maintained copy), detail pricing (historical path `.impeccable/review/rail-final-name-detail.png`; unavailable in this maintained copy), selected booking option (historical path `.impeccable/review/rail-final-name-booking.png`; unavailable in this maintained copy).
+- Focused regression results (historical path `.impeccable/review/astro-rail-results.json`; unavailable in this maintained copy). Temporary regression runner: `/tmp/astro-rail-check.cjs`.
 
 Preview returned HTTP 200 at `http://172.29.7.110:5184/`. The older Wi-Fi forwarding address was not repaired or claimed working by this task. Preview builds deliberately target an inactive local backend, so forms cannot reach production. No commit, push, PR or deployment was performed.

@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Plan 1 — Implementation Contracts and Strengthening Review
 
 Reviewed: 2026-09-10. This is the implementation companion to [Plan 1](PLAN-001-booking-inquiries-and-client-calendar.md), **not Plan 2 or a second tracker**. Plan 1 owns status/evidence. These contracts remain the target; [the latest booking-contract/Neon checkpoint](evidence/plan-001/2026-09-10-contracts-and-neon.md) and [earlier preparation](evidence/plan-001/2026-09-10-local-preparation.md) identify implemented subsets. Remaining contracts are not implied complete. Proposals require their named decision before activation.

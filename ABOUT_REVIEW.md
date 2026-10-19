@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # About page refinement — local design review
 
 Status (2026-09-08): implemented locally on `design/page-by-page`, ready for the designer's review. No push, public deployment or PR has been made. Existing dirty homepage, navigation and footer work is preserved.
@@ -63,4 +65,4 @@ Before/after screenshots and computed checks covered 1366×768, 1536×864, 1920�
 
 The Impeccable typography assessment supported this limited change; the focused type detector's sole warning is the intentionally protected Outfit title, already documented in Design.md prose but not its Services-only frontmatter. No font replacement or unrelated documentation-system migration was made to silence that warning. Build and whitespace checks passed.
 
-Saved result: [About laptop hero typography](.impeccable/review/about-hero-laptop-type.png). Detailed before/after screenshots remain at `/tmp/about-size-before-*` and `/tmp/about-size-after-*`.
+Saved result: About laptop hero typography (historical path `.impeccable/review/about-hero-laptop-type.png`; unavailable in this maintained copy). Detailed before/after screenshots remain at `/tmp/about-size-before-*` and `/tmp/about-size-after-*`.

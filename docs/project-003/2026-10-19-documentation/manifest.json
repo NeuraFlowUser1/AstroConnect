@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-19",
+  "purpose": "Portable documentation only; no duplicate application, credentials, dependencies or private customer records.",
+  "files": [
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/README.md",
+      "saved": "client-readme.md",
+      "source_sha256": "3781110e5b9a3f0ffbebc41665aef3babda26213a8060e7692e28b97ab2c69b8",
+      "saved_sha256": "44d20f6bfc587de94aabedf431b2bb27263123410258b181838ffff824630f3b"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/PROJECT-STATUS.md",
+      "saved": "PROJECT-STATUS.md",
+      "source_sha256": "ec7a2a6578d26260e6fcc02ec63357f4cd270c1080787c050cdc11503b2d589c",
+      "saved_sha256": "8f0d02c52e482abb111b150292f963d2983f57595a85562bfd9a635e1438546c"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/README.md",
+      "saved": "AstroConnect/README.md",
+      "source_sha256": "5b0dcc6bd5c22814878e77eb7297ad1f0e8ea8bb64ece31e5104ce5a9bba65f6",
+      "saved_sha256": "3627f3c802b253bb2d25c3494b7a0aca11d7e56acca77e86f171247c5bfd74b9"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/README.md",
+      "saved": "AstroConnect/docs/README.md",
+      "source_sha256": "619e984b78304618f52620b98c94f57111709d92c68adb78f5cc37e1361beb33",
+      "saved_sha256": "bf338d7a2f8856d4bf73cde2b49f7bb1bb3f61f3bf0e2e68a2d521ff2c66f851"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "saved": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "source_sha256": "78555b6150ed51e855a0373590689e3b0a4e975d1f53fb46b33335cb1f3de1aa",
+      "saved_sha256": "923c4b4a385a68e429eaa3bbca7e15760aa7f542c6057bafab994d6577534702"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-002-testing-and-release-certification.md",
+      "saved": "AstroConnect/docs/PLAN-002-testing-and-release-certification.md",
+      "source_sha256": "95b8e726b976e4c0bff34e06e2537330e2fe3111350842622506072b66912b7a",
+      "saved_sha256": "10abce341303f64c74a6b9a197a808e5f17972490ae3dae86e20748e76c374d7"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/TESTING.md",
+      "saved": "AstroConnect/docs/TESTING.md",
+      "source_sha256": "28b22c95c221c6757eee55a0eed28d633a2170de6478be498a0c6f6670d96b0c",
+      "saved_sha256": "2259e50b990159ef26ec2fa1433b230476e189165e96374cb5875f421329d88e"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/OPERATIONS-001-booking-system.md",
+      "saved": "AstroConnect/docs/OPERATIONS-001-booking-system.md",
+      "source_sha256": "5d66850485b679a9da74dc04e0fd65b65754226170e06b23863831efa61705be",
+      "saved_sha256": "5b2b8d1d667148e68f16c3301f675879913288bad2f3d37463cbffae3e76e4eb"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_SETUP.md",
+      "saved": "AstroConnect/BOOKING_SETUP.md",
+      "source_sha256": "58d935fc66e71e4f83fd9f34a0edcc64483ca286b284f6c322813b6d2552db89",
+      "saved_sha256": "0e7c982bf3b66ee4cb8e0236ad56be617ba41d1e271e87a1ca4dc3a9f39f6699"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/architecture.md",
+      "saved": "AstroConnect/architecture.md",
+      "source_sha256": "f04ffa330aefc7f014a47d2589c68fa5c4d32058c78fd425a0e2060bc12db854",
+      "saved_sha256": "49791ea3daec2e367afd4a3f2cbb7ab9b4e188daf3b5b66823607d241c0445ed"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_ROADMAP.md",
+      "saved": "AstroConnect/BOOKING_ROADMAP.md",
+      "source_sha256": "1338d4b9b5c72f587e57ef093c1c33a054ec5a4e26ba478137e6d8a5ea857d7e",
+      "saved_sha256": "cb2c3c23908f70262645cfd68c33fc2a3889993068d0da65454a3bc086ed8a4f"
+    },
+    {
+      "source": "03-client-projects/003-astroadvice-by-kundan-singh/appointment-booking.md",
+      "saved": "appointment-booking.md",
+      "source_sha256": "b5686d500598f33c685b82cc6c756369fb45031d134440641dd4c5875a09d9c5",
+      "saved_sha256": "70f57839d6e28401eb1596f5a327f48aef06e4fd1d094e6f53ffb5c2a9f689a1"
+    }
+  ],
+  "local_only_references": [
+    {
+      "document": "AstroConnect/README.md",
+      "target": "src/backend/README.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/README.md"
+    },
+    {
+      "document": "AstroConnect/README.md",
+      "target": "BOOKING_FOUNDATION_REVIEW.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_FOUNDATION_REVIEW.md"
+    },
+    {
+      "document": "AstroConnect/README.md",
+      "target": "./Design.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/Design.md"
+    },
+    {
+      "document": "AstroConnect/README.md",
+      "target": "./DEVELOPER_RULES.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/DEVELOPER_RULES.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "../src/backend/README.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/README.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "PLAN-001-implementation-contracts.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-001-implementation-contracts.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "PLAN-001-no-card-hosting-review.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-001-no-card-hosting-review.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "evidence/plan-002/2026-09-15-production-watchdog.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-002/2026-09-15-production-watchdog.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "evidence/plan-001/2026-09-15-encrypted-backup-and-restore.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-15-encrypted-backup-and-restore.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "evidence/plan-001/2026-09-14-email-and-sheet-mirroring.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-14-email-and-sheet-mirroring.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "evidence/plan-001/2026-09-13-appointments-and-service-polish.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-13-appointments-and-service-polish.md"
+    },
+    {
+      "document": "AstroConnect/docs/README.md",
+      "target": "evidence/plan-001/2026-09-13-live-payment-verification.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-13-live-payment-verification.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-30-shared-sarsa-email-allowance.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-30-shared-sarsa-email-allowance.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-15-encrypted-backup-and-restore.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-15-encrypted-backup-and-restore.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-14-email-and-sheet-mirroring.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-14-email-and-sheet-mirroring.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-13-appointments-and-service-polish.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-13-appointments-and-service-polish.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-13-live-payment-verification.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-13-live-payment-verification.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-13-production-release.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-13-production-release.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-12-completion-candidate.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-12-completion-candidate.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-12-payment-dispatch.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-12-payment-dispatch.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-12-payment-coordination.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-12-payment-coordination.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-12-razorpay-adapter.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-12-razorpay-adapter.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-12-calendar-compact.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-12-calendar-compact.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-12-policy-pages.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-12-policy-pages.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-google-connection.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-google-connection.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-public-preview-inquiry-check.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-public-preview-inquiry-check.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-hosted-readiness-check.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-hosted-readiness-check.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-vercel-requirements-fix.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-vercel-requirements-fix.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-inquiry-observations.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-inquiry-observations.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-hosted-readiness-check.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-hosted-readiness-check.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/data/consultationCatalogue.json",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/data/consultationCatalogue.json"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/application.py",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/application.py"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/storage.py",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/storage.py"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/migrations/001_booking_foundation.sql",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/migrations/001_booking_foundation.sql"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/migrations/002_private_calendar.sql",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/migrations/002_private_calendar.sql"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/admin.py",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/admin.py"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/verification.py",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/verification.py"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/Component/Appointment_Booking.jsx",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/Component/Appointment_Booking.jsx"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/Component/EmailOtpModal.jsx",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/Component/EmailOtpModal.jsx"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/lib/formApi.js",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/lib/formApi.js"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/Component/PrivateCalendar.jsx",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/Component/PrivateCalendar.jsx"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/lib/adminApi.js",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/lib/adminApi.js"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../BOOKING_FOUNDATION_REVIEW.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_FOUNDATION_REVIEW.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../tests",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/tests"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "PLAN-001-implementation-contracts.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-001-implementation-contracts.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-10-resend-connection.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-10-resend-connection.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-inquiry-dispatch.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-inquiry-dispatch.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-10-local-preparation.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-10-local-preparation.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-10-contracts-and-neon.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-10-contracts-and-neon.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-10-resend-connection.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-10-resend-connection.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-inquiry-delivery.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-inquiry-delivery.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-inquiry-dispatch.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-inquiry-dispatch.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../workers/inquiry-delivery/README.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/workers/inquiry-delivery/README.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-expiry-cleanup.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-expiry-cleanup.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-email-allowance.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-email-allowance.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "evidence/plan-001/2026-09-11-inquiry-observations.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-11-inquiry-observations.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../src/backend/README.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/README.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-001-booking-inquiries-and-client-calendar.md",
+      "target": "../BOOKING_FOUNDATION_REVIEW.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_FOUNDATION_REVIEW.md"
+    },
+    {
+      "document": "AstroConnect/docs/PLAN-002-testing-and-release-certification.md",
+      "target": "evidence/plan-002/2026-09-15-production-watchdog.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-002/2026-09-15-production-watchdog.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_SETUP.md",
+      "target": "docs/PLAN-001-no-card-hosting-review.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-001-no-card-hosting-review.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_SETUP.md",
+      "target": "workers/inquiry-delivery/README.md#configuration-and-account-sequence",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/workers/inquiry-delivery/README.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_SETUP.md",
+      "target": "BOOKING_FOUNDATION_REVIEW.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_FOUNDATION_REVIEW.md"
+    },
+    {
+      "document": "AstroConnect/architecture.md",
+      "target": "src/backend/README.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/README.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_ROADMAP.md",
+      "target": "docs/evidence/plan-001/2026-09-10-local-preparation.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/evidence/plan-001/2026-09-10-local-preparation.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_ROADMAP.md",
+      "target": "BOOKING_FOUNDATION_REVIEW.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/BOOKING_FOUNDATION_REVIEW.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_ROADMAP.md",
+      "target": "src/backend/README.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/src/backend/README.md"
+    },
+    {
+      "document": "AstroConnect/BOOKING_ROADMAP.md",
+      "target": "docs/PLAN-001-no-card-hosting-review.md",
+      "workspace_reference": "03-client-projects/003-astroadvice-by-kundan-singh/AstroConnect/docs/PLAN-001-no-card-hosting-review.md"
+    }
+  ]
+}

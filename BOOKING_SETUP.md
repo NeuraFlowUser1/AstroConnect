@@ -1,3 +1,5 @@
+> **Historical source/design record — reviewed 19 October 2026.** Use [the current operating/source guide](docs/appointment-system-release.md) first. The dated body below describes its original source and observations; obsolete backend paths and unbundled screenshots are historical references, not present commands, current features or fresh proof. No missing evidence is reconstructed or claimed as available.
+
 # Booking provider setup
 
 Updated: 2026-09-11. This is the account/setup companion to [BOOKING_ROADMAP.md](BOOKING_ROADMAP.md), not a deployment script.
