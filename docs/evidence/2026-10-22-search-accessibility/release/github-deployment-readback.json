@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-10-22T17:32:41.510Z",
+  "route": "Existing Git main to connected Vercel; no Vercel connector or alternate deployment route",
+  "runtime_statuses": [
+    {
+      "commit": "24782b18eeeeda32d46a0efcfaffe68aae0adc39",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "target_url": "https://vercel.com/neura-flow1/astrologer-website-kundan-singh/Dd3tNF5xRKpHn4S6dtCZqh2uinqp"
+        }
+      ]
+    },
+    {
+      "commit": "f77a146c62ffe48cbedd55aa1195dbf47cb691b8",
+      "statuses": [
+        {
+          "context": "Vercel",
+          "state": "success",
+          "target_url": "https://vercel.com/neura-flow1/astrologer-website-kundan-singh/HQ7T554tbm3CXVNVNM6p8JVQkDEC"
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

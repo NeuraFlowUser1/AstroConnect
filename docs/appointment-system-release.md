@@ -1,14 +1,12 @@
 # AstroAdvice — current booking and operating guide
 
-> **19 October GitHub publication:** the owner has authorized publishing this documentation. Runtime/closeout commits quoted below identify the inspected base before this documentation follow-up; they are not an assertion that those remain the latest main revision. Git records the current revision. No customer setting or website behavior changes here.
-
-Reviewed **19 October 2026** against current source and saved release evidence. This guide describes the contained system, replacing the old SMTP/Jitsi/local-JSON backend/runbooks. It contains no secret values or private customer records.
+Reviewed **22 October 2026** against current source and the accepted [release record](evidence/2026-10-22-search-accessibility/release/README.md). This guide describes the contained system, replacing the old SMTP/Jitsi/local-JSON runbooks. It contains no secret values or private customer records.
 
 ## Installed source and publication
 
-Runtime 693872e257cead98f56afe6ebcaf38a8421f3b77 introduced name-and-phone access on 11 October; current documentation/main4b9d4bac935dba8fee6d61a48517763753e669db is independently confirmed from GitHub on 19 October. Package 1.0.0-rc.1 digest 54af467afbe152286f1f81f28f904a8b59b51e31111e6a81d93b1d340bd3720a has 576 manifest entries plus seal and migrations 001–037. Existing main→Vercel neura-flow1/astrologer-website-kundan-singh→https://astroadvicebykundansingh.com is the only publication route. Vercel stays disconnected from Codex.
+The 22 October operating/search release is live from `24782b18eeeeda32d46a0efcfaffe68aae0adc39`, followed by raw utility-head correction `f77a146c62ffe48cbedd55aa1195dbf47cb691b8`. Current Git main may include later documentation closeout. Package **1.0.1-rc.3** digest `1bb6cb1cc00a2ead7cec70de052ea78330005d7644dfc0d2e2a40ea7c287b31f` has **579** manifest files plus seal; migrations **001–037** match the existing applied ledger exactly. Existing main → Vercel `neura-flow1/astrologer-website-kundan-singh` → official domain is the only publication route. Vercel remains disconnected from Codex.
 
-The actual factory working copy is `04-shared-tools/003-appointment-booking-system/.local-runtime/name-phone-20261011/003/`. The imported client AstroConnect folder and older contained scaffold remain preserved. The maintained copy has pre-existing executable-bit noise and installer lock/rollback artifacts; a one-command `git -c core.fileMode=false status --short` separates content changes without changing Git configuration.
+The active factory working copy is `04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/003/`. The previous `name-phone-20261011/003`, older scaffold and imported client AstroConnect source remain preserved return/comparison material. The release publication worktree is separate; Git and the release record identify actual current source rather than a stale local main reference. Use `git -c core.fileMode=false status --short` to distinguish existing executable-bit noise without changing Git configuration.
 
 ## Customer journeys
 
@@ -33,7 +31,7 @@ The installed [details contract](../appointment-system/docs/booking-details.md) 
 
 Staff sign-in, Calendar consent, client record copy and agency record copy are separate resources. Schedule permission does not confer company or refund authority. Keep the existing accounts/resources/secrets; normal operation does not require another first enrollment or key handover. Company recovery uses the [protected recovery procedure](../appointment-system/docs/company-recovery.md) only when necessary.
 
-OFF closes admission and denies public booking, saved receipts, lookup, booking dashboard and exclusive assets. General content/enquiries remain independent. OFF does not cancel/refund obligations. Current astrology cancellation/rescheduling policy remains its installed/saved contract; the clinic's later staff-discretion mode is not installed here. A cancellation is not a refund or proof of money returned.
+OFF closes admission and denies public booking, saved receipts, lookup, booking dashboard and exclusive assets. General content/enquiries remain independent. OFF does not cancel/refund obligations. Only authenticated staff/company operators can cancel or move appointments; the consumer lookup/receipt grants no such authority. Existing saved standard staff constraints remain; the clinic's special past-appointment/discretion extension is a separate package line. A cancellation is not a refund or proof of money returned.
 
 The project database is authoritative; Sheets are reporting copies. Worker lanes process saved delivery work without holding transactions across provider calls. Existing monitor/backup workflows and independent provider-disabled restore remain. Never test recovery over production or replay jobs from a restored fixture against real providers.
 
@@ -41,12 +39,12 @@ The project database is authoritative; Sheets are reporting copies. Worker lanes
 
 | Owner | Responsibility |
 | --- | --- |
-| src/App.jsx, src/Component, src/data | Pages/routes, public services/reviews and frame. |
+| src/main.jsx, src/App.jsx, src/PublicApp.jsx, src/Component, src/data/page-metadata.mjs | One product-state lifetime, private browser routes, actual eager public tree and one public/utility identity registry. |
 | src/lib/BookingProduct.jsx, productState.js, useBooking.js, useEnquiry.js, booking-ui.jsx | Thin receiving-site adapters to the contained browser contracts. |
 | api/index.py | Verifies/loads sibling package with appointment-settings/project.json; no factory runtime. |
 | appointment-settings | Installation identity, declared accounts/surfaces and bootstrap. Protected values live only in project-owned settings. |
 | appointment-system | Sealed engine/browser/contracts/setup/backup/testing tools; install whole, never edit selected files. |
-| build-support/public-page-modes.mjs, proxy.js, vercel.json | Build classification and signed ON/OFF hosting behavior. |
+| src/entry-server.jsx, build-support/public-page-modes.mjs, proxy.js, vercel.json | Build-time real public HTML with fresh display-only stores; utility discovery cleanup after generator enforcement; signed ON/OFF hosting. |
 | workers, .github/workflows/appointment-* | Existing background processing, observer and encrypted backup/validation. |
 
 Use declared Node22 and lockfile: `npm ci`, `npm run dev`, `npm run build`. Python dependencies/setup follow the installed [contained setup guide](../appointment-system/docs/contained-setup.md); import/startup never applies migrations or resets company enrollment. Changing business-settings.json does not update saved policy.
@@ -55,10 +53,14 @@ Existing aliases `verify:fast`, `verify:release`, `verify:production` delegate t
 
 ## Evidence, remaining work and recovery
 
-Last completed access changeover: 11 October, matching package/database/application/worker identity and original ON intent restored; existing records/audit preserved. No tests, coverage, customer lookup, payment, email or real-provider journey ran for that change. Older8 October 93/93 focused checks, approved no-email₹1 Vedic booking/Meet/PDF/staff/dual-Sheet/requested-copy outcomes and restored₹2,100 price remain their own dated proof. Older7 October backup/isolated-restore/retention and monitor/protection results remain source-bound, not fresh continuous-health guarantees.
+The [22 October release record](evidence/2026-10-22-search-accessibility/release/README.md) and its linked complete shared/application receipts are the current proof. Matching app, Worker and guarded database identity were verified; original ON was restored at revision 12. The effective maintenance interval was 16:59:00.292–17:05:20.947 UTC (6 minutes, 20.654 seconds). Business settings remain revision 15 with the same pre-release hash. All nine read-only recovery lanes had zero due work and no attention flag at the recorded observation; this is not a future uptime guarantee.
 
-The factory shared checkpoint and original evidence under `04-shared-tools/003-appointment-booking-system/001-implementation-evidence/` own those receipts. The detailed pre-reconciliation guide is preserved outside this application in Project 003's documentation-review/2026-10-19/originals/published-source/docs/. September numbered plans/runbooks remain historical decisions, never today's setup commands.
+Fourteen ordinary routes contain their actual public React body, exact metadata and structured facts in original HTML. All four utility paths (six query/path cases) remain noindex with no raw canonical or public graph; the sitemap lists only the fourteen ordinary routes. Public raw/header checks and actual hosted desktop/phone browser reads pass. The broad local gate retains all 37 JavaScript and both Python receiving owners without exclusions, plus the complete sealed neutral package; see receipts for numerators, denominators, domains, native skips and observation limits.
 
-**Deferred:** owner-requested chronological enquiry note/action UI (existing staff_reviews already stores history); broader whole-marketing-site coverage; physical-phone/native-screen-reader proof. Earlier intermittent dashboard startup evidence has no established cause or claimed repair. No outstanding key-save, consent or switch action remains from the accepted 11 October change. Routine provider/monitor health needs a fresh authorized observation before a current-health claim.
+The release changes browser request cadence/lifecycle, build-time public discovery, media sizing and focused accessibility behavior. It preserves service content, existing motion, saved policy/fees, Calendar/Meet, payments, mail, staff permissions, customer records and provider accounts. No real 003 booking, message, payment, refund or delivery exercise was triggered for this release. Earlier 8 October real booking/Meet/PDF/staff/records outcomes remain dated evidence and are not relabelled as new provider acceptance.
 
-No new provider action, full suite, package release or clinical policy change is assigned. For a future incompatible change, agree the exact OFF transition, whole-package install, ledger/permission compatibility and source/database/worker/application readback first. Old552/035 or code-era builds are not automatically compatible with nullable/V3 bookings and retired code authority. Keep booking OFF and repair forward rather than silently reverting data contracts.
+**Remaining:** correct-owner Search Console follow-up for the eligible public Contact/Services pages, future crawl/index/rank observation, normal 24-hour/7-day request/usage observation, physical-device/native-screen-reader checks, and client confirmation of the existing About accreditation/Prashna timing wording (D07). These do not invalidate the accepted technical release. Keep booking/receipt utilities excluded; do not request their indexing. Persistent-motion conformance retains its explicit approved-policy limit. No public claim, credential or guarantee was invented by this patch.
+
+**Parked:** the owner-requested chronological enquiry note/action interface; the existing staff review data remains. This programme does not add that product feature or change business policy. The original factory evidence under `04-shared-tools/003-appointment-booking-system/001-implementation-evidence/` and September plans remain historical context, not setup instructions.
+
+For future compatibility work, preserve both return app/Worker/binding identities, keep ordinary pages available, close booking only through the official company control, and use the single-connection guarded expected-digest/idle-lease transaction. Never call `configure_worker_release` unguarded or force-clear a lease. A partial deployment must stay closed until the actual compatible pair is read back; do not infer publication from a successful push. Old code-era or 552/035 packages are not automatic data-compatible rollback targets. The exact 22 October return identities and unused rollback procedure are recorded with the release.

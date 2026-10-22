@@ -1,0 +1,10 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[\n  {\n    \"installation_id\": \"daccb464-1036-4d35-be47-8ef0f3c4a516\",\n    \"project_id\": \"003\",\n    \"environment\": \"production\",\n    \"origin\": \"https://astroadvicebykundansingh.com\",\n    \"enabled\": true,\n    \"requested_enabled\": true,\n    \"restore_generation\": \"5b2dd7fd-a7b4-4237-8e4c-b208a461f72f\",\n    \"revision\": \"12\",\n    \"winning_operation\": \"f18fd6d1-68e0-49e9-873e-0fb75513aea1\",\n    \"release_digest\": \"1bb6cb1cc00a2ead7cec70de052ea78330005d7644dfc0d2e2a40ea7c287b31f\",\n    \"active_run\": null,\n    \"active_until\": null,\n    \"migration_count\": \"37\"\n  }\n]"
+    }
+  ],
+  "structuredContent": null,
+  "isError": false
+}

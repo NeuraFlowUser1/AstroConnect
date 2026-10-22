@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-22T17:06:23.292Z",
+  "observed_at": "2026-10-22T17:18:03.283Z",
   "origin": "https://astroadvicebykundansingh.com",
   "public": [
     {
@@ -191,48 +191,48 @@
       "status": 200,
       "robots": "noindex, nofollow",
       "header_robots": "noindex, nofollow",
-      "canonical": 1,
-      "graphs": 1
+      "canonical": 0,
+      "graphs": 0
     },
     {
       "path": "/booking?service=1",
       "status": 200,
       "robots": "noindex, nofollow",
       "header_robots": "noindex, nofollow",
-      "canonical": 1,
-      "graphs": 1
+      "canonical": 0,
+      "graphs": 0
     },
     {
       "path": "/booking?service=numerology",
       "status": 200,
       "robots": "noindex, nofollow",
       "header_robots": "noindex, nofollow",
-      "canonical": 1,
-      "graphs": 1
+      "canonical": 0,
+      "graphs": 0
     },
     {
       "path": "/booking/receipt",
       "status": 200,
       "robots": "noindex, nofollow",
       "header_robots": "noindex, nofollow",
-      "canonical": 1,
-      "graphs": 1
+      "canonical": 0,
+      "graphs": 0
     },
     {
       "path": "/booking/access",
       "status": 200,
       "robots": "noindex, nofollow",
       "header_robots": "noindex, nofollow",
-      "canonical": 1,
-      "graphs": 1
+      "canonical": 0,
+      "graphs": 0
     },
     {
       "path": "/booking-help",
       "status": 200,
       "robots": "noindex, nofollow",
       "header_robots": "noindex, nofollow",
-      "canonical": 1,
-      "graphs": 1
+      "canonical": 0,
+      "graphs": 0
     }
   ],
   "resources": [
@@ -286,15 +286,8 @@
       "status": 404
     }
   ],
-  "failures": [
-    "/booking:utility_no_discovery_graph",
-    "/booking?service=1:utility_no_discovery_graph",
-    "/booking?service=numerology:utility_no_discovery_graph",
-    "/booking/receipt:utility_no_discovery_graph",
-    "/booking/access:utility_no_discovery_graph",
-    "/booking-help:utility_no_discovery_graph"
-  ],
+  "failures": [],
   "customer_actions": 0,
   "provider_dispatch": 0,
-  "passed": false
+  "passed": true
 }

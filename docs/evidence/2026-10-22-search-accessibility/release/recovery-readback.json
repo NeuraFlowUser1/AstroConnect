@@ -1,0 +1,10 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "[\n  {\n    \"read_only_recovery\": {\n      \"lanes\": [\n        {\n          \"lane\": \"booking_records\",\n          \"due_count\": 0,\n          \"next_due_at\": \"2026-10-22T20:34:01.272355+00:00\"\n        },\n        {\n          \"lane\": \"control_publication\",\n          \"due_count\": 0,\n          \"next_due_at\": \"2026-10-22T17:32:59.648998+00:00\"\n        },\n        {\n          \"lane\": \"email_events\",\n          \"due_count\": 0,\n          \"next_due_at\": null\n        },\n        {\n          \"lane\": \"enquiry_records\",\n          \"due_count\": 0,\n          \"next_due_at\": \"2026-10-22T20:48:26.427803+00:00\"\n        },\n        {\n          \"lane\": \"maintenance\",\n          \"due_count\": 0,\n          \"next_due_at\": \"2026-10-24T08:28:00+00:00\"\n        },\n        {\n          \"lane\": \"notification_email\",\n          \"due_count\": 0,\n          \"next_due_at\": null\n        },\n        {\n          \"lane\": \"payment\",\n          \"due_count\": 0,\n          \"next_due_at\": \"2026-10-23T08:04:07.748288+00:00\"\n        },\n        {\n          \"lane\": \"payment_events\",\n          \"due_count\": 0,\n          \"next_due_at\": null\n        },\n        {\n          \"lane\": \"verification_email\",\n          \"due_count\": 0,\n          \"next_due_at\": null\n        }\n      ],\n      \"attention\": false,\n      \"observed_at\": \"2026-10-22T17:17:59.650809+00:00\"\n    }\n  }\n]"
+    }
+  ],
+  "structuredContent": null,
+  "isError": false
+}

@@ -2,7 +2,7 @@
 
 Reviewed **22 October 2026**. This is the maintained application's current reading route. The original September plans and old runbooks are retained as history, not the present engine or a request to repeat setup.
 
-The [19 October client handoff](project-003/2026-10-19-documentation/README.md) publishes the current outer working status/navigation and relevant historical notices alongside this application. Its manifest distinguishes original working text from link-adapted copies; no private storage or application duplicate is included.
+The [19 October client handoff](project-003/2026-10-19-documentation/README.md) preserves the earlier outer working status/navigation and relevant historical notices. Its manifest distinguishes original working text from link-adapted copies; no private storage or application duplicate is included. The current application and release state belongs to the 22 October guide and release record below; do not use that dated handoff as a second active tracker.
 
 | Read | Purpose |
 | --- | --- |
@@ -16,9 +16,9 @@ The [19 October client handoff](project-003/2026-10-19-documentation/README.md) 
 
 Source owners: src/App.jsx → src/Component and src/lib; api/index.py → complete appointment-system and sibling appointment-settings; proxy/build-support → guarded hosting; workers/workflows → contained operation. Public service copy belongs in src/data/publicServices.js; protected saved policy and server quotes own current fees/availability.
 
-## Current public-page candidate
+## Current published public pages
 
-The [22 October search/accessibility implementation](evidence/2026-10-22-search-accessibility/README.md) records the actual public HTML renderer, single metadata owner, responsive media and focused interface changes. It is an isolated local candidate; publication and hosted acceptance remain with the coordinating four-project release. The current source chain is `src/main.jsx` → `src/App.jsx` → `src/PublicApp.jsx`; public page identity belongs in `src/data/page-metadata.mjs`. Do not use the older title/sitemap tables as a second source.
+The [22 October search/accessibility implementation](evidence/2026-10-22-search-accessibility/README.md) records the actual public HTML renderer, single metadata owner, responsive media and focused interface changes. It is published through the existing Git-linked route, with matching app/Worker/database identity, original booking ON intent restored and current hosted HTML/browser acceptance. The [release record](evidence/2026-10-22-search-accessibility/release/README.md) contains exact evidence and remaining observation boundaries. The current source chain is `src/main.jsx` → `src/App.jsx` → `src/PublicApp.jsx`; public page identity belongs in `src/data/page-metadata.mjs`. Do not use the older title/sitemap tables as a second source.
 
 ## Historical decisions and proof
 

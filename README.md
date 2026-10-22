@@ -1,14 +1,14 @@
 # AstroAdvice by Kundan Singh — maintained application
 
-> **19 October GitHub publication:** the owner has authorized publishing this documentation. Runtime/closeout commits quoted below identify the inspected base before this documentation follow-up; they are not an assertion that those remain the latest main revision. Git records the current revision. No customer setting or website behavior changes here.
+Reviewed **22 October 2026**. Official website: **https://astroadvicebykundansingh.com**. Repository: **NeuraFlowUser1/AstroConnect**. Start with [the documentation index](docs/README.md) and [the operating/source guide](docs/appointment-system-release.md).
 
-Reviewed **19 October 2026**. Official website: **https://astroadvicebykundansingh.com**. Repository: **NeuraFlowUser1/AstroConnect**. Start with [the current documentation index](docs/README.md) and [the operating/source guide](docs/appointment-system-release.md).
+The public search/accessibility and shared request-efficiency update is **published and booking is ON**. Runtime release commit `24782b18eeeeda32d46a0efcfaffe68aae0adc39` and the raw-utility HTML correction `f77a146c62ffe48cbedd55aa1195dbf47cb691b8` are accepted through the existing Git-linked route. Later documentation commits do not change the runtime contract. The installed sealed package is **1.0.1-rc.3**, digest `1bb6cb1cc00a2ead7cec70de052ea78330005d7644dfc0d2e2a40ea7c287b31f`: **579** manifest entries plus release.json; all **37** existing migration hashes are unchanged.
 
-The 11 October shared name-and-phone booking access is published. Runtime source693872e257cead98f56afe6ebcaf38a8421f3b77; documentation closeout/main 4b9d4bac935dba8fee6d61a48517763753e669db, independently read on 19 October. The installed package is 1.0.0-rc.1, digest 54af467afbe152286f1f81f28f904a8b59b51e31111e6a81d93b1d340bd3720a: 576 manifest entries plus release.json, migrations 001–037.
+The [22 October release record](docs/evidence/2026-10-22-search-accessibility/release/README.md) owns exact app/Worker/database identity, complete source coverage, public browser/HTML proof, the short maintenance interval, return identities and explicit remaining observation/client-fact boundaries.
 
 ## How this application is organized
 
-- `src/App.jsx`, `src/Component/` and `src/data/` own public routing, pages, shared frame, public services and reviews.
+- `src/App.jsx` adds private browser routes to `src/PublicApp.jsx`; the latter owns the actual eager public tree. `src/data/page-metadata.mjs` is the single public/utility discovery identity owner.
 - `src/lib/BookingProduct.jsx`, productState/useBooking/useEnquiry and booking-ui bindings adapt the complete contained system without creating another booking implementation.
 - `api/index.py` creates the application from sibling `appointment-system/` and `appointment-settings/project.json`. Settings own this client; no factory or other-client runtime import.
 - `build-support/public-page-modes.mjs`, `proxy.js`, vercel.json and classified settings preserve guarded ON/OFF page/assets and private routes.
@@ -18,9 +18,9 @@ Customers use `/booking/receipt` with both saved full name and phone; old help/a
 
 ## Local work and publication
 
-Use the Node version declared by .nvmrc/package.json. With the committed lockfile, run `npm ci`, then `npm run dev`; `npm run build` builds the website and guarded public-page modes. Backend setup/operation uses the installed [contained setup guide](appointment-system/docs/contained-setup.md), with protected project credentials. Import/startup never authorizes migration, enrollment or provider actions.
+Use the Node version declared by .nvmrc/package.json. With the committed lockfile, run `npm ci`, then `npm run dev`; `npm run build` builds the website and guarded public-page modes, including real public React HTML at build time. No request-time rendering service is added. Backend setup/operation uses the installed [contained setup guide](appointment-system/docs/contained-setup.md), with protected project credentials. Import/startup never authorizes migration, enrollment or provider actions.
 
-`verify:fast`, `verify:release` and `verify:production` exist; [the current guide](docs/appointment-system-release.md) defines their scope and required isolated fixtures. Even the fast alias runs a broad contained selection: no suite is part of this documentation review. Full local/hosted checks require explicit scope. Do not use the retired SMTP/Jitsi/local-JSON/service-account runbooks as setup instructions.
+`verify:fast`, `verify:release` and `verify:production` exist; [the current guide](docs/appointment-system-release.md) defines their scope and required isolated fixtures. These wrappers have narrower declared boundaries than the complete 22 October source and hosted gates. Full local/hosted checks still require explicit scope for future work. Do not use the retired SMTP/Jitsi/local-JSON/service-account runbooks as setup instructions.
 
 Publish only through existing Git main → connected Vercel neura-flow1/astrologer-website-kundan-singh → official domain, after applicable approval. Keep Vercel disconnected from Codex. Verify actual published assets separately from Git success. An older package is not a safe automatic rollback after retired code/nullable-email migrations; keep booking OFF and use a compatible repair if needed.
 

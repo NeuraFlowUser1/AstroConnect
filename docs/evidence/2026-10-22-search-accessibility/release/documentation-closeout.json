@@ -1,0 +1,28 @@
+{
+  "observed_at": "2026-10-22T17:34:03.076Z",
+  "scope": "Project003 current application README, documentation index, operating guide, public implementation and accepted release receipts",
+  "current_links": {
+    "files": 7,
+    "local_links": 31,
+    "missing": 0,
+    "passed": true
+  },
+  "privacy_check": {
+    "command": "node scripts/check-tracked-secrets.mjs --history",
+    "history_revisions": 37,
+    "current_files": 973,
+    "passed": true,
+    "boundary": "Measured before adding this receipt; no credential values printed."
+  },
+  "runtime_commit": "f77a146c62ffe48cbedd55aa1195dbf47cb691b8",
+  "runtime_changed_by_closeout": false,
+  "customer_actions": 0,
+  "provider_jobs_forced": 0,
+  "remaining": [
+    "Correct-owner Google Search Console follow-up and subsequent indexing/ranking observations",
+    "Normal 24-hour/seven-day usage/request observation",
+    "Existing D07 client fact wording decision",
+    "Physical-device/native assistive-technology and persistent-motion conformance limits",
+    "Separately parked chronological enquiry note/action interface"
+  ]
+}

@@ -1,6 +1,6 @@
-# Project 003 public pages and interface candidate
+# Project 003 published public pages and interface
 
-22 October 2026. Local implementation of the approved four-project operating/search programme. The preserved earlier worktree remains untouched. The candidate has completed its local gates. Its compatible website/worker/release-binding changeover and hosted readback are the next approved release step; no live change is inferred from these local results. Project 003 Vercel remains disconnected from Codex.
+22 October 2026. Local implementation of the approved four-project operating/search programme. The preserved earlier worktree remains untouched. The compatible website/Worker/database changeover is complete, original booking ON restored, and raw/header plus desktop/phone hosted gates pass. The [release record](release/README.md) distinguishes current source qualification, actual publication, provider configuration and remaining observation/client-fact boundaries. Project 003 Vercel remains disconnected from Codex.
 
 ## Current source owners
 

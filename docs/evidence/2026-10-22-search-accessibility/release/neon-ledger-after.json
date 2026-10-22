@@ -1,0 +1,155 @@
+{
+  "observed_at": "2026-10-22T17:26:14.391Z",
+  "migration_count": 37,
+  "allHashesUnchanged": true,
+  "rows": [
+    {
+      "version": "001_initial_schema.sql",
+      "sha256": "172673631d5567f2e97b5b89c0aef74c16a2ed02fffa7e07682425c68aefee78"
+    },
+    {
+      "version": "002_checkout_resume_authority.sql",
+      "sha256": "8abc3d90a2705618a36288b2f19f9fbf5ba6fa5f359911c232f807f12aace7d8"
+    },
+    {
+      "version": "003_checkout_completion_barrier.sql",
+      "sha256": "3f37152ff699655e05541727bbdb0d3a0603a3fdf38bdbf53e5fccccb7182c37"
+    },
+    {
+      "version": "004_conversion_authority.sql",
+      "sha256": "7b83c2296a51198d458c7688517e2dad6c576d0bc6f1647f2c460e5a6f8b288c"
+    },
+    {
+      "version": "005_journal_readiness.sql",
+      "sha256": "f9225537cb0079ad18818df8577c81b45ca313de1e17c1cd68a427b9c6de0ecf"
+    },
+    {
+      "version": "006_owned_historical_import.sql",
+      "sha256": "333ff874b5ecd60f6ef49436d62058d4a0b23343b3823eb6c5a3559958c119ee"
+    },
+    {
+      "version": "007_historical_admission_order.sql",
+      "sha256": "2a32bb112fd1db33d449c4d22e6c92d31a2df142e463a863a2c8eeee07d1e6af"
+    },
+    {
+      "version": "008_historical_order_evidence.sql",
+      "sha256": "961c015745fb8916819c59c3a6ac264006225225e11ebaed2d0ecde3dbe1477e"
+    },
+    {
+      "version": "009_conversion_verification.sql",
+      "sha256": "0256753f2d85126cbcda17e78c1629135db1a5a7f89f2c7aa01e560385c57c93"
+    },
+    {
+      "version": "010_historical_late_move.sql",
+      "sha256": "916d1a71c7986f389b6f7bf523f088ddb9b063f0e7f87a5f5134b6291f49d19e"
+    },
+    {
+      "version": "011_retained_mail_protocols.sql",
+      "sha256": "5c0706df7a86af79bd283d3ad1b18dd7d217a4d5ee9ca9739074bdac1eba066e"
+    },
+    {
+      "version": "012_historical_sending_allowance.sql",
+      "sha256": "25c5c4ca78987609523436b3fd04e0fb01acdd71534165eed04ad304f25a060b"
+    },
+    {
+      "version": "013_historical_workbook_protocols.sql",
+      "sha256": "7983cc0969e98b33f9f8b01178dd02d2e0da7bf85e07d1526d1d867b5c137ead"
+    },
+    {
+      "version": "014_retained_email_reports.sql",
+      "sha256": "b6ebd5350493fbe902e3ae743f3abc310e0405e0d9e11592435399e08e584356"
+    },
+    {
+      "version": "015_utc_sending_allowance.sql",
+      "sha256": "2acdf8ccff1050c036481a55ac737eeddcbc9f17bb7319bd9bd726c0a3135262"
+    },
+    {
+      "version": "016_retained_mail_configuration.sql",
+      "sha256": "731fbb647c983cd780b8cd7d1499ba73deaa41154a1e1ae2384b91f9395f6915"
+    },
+    {
+      "version": "017_control_writer_lock_order.sql",
+      "sha256": "5e91e91644b962762ae9877639dd7f71b3d9f5f8e4f5046f1717c9313e1ce405"
+    },
+    {
+      "version": "018_receipt_recovery_key_provenance.sql",
+      "sha256": "eb72ca931ea20963e5d921eaae5a8fd032f0ac46150985b7b765bc2f9cb4b068"
+    },
+    {
+      "version": "019_recovery_booking_metadata.sql",
+      "sha256": "c0ac3bb28a04f541ba2f9f81998857266aa658c3abe1ad204b663be9c22e2096"
+    },
+    {
+      "version": "020_support_full_snapshot_and_meeting.sql",
+      "sha256": "1bd0dc6cdd82f47dce0d679aae169efa61021ece46c15cb683a10dab86c5b82a"
+    },
+    {
+      "version": "021_staff_pending_results.sql",
+      "sha256": "fef73fe42634d6f90a245dd58989e176e8d470bdfdd90dda87a93cd7974ba99f"
+    },
+    {
+      "version": "022_staff_time_context.sql",
+      "sha256": "0795efbd6cf83c86067ea572751490e16aa0c31b339702ac1f399220923f0fa6"
+    },
+    {
+      "version": "023_historical_recovery_formats.sql",
+      "sha256": "c3ef11dbe318db5ebb4b22458ae9526983fc1685c8bb054150844f179ee6b96a"
+    },
+    {
+      "version": "024_retired_mail_evidence.sql",
+      "sha256": "03cf49626630051b85c53e56df9c2c378ce0646c8861822fbdb1309fcafe2603"
+    },
+    {
+      "version": "025_historical_staff_support.sql",
+      "sha256": "e2996f9a754d20accb7465e80b1a0b1a068f0e231c6f5e8bcc19c6d88e6e2f3b"
+    },
+    {
+      "version": "026_current_sheet_records.sql",
+      "sha256": "8373b1be5b2ef5eb5af11953751697447c15c8c1f552652edce1fc5459bf3971"
+    },
+    {
+      "version": "027_workbook_named_permissions.sql",
+      "sha256": "cf453e5ccca51706b23fb2092cf355f2e1221a6f4eaaaf1db12b3851a334e12e"
+    },
+    {
+      "version": "028_retained_enquiry_privacy.sql",
+      "sha256": "541b92c425f1394d76ce9822cc0219676ba6a19ff7b7692a0b752cb5ddbd24b2"
+    },
+    {
+      "version": "029_company_password_recovery.sql",
+      "sha256": "025805ee43105f01a9f87b7fa67ab031d4d601c40232f543b01826d81f295726"
+    },
+    {
+      "version": "030_independent_enquiry_admission.sql",
+      "sha256": "92d8172aeda8b14780a1008f54397aea46a07842c81a6d36829db8f7fc7d4ffa"
+    },
+    {
+      "version": "031_accepted_meeting_changes.sql",
+      "sha256": "71ad28fb22206dd00e454a46dea8b44c86acb9e5a1a5100e716afeb578b66572"
+    },
+    {
+      "version": "032_older_financial_observations.sql",
+      "sha256": "5e2ab656a86323947be529a6155135c3166ba00414762d4aa819efbc4c06311c"
+    },
+    {
+      "version": "033_enquiry_issue_filter.sql",
+      "sha256": "60e00b511c0919d1736a67f8a12eec033b76b8fb118cea329e60c1c18914228f"
+    },
+    {
+      "version": "034_restore_pending_google_consent.sql",
+      "sha256": "3ef31ad5ba82deb1826fb143bf32b37b8f430138b16f727db684980c51d23c62"
+    },
+    {
+      "version": "035_booking_code_event_provider_column.sql",
+      "sha256": "1de3b2679048e322976d1d2969c9e6b990a23fe4e47c7c38bbd977570122bb32"
+    },
+    {
+      "version": "036_booking_experience.sql",
+      "sha256": "836db83666630dee7c8f55e7b9532a618eaed9793ad9e73765bb629787e2a9f8"
+    },
+    {
+      "version": "037_name_phone_booking_details.sql",
+      "sha256": "0b85be82c80dda9cdeb0a9a1069305a1c99fc7007b5bd130eca11b4d41782220"
+    }
+  ]
+}
