@@ -7,18 +7,26 @@
     "originalMapsRebuilt": true,
     "zeroBaselinePreserved": true,
     "rejections": [],
+    "invalidatedCounters": [
+      {
+        "pool": "public-build-clean-8.json",
+        "owner": "build-support/public-page-modes.mjs",
+        "oldSource": "5b9063d6f4e2926343c73383e718bbe8d7ce241f92ed6e1f2cc928457f129c19",
+        "newSource": "75ce1d75a4393ef91df6b6dd9e345ff5be560c965dad33f116e736a49480c72b"
+      }
+    ],
     "summary": {
       "lines": {
-        "total": 1013,
-        "covered": 984,
+        "total": 1016,
+        "covered": 987,
         "skipped": 0,
-        "pct": 97.13
+        "pct": 97.14
       },
       "statements": {
-        "total": 1308,
-        "covered": 1241,
+        "total": 1311,
+        "covered": 1244,
         "skipped": 0,
-        "pct": 94.87
+        "pct": 94.88
       },
       "functions": {
         "total": 353,
@@ -111,11 +119,25 @@
         "compressed_sha256": "1c4fd4cc54997c0b67e4adb917debd737aa26e79c4f0320a7bb43f19a3b23432"
       },
       {
+        "pool": "public-utility-final-1684970.json",
+        "sha256": "fc1ef26329f1cf4a2bc14fb90e1f930a8efc8cd727c0fa4847926102e31a3418",
+        "owners": 1,
+        "observations": 1,
+        "compressed_sha256": "005ec6db33a2327a30fac2e4935244fb6391cb8ba4a96ec3ef41af159b71e3ae"
+      },
+      {
         "pool": "public-build-clean-8.json",
         "sha256": "158993d5f2ae80704de9726cdae8e525a76392d030ca7adebcad121211a671b7",
-        "owners": 2,
+        "owners": 1,
         "observations": 1,
         "compressed_sha256": "9d0080da0fd00002ad094cafc22fc90295df61972cdd38047a97c82a363e0948"
+      },
+      {
+        "pool": "public-build-utility-final-8.json",
+        "sha256": "6cbf928031afe16bfcb4c5632c489c59d38ba54ca8cdc03ab5b4fc996e95f26b",
+        "owners": 2,
+        "observations": 1,
+        "compressed_sha256": "19559488fb291f29976a674c1832087c2405b84a7a66343c01d864479566f422"
       }
     ]
   },

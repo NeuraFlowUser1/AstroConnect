@@ -1,0 +1,404 @@
+{
+  "reason": "Hosted gate found correct utility noindex but inherited raw canonical/base-shell graph; fix receiving build finalization and prove raw utility outputs.",
+  "file": "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/003/build-support/public-page-modes.mjs",
+  "relative": "build-support/public-page-modes.mjs",
+  "oldSource": "5b9063d6f4e2926343c73383e718bbe8d7ce241f92ed6e1f2cc928457f129c19",
+  "newSource": "75ce1d75a4393ef91df6b6dd9e345ff5be560c965dad33f116e736a49480c72b",
+  "oldBaseline": {
+    "path": "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/003/build-support/public-page-modes.mjs",
+    "statementMap": {
+      "0": {
+        "start": {
+          "line": 10,
+          "column": 11
+        },
+        "end": {
+          "line": 10,
+          "column": 44
+        }
+      },
+      "1": {
+        "start": {
+          "line": 10,
+          "column": 50
+        },
+        "end": {
+          "line": 10,
+          "column": 70
+        }
+      },
+      "2": {
+        "start": {
+          "line": 11,
+          "column": 12
+        },
+        "end": {
+          "line": 11,
+          "column": 59
+        }
+      },
+      "3": {
+        "start": {
+          "line": 13,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
+          "column": 239
+        }
+      },
+      "4": {
+        "start": {
+          "line": 14,
+          "column": 25
+        },
+        "end": {
+          "line": 14,
+          "column": 101
+        }
+      },
+      "5": {
+        "start": {
+          "line": 15,
+          "column": 19
+        },
+        "end": {
+          "line": 15,
+          "column": 36
+        }
+      },
+      "6": {
+        "start": {
+          "line": 16,
+          "column": 15
+        },
+        "end": {
+          "line": 16,
+          "column": 217
+        }
+      },
+      "7": {
+        "start": {
+          "line": 17,
+          "column": 16
+        },
+        "end": {
+          "line": 17,
+          "column": 317
+        }
+      },
+      "8": {
+        "start": {
+          "line": 17,
+          "column": 22
+        },
+        "end": {
+          "line": 17,
+          "column": 317
+        }
+      },
+      "9": {
+        "start": {
+          "line": 18,
+          "column": 19
+        },
+        "end": {
+          "line": 18,
+          "column": 21
+        }
+      },
+      "10": {
+        "start": {
+          "line": 19,
+          "column": 0
+        },
+        "end": {
+          "line": 25,
+          "column": 5
+        }
+      },
+      "11": {
+        "start": {
+          "line": 21,
+          "column": 2
+        },
+        "end": {
+          "line": 21,
+          "column": 25
+        }
+      },
+      "12": {
+        "start": {
+          "line": 21,
+          "column": 13
+        },
+        "end": {
+          "line": 21,
+          "column": 25
+        }
+      },
+      "13": {
+        "start": {
+          "line": 22,
+          "column": 13
+        },
+        "end": {
+          "line": 22,
+          "column": 40
+        }
+      },
+      "14": {
+        "start": {
+          "line": 23,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
+          "column": 112
+        }
+      },
+      "15": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 270
+        }
+      },
+      "16": {
+        "start": {
+          "line": 26,
+          "column": 0
+        },
+        "end": {
+          "line": 26,
+          "column": 90
+        }
+      },
+      "17": {
+        "start": {
+          "line": 27,
+          "column": 0
+        },
+        "end": {
+          "line": 27,
+          "column": 141
+        }
+      },
+      "18": {
+        "start": {
+          "line": 28,
+          "column": 0
+        },
+        "end": {
+          "line": 28,
+          "column": 108
+        }
+      }
+    },
+    "fnMap": {
+      "0": {
+        "name": "(anonymous_0)",
+        "decl": {
+          "start": {
+            "line": 17,
+            "column": 16
+          },
+          "end": {
+            "line": 17,
+            "column": 17
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 22
+          },
+          "end": {
+            "line": 17,
+            "column": 317
+          }
+        },
+        "line": 17
+      },
+      "1": {
+        "name": "(anonymous_1)",
+        "decl": {
+          "start": {
+            "line": 20,
+            "column": 12
+          },
+          "end": {
+            "line": 20,
+            "column": 13
+          }
+        },
+        "loc": {
+          "start": {
+            "line": 20,
+            "column": 40
+          },
+          "end": {
+            "line": 25,
+            "column": 2
+          }
+        },
+        "line": 20
+      }
+    },
+    "branchMap": {
+      "0": {
+        "loc": {
+          "start": {
+            "line": 21,
+            "column": 2
+          },
+          "end": {
+            "line": 21,
+            "column": 25
+          }
+        },
+        "type": "if",
+        "locations": [
+          {
+            "start": {
+              "line": 21,
+              "column": 2
+            },
+            "end": {
+              "line": 21,
+              "column": 25
+            }
+          },
+          {
+            "start": {},
+            "end": {}
+          }
+        ],
+        "line": 21
+      },
+      "1": {
+        "loc": {
+          "start": {
+            "line": 23,
+            "column": 69
+          },
+          "end": {
+            "line": 23,
+            "column": 101
+          }
+        },
+        "type": "binary-expr",
+        "locations": [
+          {
+            "start": {
+              "line": 23,
+              "column": 69
+            },
+            "end": {
+              "line": 23,
+              "column": 97
+            }
+          },
+          {
+            "start": {
+              "line": 23,
+              "column": 99
+            },
+            "end": {
+              "line": 23,
+              "column": 101
+            }
+          }
+        ],
+        "line": 23
+      }
+    },
+    "s": {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0
+    },
+    "f": {
+      "0": 0,
+      "1": 0
+    },
+    "b": {
+      "0": [
+        0,
+        0
+      ],
+      "1": [
+        0,
+        0
+      ]
+    }
+  },
+  "priorSuccessfulPools": [
+    {
+      "pool": "server.json",
+      "sha256": "259d31a20b3d81e4935194d15d40ccddb0fe5304b4dd1f0a0729c2d4aca66a85"
+    },
+    {
+      "pool": "browser.json",
+      "sha256": "b5adaeb65410e033483ad5ef6c9932f1c56bf7e1ecb526b0d50ea1c9322a2e9d"
+    },
+    {
+      "pool": "dormant-components.json",
+      "sha256": "c7feeeb8e0d8a35b38a0c4c40d7ccca469581ebf1bb02b443160be309cabda9c"
+    },
+    {
+      "pool": "forms-motion.json",
+      "sha256": "5de2700c3d6cd9b15d779ce6b9c7eb299c65d8993aa1a66254e7048740f6c72c"
+    },
+    {
+      "pool": "secondary-controls.json",
+      "sha256": "493ab8c235d97627d73878c9eb2514212334cdc55b59a1c621fa896547b93ccc"
+    },
+    {
+      "pool": "utilities-browser.json",
+      "sha256": "bd09dc04386953938b7a69e701e369fd3721b47dc88b71e70797cc9ee9835b53"
+    },
+    {
+      "pool": "commands-clean-8.json",
+      "sha256": "06f73fc6c3039d92920bce39a9509617c7c32b7d939103bc811a264b1d73db5b"
+    },
+    {
+      "pool": "publication-guards-clean-8.json",
+      "sha256": "8b415c8a61adcdb144749a6ee74cf150db64c3568a9abfce4528699336ad5690"
+    },
+    {
+      "pool": "native-1389753.json",
+      "sha256": "f8939d2cc28767bcbe735d38f4b28b857385db9ecf638ab3ce2e447ffd04ebbc"
+    },
+    {
+      "pool": "public-final-8.json",
+      "sha256": "ff2309ea2598694f8e1051eb3282b9478fe8fc10a4b62fb1c8e8d1d74def1265"
+    },
+    {
+      "pool": "public-build-clean-8.json",
+      "sha256": "158993d5f2ae80704de9726cdae8e525a76392d030ca7adebcad121211a671b7"
+    }
+  ],
+  "unchangedOwners": 36,
+  "currentOwners": 37,
+  "sourceExclusions": 0
+}

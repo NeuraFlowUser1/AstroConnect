@@ -23,6 +23,13 @@ generateModes({dist,shell,pages:{...publicPages,...utilityPages},project,manifes
   pageEvidence.push({path,mode,bodyBytes:Buffer.byteLength(body),h1:(body.match(/<h1(?: |>|\n)/g)||[]).length});
   return cleanHead(html).replace('</head>',metadataTags(path)+'</head>').replace('<html lang="en">','<html lang="en" data-public-bound="false">').replace('<div id="root"></div>',`<div id="root" data-public-html="1" data-public-path="${escapeHtml(path)}">${body}</div>`);
  }});
+// Utility discovery identity belongs to this site's reviewed metadata owner.
+// The common legacy generator supplies a canonical to all pages; remove that
+// and the base shell's public graph only after its final enforcement pass.
+for(const path of utilityPaths){
+ const file=resolve(dist,'__booking_display/on',path.slice(1)+'.html');
+ writeFileSync(file,cleanHead(readFileSync(file,'utf8')).replace('</head>',metadataTags(path)+'</head>'));
+}
 mkdirSync(resolve(root,'docs/evidence/2026-10-22-search-accessibility'),{recursive:true});
 writeFileSync(resolve(root,'docs/evidence/2026-10-22-search-accessibility/public-html-build.json'),JSON.stringify(pageEvidence,null,2)+'\n');
 console.log('Generated actual public React HTML in both unverified display modes; no protected data read.');

@@ -20,6 +20,14 @@ for(const mode of ['on','off'])for(const [path,expected]of Object.entries(public
  const data=JSON.parse(doc.querySelector('script[type="application/ld+json"]').textContent);
  assert.equal(data['@graph'].find(n=>n['@type']==='WebPage').url,origin+path);assert.ok(!html.includes('/src/assets/logos/logo2.webp'));
 });
+for(const path of utilityPaths)test(`raw ON utility ${path} has no public discovery identity`,()=>{
+ const html=readFileSync(resolve(dist,'__booking_display/on',path.slice(1)+'.html'),'utf8'),doc=new JSDOM(html).window.document;
+ assert.equal(doc.title,metadataFor(path).title);assert.equal(doc.querySelector('meta[name="robots"]').content,'noindex, nofollow');
+ assert.equal(doc.querySelector('meta[name="referrer"]').content,'no-referrer');assert.equal(doc.querySelector('meta[name="booking-display-mode"]').content,'on');
+ assert.equal(doc.querySelector('link[rel="canonical"]'),null);assert.equal(doc.querySelector('script[type="application/ld+json"]'),null);
+ assert.equal(doc.querySelector('meta[property="og:image"]'),null);assert.equal(doc.querySelector('#root').textContent,'');
+ assert.ok(doc.querySelector('script[type="module"][src]'),'The actual booking entry script must remain intact');
+});
 test('sitemaps contain fourteen ordinary pages and no booking/receipt utilities',()=>{
  for(const mode of ['on','off']){const xml=readFileSync(resolve(dist,'__booking_display',mode,'sitemap.xml'),'utf8');const doc=new JSDOM(xml,{contentType:'application/xml'}).window.document;
   assert.deepEqual([...doc.querySelectorAll('loc')].map(n=>n.textContent).sort(),Object.keys(publicPages).map(p=>origin+p).sort());

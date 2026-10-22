@@ -1,0 +1,15 @@
+{
+  "observed_at": "2026-10-22T17:00:03.207Z",
+  "project_id": "fancy-water-31658958",
+  "branch_id": "br-rough-lake-b3ira3cc",
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[\n  [],\n  [],\n  []\n]"
+      }
+    ],
+    "structuredContent": null,
+    "isError": false
+  }
+}

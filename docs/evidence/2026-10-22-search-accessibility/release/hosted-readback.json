@@ -1,0 +1,300 @@
+{
+  "observed_at": "2026-10-22T17:06:23.292Z",
+  "origin": "https://astroadvicebykundansingh.com",
+  "public": [
+    {
+      "path": "/",
+      "status": 200,
+      "title": "Astrology Consultations in New Delhi | AstroAdvice by Kundan Singh",
+      "description": "Explore astrology, Numerology and Vastu consultations with Kundan Singh in New Delhi. Read about the services and contact the practice with your questions.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/",
+      "main": 1,
+      "h1": 1,
+      "body_text": 5111,
+      "graphs": 1
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "title": "About Kundan Singh | AstroAdvice",
+      "description": "Read about Kundan Singh's astrology studies, experience and approach to consultations, and find the service that fits your question.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/about",
+      "main": 1,
+      "h1": 1,
+      "body_text": 2063,
+      "graphs": 1
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "title": "Astrology Services | AstroAdvice by Kundan Singh",
+      "description": "Compare Vedic Astrology, Numerology, Vastu, Laal Kitaab, Prashna Kundali and name-change consultations with Kundan Singh.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services",
+      "main": 1,
+      "h1": 1,
+      "body_text": 2187,
+      "graphs": 1
+    },
+    {
+      "path": "/services/vedic-astrology",
+      "status": 200,
+      "title": "Vedic Astrology Consultation | AstroAdvice",
+      "description": "Read about a Vedic Astrology consultation with Kundan Singh, the questions you can bring and the information requested when arranging a consultation.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services/vedic-astrology",
+      "main": 1,
+      "h1": 1,
+      "body_text": 2566,
+      "graphs": 1
+    },
+    {
+      "path": "/services/numerology",
+      "status": 200,
+      "title": "Numerology Consultation | AstroAdvice",
+      "description": "Read about Numerology consultations with Kundan Singh and how names and dates are discussed. Contact the practice if you need help choosing a service.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services/numerology",
+      "main": 1,
+      "h1": 1,
+      "body_text": 4122,
+      "graphs": 1
+    },
+    {
+      "path": "/services/vastu",
+      "status": 200,
+      "title": "Vastu Consultation | AstroAdvice",
+      "description": "Read about discussing your home or workplace with Kundan Singh through a Vastu consultation, including the information to prepare.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services/vastu",
+      "main": 1,
+      "h1": 1,
+      "body_text": 2830,
+      "graphs": 1
+    },
+    {
+      "path": "/services/laal-kitaab",
+      "status": 200,
+      "title": "Laal Kitaab Consultation | AstroAdvice",
+      "description": "Learn what a Laal Kitaab consultation with Kundan Singh covers and how to bring your questions to the discussion.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services/laal-kitaab",
+      "main": 1,
+      "h1": 1,
+      "body_text": 3144,
+      "graphs": 1
+    },
+    {
+      "path": "/services/prashna-kundali",
+      "status": 200,
+      "title": "Prashna Kundali Consultation | AstroAdvice",
+      "description": "Read about bringing a specific question to a Prashna Kundali consultation with Kundan Singh and how question-based booking works.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services/prashna-kundali",
+      "main": 1,
+      "h1": 1,
+      "body_text": 2667,
+      "graphs": 1
+    },
+    {
+      "path": "/services/name-change",
+      "status": 200,
+      "title": "Name Change Consultation | AstroAdvice",
+      "description": "Read about a name-change consultation with Kundan Singh and discuss your questions about names and Numerology with the practice.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/services/name-change",
+      "main": 1,
+      "h1": 1,
+      "body_text": 1630,
+      "graphs": 1
+    },
+    {
+      "path": "/testimonials",
+      "status": 200,
+      "title": "Client Experiences | AstroAdvice by Kundan Singh",
+      "description": "Read the experiences shared on the AstroAdvice website about consultations with Kundan Singh.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/testimonials",
+      "main": 1,
+      "h1": 1,
+      "body_text": 4105,
+      "graphs": 1
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "title": "Contact AstroAdvice | Kundan Singh, New Delhi",
+      "description": "Find AstroAdvice's contact details and send the practice a question about consultations or an existing appointment.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/contact",
+      "main": 1,
+      "h1": 1,
+      "body_text": 1603,
+      "graphs": 1
+    },
+    {
+      "path": "/privacy-policy",
+      "status": 200,
+      "title": "Privacy Policy | AstroAdvice by Kundan Singh",
+      "description": "Read how AstroAdvice handles enquiry and appointment information, including contact details and practice records.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/privacy-policy",
+      "main": 1,
+      "h1": 1,
+      "body_text": 4028,
+      "graphs": 1
+    },
+    {
+      "path": "/terms-and-conditions",
+      "status": 200,
+      "title": "Terms & Conditions | AstroAdvice by Kundan Singh",
+      "description": "Read the terms for AstroAdvice consultations, booking and support, and contact the practice if you have a question.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/terms-and-conditions",
+      "main": 1,
+      "h1": 1,
+      "body_text": 2062,
+      "graphs": 1
+    },
+    {
+      "path": "/refund-policy",
+      "status": 200,
+      "title": "Refund Policy | AstroAdvice by Kundan Singh",
+      "description": "Read AstroAdvice's information about appointment changes, cancellations and refund review. Contact the practice for help with an existing booking.",
+      "robots": "index, follow",
+      "header_robots": null,
+      "canonical": "https://astroadvicebykundansingh.com/refund-policy",
+      "main": 1,
+      "h1": 1,
+      "body_text": 1845,
+      "graphs": 1
+    }
+  ],
+  "utilities": [
+    {
+      "path": "/booking",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "header_robots": "noindex, nofollow",
+      "canonical": 1,
+      "graphs": 1
+    },
+    {
+      "path": "/booking?service=1",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "header_robots": "noindex, nofollow",
+      "canonical": 1,
+      "graphs": 1
+    },
+    {
+      "path": "/booking?service=numerology",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "header_robots": "noindex, nofollow",
+      "canonical": 1,
+      "graphs": 1
+    },
+    {
+      "path": "/booking/receipt",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "header_robots": "noindex, nofollow",
+      "canonical": 1,
+      "graphs": 1
+    },
+    {
+      "path": "/booking/access",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "header_robots": "noindex, nofollow",
+      "canonical": 1,
+      "graphs": 1
+    },
+    {
+      "path": "/booking-help",
+      "status": 200,
+      "robots": "noindex, nofollow",
+      "header_robots": "noindex, nofollow",
+      "canonical": 1,
+      "graphs": 1
+    }
+  ],
+  "resources": [
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "type": "application/xml",
+      "urls": [
+        "https://astroadvicebykundansingh.com/",
+        "https://astroadvicebykundansingh.com/about",
+        "https://astroadvicebykundansingh.com/services",
+        "https://astroadvicebykundansingh.com/services/vedic-astrology",
+        "https://astroadvicebykundansingh.com/services/numerology",
+        "https://astroadvicebykundansingh.com/services/vastu",
+        "https://astroadvicebykundansingh.com/services/laal-kitaab",
+        "https://astroadvicebykundansingh.com/services/prashna-kundali",
+        "https://astroadvicebykundansingh.com/services/name-change",
+        "https://astroadvicebykundansingh.com/testimonials",
+        "https://astroadvicebykundansingh.com/contact",
+        "https://astroadvicebykundansingh.com/privacy-policy",
+        "https://astroadvicebykundansingh.com/terms-and-conditions",
+        "https://astroadvicebykundansingh.com/refund-policy"
+      ]
+    },
+    {
+      "path": "/social/astroadvice-consultations.webp",
+      "status": 200,
+      "type": "image/webp"
+    }
+  ],
+  "refusals": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/api/company/control/status",
+      "status": 401
+    },
+    {
+      "path": "/api/studio/status",
+      "status": 401
+    },
+    {
+      "path": "/this-path-does-not-exist-20261022",
+      "status": 404
+    }
+  ],
+  "failures": [
+    "/booking:utility_no_discovery_graph",
+    "/booking?service=1:utility_no_discovery_graph",
+    "/booking?service=numerology:utility_no_discovery_graph",
+    "/booking/receipt:utility_no_discovery_graph",
+    "/booking/access:utility_no_discovery_graph",
+    "/booking-help:utility_no_discovery_graph"
+  ],
+  "customer_actions": 0,
+  "provider_dispatch": 0,
+  "passed": false
+}
