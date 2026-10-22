@@ -445,11 +445,7 @@ function About() {
                   key={idx}
                   onClick={() => setCertIndex(idx)}
                   aria-pressed={certIndex === idx}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    certIndex === idx 
-                      ? "bg-[#D3AF54] scale-125 shadow-[0_0_8px_rgba(211,175,84,0.8)]" 
-                      : "bg-[#D3AF54]/20 hover:bg-[#D3AF54]/45"
-                  }`}
+                  className="certificate-dot-button" data-selected={certIndex===idx}
                   aria-label={`Go to certificate ${idx + 1}`}
                 />
               ))}
@@ -498,16 +494,14 @@ function GridPattern({
   );
 }
 
-function genRandomPattern(length) {
-  length = length ?? 5;
-  return Array.from({ length }, () => [
-    Math.floor(Math.random() * 4) + 7, // random x between 7 and 10
-    Math.floor(Math.random() * 6) + 1, // random y between 1 and 6
-  ]);
+function featurePattern(key) {
+  // Decorative variation stays stable for this service in both public HTML and the browser.
+  let value=[...key].reduce((sum,letter)=>(sum*31+letter.charCodeAt(0))>>>0,17);
+  return Array.from({length:5},()=>{value=(Math.imul(value,1664525)+1013904223)>>>0;return [7+(value%4),1+((value>>>8)%6)];});
 }
 
 function FeatureCard({ feature, className, ...props }) {
-  const p = genRandomPattern();
+  const p = featurePattern(feature.id);
 
 
 

@@ -1,0 +1,170 @@
+{
+  "passed": true,
+  "sourceScope": "All app src, build-support, app scripts, Vite configuration, routing proxy and Python API entry; standard contained package measured separately in neutral-qualification.",
+  "javascript": {
+    "owners": 37,
+    "sourceHashesVerified": true,
+    "originalMapsRebuilt": true,
+    "zeroBaselinePreserved": true,
+    "rejections": [],
+    "summary": {
+      "lines": {
+        "total": 1013,
+        "covered": 984,
+        "skipped": 0,
+        "pct": 97.13
+      },
+      "statements": {
+        "total": 1308,
+        "covered": 1241,
+        "skipped": 0,
+        "pct": 94.87
+      },
+      "functions": {
+        "total": 353,
+        "covered": 328,
+        "skipped": 0,
+        "pct": 92.91
+      },
+      "branches": {
+        "total": 940,
+        "covered": 847,
+        "skipped": 0,
+        "pct": 90.1
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "pools": [
+      {
+        "pool": "server.json",
+        "sha256": "259d31a20b3d81e4935194d15d40ccddb0fe5304b4dd1f0a0729c2d4aca66a85",
+        "owners": 22,
+        "observations": null,
+        "compressed_sha256": "4bd54d8501c47a06e702c968e704df2e35ed6b6de80e5438be7c13b08c7024f9"
+      },
+      {
+        "pool": "browser.json",
+        "sha256": "b5adaeb65410e033483ad5ef6c9932f1c56bf7e1ecb526b0d50ea1c9322a2e9d",
+        "owners": 24,
+        "observations": null,
+        "compressed_sha256": "df1fab9a02978705e7a25b1e79528357f2c12e772539fdaffb7b9b2003337035"
+      },
+      {
+        "pool": "dormant-components.json",
+        "sha256": "c7feeeb8e0d8a35b38a0c4c40d7ccca469581ebf1bb02b443160be309cabda9c",
+        "owners": 7,
+        "observations": null,
+        "compressed_sha256": "b32e928602abc6ad90567ab21c172934e86789f58f237c91c3972ad6f6ff6789"
+      },
+      {
+        "pool": "forms-motion.json",
+        "sha256": "5de2700c3d6cd9b15d779ce6b9c7eb299c65d8993aa1a66254e7048740f6c72c",
+        "owners": 24,
+        "observations": null,
+        "compressed_sha256": "e1c8fef6330b27e23e8d0a03f79eca49a48510bdd4879da95dc95aa422879132"
+      },
+      {
+        "pool": "secondary-controls.json",
+        "sha256": "493ab8c235d97627d73878c9eb2514212334cdc55b59a1c621fa896547b93ccc",
+        "owners": 24,
+        "observations": null,
+        "compressed_sha256": "8e2f8254e57d9cb94a0336db631da5a9aed2d865b8ba77e6740cc4b156234139"
+      },
+      {
+        "pool": "utilities-browser.json",
+        "sha256": "bd09dc04386953938b7a69e701e369fd3721b47dc88b71e70797cc9ee9835b53",
+        "owners": 28,
+        "observations": null,
+        "compressed_sha256": "0097bda60a800c9d82ff3246e8765ed2a424bbbcde399c0f94d2bb9f4f60bda4"
+      },
+      {
+        "pool": "commands-clean-8.json",
+        "sha256": "06f73fc6c3039d92920bce39a9509617c7c32b7d939103bc811a264b1d73db5b",
+        "owners": 3,
+        "observations": 1,
+        "compressed_sha256": "f317e2cff427c25e35ca18a52ce46a2bbb8319970ae7206a664d7502602faec9"
+      },
+      {
+        "pool": "publication-guards-clean-8.json",
+        "sha256": "8b415c8a61adcdb144749a6ee74cf150db64c3568a9abfce4528699336ad5690",
+        "owners": 2,
+        "observations": 1,
+        "compressed_sha256": "9459f8b69860d2178227da0e2c7b285b861ebf196ed29b7a1c3defbeb34f44fb"
+      },
+      {
+        "pool": "native-1389753.json",
+        "sha256": "f8939d2cc28767bcbe735d38f4b28b857385db9ecf638ab3ce2e447ffd04ebbc",
+        "owners": 28,
+        "observations": 39,
+        "compressed_sha256": "944086895d4fb3fa0da366026bc6f90f71eaec054cca585bfc71260ad02ed4cf"
+      },
+      {
+        "pool": "public-final-8.json",
+        "sha256": "ff2309ea2598694f8e1051eb3282b9478fe8fc10a4b62fb1c8e8d1d74def1265",
+        "owners": 1,
+        "observations": 1,
+        "compressed_sha256": "1c4fd4cc54997c0b67e4adb917debd737aa26e79c4f0320a7bb43f19a3b23432"
+      },
+      {
+        "pool": "public-build-clean-8.json",
+        "sha256": "158993d5f2ae80704de9726cdae8e525a76392d030ca7adebcad121211a671b7",
+        "owners": 2,
+        "observations": 1,
+        "compressed_sha256": "9d0080da0fd00002ad094cafc22fc90295df61972cdd38047a97c82a363e0948"
+      }
+    ]
+  },
+  "python": {
+    "owners": 2,
+    "sourceHashesVerified": true,
+    "excludedLines": 0,
+    "summary": {
+      "covered_lines": 66,
+      "num_statements": 67,
+      "percent_covered": 97.70114942528735,
+      "percent_covered_display": "98",
+      "missing_lines": 1,
+      "excluded_lines": 0,
+      "percent_statements_covered": 98.50746268656717,
+      "percent_statements_covered_display": "99",
+      "num_branches": 20,
+      "num_partial_branches": 1,
+      "covered_branches": 19,
+      "missing_branches": 1,
+      "percent_branches_covered": 95,
+      "percent_branches_covered_display": "95"
+    },
+    "cases": [
+      "fast-success",
+      "release-success",
+      "fast-native-refusal",
+      "fast-history-refusal",
+      "release-target-refusal",
+      "release-prefix-refusal",
+      "cwd-refusal",
+      "failure-preserved",
+      "error-preserved",
+      "skip-preserved",
+      "expected-failure-preserved",
+      "unexpected-success-refused",
+      "entry-safe-delegation",
+      "entry-link-refusal"
+    ]
+  },
+  "gates": {
+    "minimum": 90,
+    "exclusions": 0,
+    "providerCalls": 0,
+    "customerMutations": 0
+  },
+  "boundaries": [
+    "This receipt is local source qualification, not hosted publication or search-ranking proof.",
+    "Synthetic contact and receipt responses are test-only and cannot reach providers.",
+    "Dormant retained components are exercised only by appended fixture exports after original-source instrumentation; product source and exports are unchanged."
+  ]
+}

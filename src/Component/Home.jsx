@@ -1,3 +1,4 @@
+import {usePublicBinding} from '../lib/usePublicBinding.js';
 import React, { useState, useEffect, useRef } from 'react'
 
 import {BookingLink as Link,BookingCopy} from '../lib/BookingProduct.jsx';
@@ -8,9 +9,12 @@ import { publicServiceById } from "../data/publicServices";
 import EmailOtpModal, {EnquiryResume} from './EmailOtpModal';
 import {useEnquiry} from '../lib/useEnquiry.js'
 
-import logoImg from "../assets/logos/Nav-Logo.webp";
+import logoImg from "../assets/logos/navigation-logo-224.webp";
 import featureBg from "../assets/images/Feature.webp";
 import astrologerPortrait from "../assets/images/astrologer_portrait.webp";
+import hero360 from '../assets/images/hero-portrait-360.webp';
+import hero720 from '../assets/images/hero-portrait-720.webp';
+import hero1080 from '../assets/images/hero-portrait-1080.webp';
 import hero1 from "../assets/images/Hero1.png";
 import about1 from "../assets/images/About1.webp";
 import zodiacWheel from "../assets/images/zodiac_wheel.webp";
@@ -365,6 +369,7 @@ const ServiceSlider = () => {
  * and custom gold dividers.
  */
 export default function Home() {
+  const formBound=usePublicBinding();
   const pageRef = useRef(null);
   const heroRef = useRef(null);
   const servicesRef = useRef(null);
@@ -377,13 +382,14 @@ export default function Home() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [serviceActionFocused, setServiceActionFocused] = useState(false);
   const [reviewsPaused, setReviewsPaused] = useState(false);
-  const [landscapeLayout, setLandscapeLayout] = useState(() => window.matchMedia('(min-width: 1024px) and (orientation: landscape)').matches);
-  const [pageVisible, setPageVisible] = useState(!document.hidden);
+  const [landscapeLayout, setLandscapeLayout] = useState(false);
+  const [pageVisible, setPageVisible] = useState(true);
 
   // Keep the landscape hero and review treatment separate from the existing mobile presentation.
   useEffect(() => {
     const query = window.matchMedia('(min-width: 1024px) and (orientation: landscape)');
     const updateLayout = () => setLandscapeLayout(query.matches);
+    updateLayout();
     query.addEventListener('change', updateLayout);
     return () => query.removeEventListener('change', updateLayout);
   }, []);
@@ -626,20 +632,10 @@ export default function Home() {
             >
               {/* Top Pill Badge */}
               <div className="home-hero-intro inline-flex items-center gap-1.5 px-3 py-1 bg-white/5 border border-[#D3AF54]/30 rounded-full">
-                {landscapeLayout ? (
-                  <>
-                    <span className="home-hero-intro-item"><Star aria-hidden="true" />Guidance</span>{' '}
-                    <span className="home-hero-intro-item"><Sparkles aria-hidden="true" />Clarity</span>{' '}
-                    <span className="home-hero-intro-item"><Flower2 aria-hidden="true" />Positivity</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="w-1.5 h-1.5 bg-[#D3AF54] rounded-full animate-pulse" aria-hidden="true"></span>
-                    <span className="home-hero-intro-mobile-copy text-[10px] tracking-[0.2em] font-semibold text-[#D3AF54] uppercase font-sans">
-                      GUIDANCE • CLARITY • POSITIVITY
-                    </span>
-                  </>
-                )}
+                <span className="home-hero-intro-mobile-dot w-1.5 h-1.5 bg-[#D3AF54] rounded-full animate-pulse" aria-hidden="true"></span>
+                <span className="home-hero-intro-item"><Star aria-hidden="true" />Guidance</span>{' '}
+                <span className="home-hero-intro-item"><Sparkles aria-hidden="true" />Clarity</span>{' '}
+                <span className="home-hero-intro-item"><Flower2 aria-hidden="true" />Positivity</span>
               </div>
 
               {/* Large Headline */}
@@ -715,7 +711,7 @@ export default function Home() {
                 {/* Layer 1: Background Circle & Full Border (overflow-hidden to clip bottom image to circle curve) */}
                 <div className="absolute inset-0 rounded-full border-4 border-[#D3AF54] bg-[radial-gradient(circle_at_center,rgba(211,175,84,0.25)_0%,#0c0817_80%)] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.85),_0_0_25px_rgba(211,175,84,0.15)] overflow-hidden">
                   <motion.img 
-                    src={hero1} 
+                    src={hero1} srcSet={`${hero360} 360w, ${hero720} 720w, ${hero1080} 1080w`} sizes="(max-width:767px) 84vw, 42vw" width="1080" height="1440" fetchPriority="high"
                     alt="Astrologer Kundan Singh base" 
                     variants={imageVariants}
                     initial="initial"
@@ -726,7 +722,7 @@ export default function Home() {
 
                 {/* Layer 2: Top-half overlay image (crosses top border, bottom is clipped at 50%) */}
                 <motion.img 
-                  src={hero1} 
+                  src={hero1} srcSet={`${hero360} 360w, ${hero720} 720w, ${hero1080} 1080w`} sizes="(max-width:767px) 84vw, 42vw" width="1080" height="1440" fetchPriority="high"
                   alt="" aria-hidden="true"
                   variants={imageVariants}
                   initial="initial"
@@ -1149,8 +1145,8 @@ export default function Home() {
                 <h2 className="home-title text-[clamp(1.4rem,2.2vw,2.4rem)] font-serif font-bold text-[#181122] tracking-wide mt-1">
                   Trusted By Thousands
                 </h2>
-                {!reduceMotion && !landscapeLayout && (
-                  <button type="button" className="home-rotation-control" aria-pressed={reviewsPaused} onClick={() => setReviewsPaused(previous => !previous)}>
+                {!reduceMotion && (
+                  <button type="button" className="home-rotation-control home-reviews-phone-control" aria-pressed={reviewsPaused} onClick={() => setReviewsPaused(previous => !previous)}>
                     {reviewsPaused ? <Play size={15} /> : <Pause size={15} />}
                     {reviewsPaused ? "Resume moving reviews" : "Pause moving reviews"}
                   </button>
@@ -1158,7 +1154,7 @@ export default function Home() {
               </div>
 
               {/* Sliding Marquee Track */}
-              <div className="home-reviews-window w-full flex relative py-4" tabIndex={landscapeLayout || reduceMotion || reviewsPaused ? 0 : undefined} aria-label="Client testimonials">
+              <div className="home-reviews-window w-full flex relative py-4" tabIndex={0} role="region" aria-label="Client testimonials">
                 {/* Left & Right fading overlays are replaced by a narrow CSS edge mask. */}
                 
                 <div className="home-reviews-track flex gap-6 shrink-0">
@@ -1524,7 +1520,7 @@ export default function Home() {
                     </p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleFormSubmit} className="space-y-4 z-10 relative">
+                  <form method="post" noValidate onSubmit={handleFormSubmit} className="space-y-4 z-10 relative"><fieldset disabled={!formBound} className="public-form-fields">
                   <EnquiryResume flow={flow} onResume={() => setShowOtpModal(true)} />
                     {/* Header info */}
                     <div className="space-y-1">
@@ -1579,7 +1575,7 @@ export default function Home() {
                           Email Address*
                         </label>
                         <input 
-                          type="email" 
+                          type="email"
                           id="form-email"
                           name="email"
                           required
@@ -1674,7 +1670,7 @@ export default function Home() {
                         </>
                       )}
                     </button>
-                  </form>
+                  </fieldset></form>
                 )}
               </div>
 

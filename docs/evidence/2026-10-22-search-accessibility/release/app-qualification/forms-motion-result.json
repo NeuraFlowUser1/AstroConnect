@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "observations": [
+    "Home enquiry validation, service choices, email verification, success",
+    "Prashna validation, phone normalization, email verification, success/reset",
+    "Real service index focus, review replacement/cleanup, visible service/benefit loops, resize"
+  ],
+  "syntheticRequests": 5,
+  "providerCalls": 0
+}

@@ -26,3 +26,8 @@
 **/*.zip
 **/*.dump
 /src/backend/README.md
+
+# Build-only public HTML renderer is not a runtime service.
+/.public-renderer
+/.appointment-install.lock
+/.appointment-rollbacks

@@ -1,0 +1,1346 @@
+{
+  "root": "/tmp/astro-neutral-measurement-supplement-P2mmxz",
+  "report": {
+    "release_digest": "1bb6cb1cc00a2ead7cec70de052ea78330005d7644dfc0d2e2a40ea7c287b31f",
+    "measurement_root": "/tmp/astro-neutral-measurement-supplement-P2mmxz",
+    "run_exit": 0,
+    "all_working_js_files": 48,
+    "source_unchanged": true,
+    "baseline_reconstructed": true,
+    "counter_observations": 9,
+    "rejections": [],
+    "summary": {
+      "lines": {
+        "total": 2601,
+        "covered": 251,
+        "skipped": 0,
+        "pct": 9.65
+      },
+      "statements": {
+        "total": 5263,
+        "covered": 481,
+        "skipped": 0,
+        "pct": 9.13
+      },
+      "functions": {
+        "total": 821,
+        "covered": 104,
+        "skipped": 0,
+        "pct": 12.66
+      },
+      "branches": {
+        "total": 4448,
+        "covered": 384,
+        "skipped": 0,
+        "pct": 8.63
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "owners": [
+      {
+        "file": "browser/booking/booking-details-fields.mjs",
+        "lines": {
+          "total": 26,
+          "covered": 26,
+          "skipped": 0,
+          "pct": 100
+        },
+        "functions": {
+          "total": 21,
+          "covered": 20,
+          "skipped": 0,
+          "pct": 95.23
+        },
+        "statements": {
+          "total": 54,
+          "covered": 52,
+          "skipped": 0,
+          "pct": 96.29
+        },
+        "branches": {
+          "total": 74,
+          "covered": 69,
+          "skipped": 0,
+          "pct": 93.24
+        }
+      },
+      {
+        "file": "browser/booking/booking-details-pdf.mjs",
+        "lines": {
+          "total": 25,
+          "covered": 24,
+          "skipped": 0,
+          "pct": 96
+        },
+        "functions": {
+          "total": 17,
+          "covered": 16,
+          "skipped": 0,
+          "pct": 94.11
+        },
+        "statements": {
+          "total": 78,
+          "covered": 74,
+          "skipped": 0,
+          "pct": 94.87
+        },
+        "branches": {
+          "total": 43,
+          "covered": 30,
+          "skipped": 0,
+          "pct": 69.76
+        }
+      },
+      {
+        "file": "browser/booking/booking-details.mjs",
+        "lines": {
+          "total": 98,
+          "covered": 95,
+          "skipped": 0,
+          "pct": 96.93
+        },
+        "functions": {
+          "total": 42,
+          "covered": 39,
+          "skipped": 0,
+          "pct": 92.85
+        },
+        "statements": {
+          "total": 212,
+          "covered": 191,
+          "skipped": 0,
+          "pct": 90.09
+        },
+        "branches": {
+          "total": 177,
+          "covered": 148,
+          "skipped": 0,
+          "pct": 83.61
+        }
+      },
+      {
+        "file": "browser/booking/controller.mjs",
+        "lines": {
+          "total": 162,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 55,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 371,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 365,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/credentials.mjs",
+        "lines": {
+          "total": 44,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 12,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 71,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 80,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/date-time-fields.mjs",
+        "lines": {
+          "total": 53,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 41,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 116,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 110,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/index.mjs",
+        "lines": {
+          "total": 21,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 9,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 33,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 22,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/messages.mjs",
+        "lines": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 1,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 3,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/payment-recovery.mjs",
+        "lines": {
+          "total": 52,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 27,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 119,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 103,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/protocol.mjs",
+        "lines": {
+          "total": 54,
+          "covered": 15,
+          "skipped": 0,
+          "pct": 27.77
+        },
+        "functions": {
+          "total": 25,
+          "covered": 6,
+          "skipped": 0,
+          "pct": 24
+        },
+        "statements": {
+          "total": 78,
+          "covered": 23,
+          "skipped": 0,
+          "pct": 29.48
+        },
+        "branches": {
+          "total": 186,
+          "covered": 38,
+          "skipped": 0,
+          "pct": 20.43
+        }
+      },
+      {
+        "file": "browser/booking/razorpay.mjs",
+        "lines": {
+          "total": 19,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 12,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 55,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 32,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/receipt-actions.mjs",
+        "lines": {
+          "total": 63,
+          "covered": 2,
+          "skipped": 0,
+          "pct": 3.17
+        },
+        "functions": {
+          "total": 23,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 153,
+          "covered": 2,
+          "skipped": 0,
+          "pct": 1.3
+        },
+        "branches": {
+          "total": 132,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/booking/receipt-fields.mjs",
+        "lines": {
+          "total": 34,
+          "covered": 9,
+          "skipped": 0,
+          "pct": 26.47
+        },
+        "functions": {
+          "total": 15,
+          "covered": 3,
+          "skipped": 0,
+          "pct": 20
+        },
+        "statements": {
+          "total": 59,
+          "covered": 10,
+          "skipped": 0,
+          "pct": 16.94
+        },
+        "branches": {
+          "total": 93,
+          "covered": 5,
+          "skipped": 0,
+          "pct": 5.37
+        }
+      },
+      {
+        "file": "browser/booking/receipt-pdf.mjs",
+        "lines": {
+          "total": 40,
+          "covered": 35,
+          "skipped": 0,
+          "pct": 87.5
+        },
+        "functions": {
+          "total": 6,
+          "covered": 6,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 70,
+          "covered": 50,
+          "skipped": 0,
+          "pct": 71.42
+        },
+        "branches": {
+          "total": 59,
+          "covered": 34,
+          "skipped": 0,
+          "pct": 57.62
+        }
+      },
+      {
+        "file": "browser/booking/verification-fields.mjs",
+        "lines": {
+          "total": 15,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 9,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 25,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 36,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/conditional-work.mjs",
+        "lines": {
+          "total": 12,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 6,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 30,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 18,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/display-formatting.mjs",
+        "lines": {
+          "total": 7,
+          "covered": 4,
+          "skipped": 0,
+          "pct": 57.14
+        },
+        "functions": {
+          "total": 5,
+          "covered": 3,
+          "skipped": 0,
+          "pct": 60
+        },
+        "statements": {
+          "total": 12,
+          "covered": 7,
+          "skipped": 0,
+          "pct": 58.33
+        },
+        "branches": {
+          "total": 6,
+          "covered": 1,
+          "skipped": 0,
+          "pct": 16.66
+        }
+      },
+      {
+        "file": "browser/enquiry/controller.mjs",
+        "lines": {
+          "total": 65,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 27,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 156,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 114,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/enquiry/credentials.mjs",
+        "lines": {
+          "total": 43,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 15,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 81,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 95,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/enquiry/index.mjs",
+        "lines": {
+          "total": 17,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 7,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 22,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 28,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/enquiry/messages.mjs",
+        "lines": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 1,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 3,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/enquiry/protocol.mjs",
+        "lines": {
+          "total": 14,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 9,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 19,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 30,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/product-state.mjs",
+        "lines": {
+          "total": 82,
+          "covered": 14,
+          "skipped": 0,
+          "pct": 17.07
+        },
+        "functions": {
+          "total": 35,
+          "covered": 3,
+          "skipped": 0,
+          "pct": 8.57
+        },
+        "statements": {
+          "total": 181,
+          "covered": 24,
+          "skipped": 0,
+          "pct": 13.25
+        },
+        "branches": {
+          "total": 116,
+          "covered": 13,
+          "skipped": 0,
+          "pct": 11.2
+        }
+      },
+      {
+        "file": "browser/react-bindings.mjs",
+        "lines": {
+          "total": 62,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 27,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 114,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 123,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "browser/transport.mjs",
+        "lines": {
+          "total": 30,
+          "covered": 27,
+          "skipped": 0,
+          "pct": 90
+        },
+        "functions": {
+          "total": 10,
+          "covered": 8,
+          "skipped": 0,
+          "pct": 80
+        },
+        "statements": {
+          "total": 57,
+          "covered": 48,
+          "skipped": 0,
+          "pct": 84.21
+        },
+        "branches": {
+          "total": 67,
+          "covered": 46,
+          "skipped": 0,
+          "pct": 68.65
+        }
+      },
+      {
+        "file": "browser/visibility.js",
+        "lines": {
+          "total": 1,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 1,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 100
+        }
+      },
+      {
+        "file": "browser/visibility.mjs",
+        "lines": {
+          "total": 12,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 6,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 36,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 18,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/company_assets/command-journal.js",
+        "lines": {
+          "total": 35,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 10,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 49,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 56,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/company_assets/control.js",
+        "lines": {
+          "total": 258,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 33,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 408,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 223,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/company_assets/google-repair.js",
+        "lines": {
+          "total": 32,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 11,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 74,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 34,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/company_assets/support.js",
+        "lines": {
+          "total": 85,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 18,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 210,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 122,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/appointments.js",
+        "lines": {
+          "total": 73,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 18,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 328,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 227,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/booking-guard.mjs",
+        "lines": {
+          "total": 7,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 14,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 4,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/calendar.js",
+        "lines": {
+          "total": 151,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 26,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 326,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 233,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/enquiries.js",
+        "lines": {
+          "total": 54,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 33,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 173,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 97,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/inbox.js",
+        "lines": {
+          "total": 82,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 34,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 341,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 266,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/interface.js",
+        "lines": {
+          "total": 145,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 16,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 192,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 130,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "engine/appointment_system/studio_assets/staff-actions.js",
+        "lines": {
+          "total": 62,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 19,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 102,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 69,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "hosting/routing.mjs",
+        "lines": {
+          "total": 83,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 15,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 133,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 161,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "hosting/surface-policy.mjs",
+        "lines": {
+          "total": 13,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 9,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 23,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 30,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "tools/build/page-modes.mjs",
+        "lines": {
+          "total": 38,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 8,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 54,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 52,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "tools/build/surfaces.mjs",
+        "lines": {
+          "total": 72,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 19,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 112,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 104,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "tools/checks/website-display.mjs",
+        "lines": {
+          "total": 48,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 13,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 80,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 54,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "tools/install/source.mjs",
+        "lines": {
+          "total": 7,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 0,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 100
+        },
+        "statements": {
+          "total": 10,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 10,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "worker/index.mjs",
+        "lines": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 1,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 2,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 3,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "worker/installation.mjs",
+        "lines": {
+          "total": 8,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 1,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 10,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 25,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "worker/recovery.mjs",
+        "lines": {
+          "total": 174,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 41,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 256,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 247,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      },
+      {
+        "file": "worker/service-state.mjs",
+        "lines": {
+          "total": 117,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "functions": {
+          "total": 31,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "statements": {
+          "total": 157,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        },
+        "branches": {
+          "total": 170,
+          "covered": 0,
+          "skipped": 0,
+          "pct": 0
+        }
+      }
+    ],
+    "provider_actions": 0,
+    "customer_actions": 0,
+    "qualification_complete": false
+  }
+}

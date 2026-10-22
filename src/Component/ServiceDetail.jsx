@@ -1,7 +1,8 @@
+import {usePublicBinding} from '../lib/usePublicBinding.js';
 import React, { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
 import {BookingLink as Link,BookingOnly} from '../lib/BookingProduct.jsx';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { Calendar, Clock, Shield, Sparkles, ArrowLeft, Star, Gem, CheckCircle, ArrowRight, Home, Sofa, Bed, Utensils, Bath, Briefcase, Heart, RefreshCw, Globe, User, BookOpen, Compass, Send, Phone, MapPin, MessageSquare, Mail } from 'lucide-react'
 import EmailOtpModal, {EnquiryResume} from './EmailOtpModal'
 import NameChangeService from './NameChangeService'
@@ -10,15 +11,15 @@ import './ServiceDetail.css'
 
 import {useEnquiry} from '../lib/useEnquiry.js'
 
-import sunIcon from '../assets/planets/sun.webp'
-import moonIcon from '../assets/planets/moon.webp'
-import jupiterIcon from '../assets/planets/jupiter.webp'
-import rahuIcon from '../assets/planets/rahu.webp'
-import mercuryIcon from '../assets/planets/mercury.webp'
-import venusIcon from '../assets/planets/venus.webp'
-import ketuIcon from '../assets/planets/ketu.webp'
-import saturnIcon from '../assets/planets/saturn.webp'
-import marsIcon from '../assets/planets/mars.webp'
+import sunIcon from '../assets/planets/sun-160.webp'
+import moonIcon from '../assets/planets/moon-160.webp'
+import jupiterIcon from '../assets/planets/jupiter-160.webp'
+import rahuIcon from '../assets/planets/rahu-160.webp'
+import mercuryIcon from '../assets/planets/mercury-160.webp'
+import venusIcon from '../assets/planets/venus-160.webp'
+import ketuIcon from '../assets/planets/ketu-160.webp'
+import saturnIcon from '../assets/planets/saturn-160.webp'
+import marsIcon from '../assets/planets/mars-160.webp'
 
 import earthImg from '../assets/elements/earth.webp'
 import waterImg from '../assets/elements/water.webp'
@@ -33,11 +34,11 @@ import laalKitaabImg from '../assets/images/Laal Kitaab Remedies.webp'
 import prashnaKundliImg from '../assets/images/Prashna Kundli.webp'
 
 
-import solutionsLogo from '../assets/logos/solutions.webp'
-import guidanceLogo from '../assets/logos/guidance.webp'
-import accuracyLogo from '../assets/logos/accuracy.webp'
-import transformationLogo from '../assets/logos/transformation.webp'
-import clockLogo from '../assets/logos/clock.webp'
+import solutionsLogo from '../assets/logos/solutions-96.webp'
+import guidanceLogo from '../assets/logos/guidance-96.webp'
+import accuracyLogo from '../assets/logos/accuracy-96.webp'
+import transformationLogo from '../assets/logos/transformation-96.webp'
+import clockLogo from '../assets/logos/clock-96.webp'
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -58,7 +59,7 @@ const itemVariants = {
 
 function ServiceBookingStrip({ serviceId, title = 'Ready to discuss this consultation?' }) {
   return <BookingOnly><section className="service-detail-cta" aria-label={`Book ${publicServiceById[serviceId]?.title || 'a consultation'}`}>
-    <div><h2>{title}</h2><p>Choose a suitable day and time. The consultation type will already be selected.</p></div>
+    <div><h2>{title}</h2><p className="service-current-fee">{publicServiceById[serviceId]?.price}{publicServiceById[serviceId]?.priceUnit ? ` ${publicServiceById[serviceId].priceUnit}` : ' per consultation'}</p><p>Choose a suitable day and time. The consultation type will already be selected.</p></div>
     <Link to={`/booking?service=${serviceId}`}><Calendar aria-hidden="true" />Book an Appointment</Link>
   </section></BookingOnly>;
 }
@@ -230,14 +231,24 @@ export default function ServiceDetail() {
   const { serviceId } = useParams();
   const navigate = useNavigate();
   const [flippedCards, setFlippedCards] = useState({});
+  const [hoveredCard,setHoveredCard]=useState(null);
+  const [benefitPaused,setBenefitPaused]=useState(false);
+  const [documentVisible,setDocumentVisible]=useState(true);
+  const [benefitVisible,setBenefitVisible]=useState(false);
+  const benefitRef=useRef(null);
+  const tabRefs=useRef([]);
+  const [focusedTab,setFocusedTab]=useState(0);
+  const reduceMotion=useReducedMotion();
   const [activeAstrologyBenefit, setActiveAstrologyBenefit] = useState(0);
   const [activeLalKitaabTab, setActiveLalKitaabTab] = useState(0);
 
-  const handleCardClick = (idx) => {
-    setFlippedCards(prev => ({
-      ...prev,
-      [idx]: !prev[idx]
-    }));
+  const handleCardClick = (idx,event) => {
+    const open=flippedCards[idx]?.open ?? hoveredCard===idx;
+    setFlippedCards(prev=>({...prev,[idx]:{open:!open,owner:event.detail===0?'keyboard':'pointer'}}));
+  };
+  const leaveCard=idx=>{
+    setHoveredCard(current=>current===idx?null:current);
+    setFlippedCards(prev=>{if(prev[idx]?.owner!=='pointer')return prev;const next={...prev};delete next[idx];return next;});
   };
 
   const details = serviceDetails[serviceId];
@@ -247,15 +258,22 @@ export default function ServiceDetail() {
     window.scrollTo(0, 0);
   }, [serviceId]);
 
-  // Auto-advance benefit point every 3 seconds for Vedic Astrology
-  useEffect(() => {
-    if (serviceId === 'vedic-astrology') {
-      const timer = setInterval(() => {
-        setActiveAstrologyBenefit((prev) => (prev + 1) % 6);
-      }, 3000);
-      return () => clearInterval(timer);
-    }
-  }, [serviceId]);
+  // One visible timer; it never changes a benefit while somebody is reading or using it.
+  useEffect(()=>{
+    const update=()=>setDocumentVisible(!document.hidden);update();
+    document.addEventListener('visibilitychange',update);
+    return()=>document.removeEventListener('visibilitychange',update);
+  },[]);
+  useEffect(()=>{
+    if(serviceId!=='vedic-astrology'||!benefitRef.current)return;
+    const observer=new IntersectionObserver(entries=>setBenefitVisible(entries[0]?.isIntersecting===true),{threshold:0.1});
+    observer.observe(benefitRef.current);return()=>observer.disconnect();
+  },[serviceId]);
+  useEffect(()=>{
+    if(serviceId!=='vedic-astrology'||benefitPaused||!documentVisible||!benefitVisible||reduceMotion)return;
+    const timer=setTimeout(()=>setActiveAstrologyBenefit(prev=>(prev+1)%6),3000);
+    return()=>clearTimeout(timer);
+  },[serviceId,activeAstrologyBenefit,benefitPaused,documentVisible,benefitVisible,reduceMotion]);
 
   if (serviceId === 'name-change') return <NameChangeService />
 
@@ -503,23 +521,21 @@ export default function ServiceDetail() {
                     tags: 'Compassion, completion, humanitarianism'
                   }
                 ].map((item, idx) => {
-                  const isFlipped = !!flippedCards[idx];
+                  const isFlipped = flippedCards[idx]?.open ?? hoveredCard===idx;
                   return (
-                    <div 
-                      key={idx} 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        handleCardClick(idx);
-                      }}
-                      className="group relative w-full h-48 [perspective:1000px] cursor-pointer"
-                    >
+                    <div key={idx} className="number-reveal group relative w-full [perspective:1000px]"
+                      onPointerEnter={event=>{if(event.pointerType==='mouse'&&!flippedCards[idx])setHoveredCard(idx);}}
+                      onPointerLeave={()=>leaveCard(idx)}>
+                      <button type="button" className="number-reveal-toggle" aria-label={`${item.name}, ${item.planet}`}
+                        aria-expanded={isFlipped} aria-controls={`number-${item.num}-details`}
+                        onClick={event=>handleCardClick(idx,event)} />
                       <div 
-                        className={`relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
+                        className={`number-reveal-faces relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] ${
                           isFlipped ? '[transform:rotateY(180deg)]' : ''
-                        } lg:group-hover:[transform:rotateY(180deg)]`}
+                        }`}
                       >
                         {/* FRONT SIDE */}
-                        <div className="absolute inset-0 w-full h-full rounded-3xl bg-[#181122] border border-[#D3AF54]/30 flex flex-col items-center justify-between p-3.5 [backface-visibility:hidden] text-white overflow-hidden shadow-lg">
+                        <div aria-hidden={isFlipped} className="number-reveal-face absolute inset-0 w-full h-full rounded-3xl bg-[#181122] border border-[#D3AF54]/30 flex flex-col items-center justify-between p-3.5 [backface-visibility:hidden] text-white overflow-hidden shadow-lg">
                           <div className="w-full flex justify-between items-center text-white/40 text-[9px] font-sans font-bold uppercase tracking-wider">
                             <span className="text-[8px] font-sans font-bold uppercase tracking-widest text-[#D3AF54]/60">Vedic Planet</span>
                             <div className="text-[10px] font-serif font-bold text-[#D3AF54] border border-[#D3AF54]/25 bg-white/5 px-2 py-0.5 rounded-full uppercase tracking-wider">
@@ -540,7 +556,7 @@ export default function ServiceDetail() {
                         </div>
 
                         {/* BACK SIDE */}
-                        <div className="absolute inset-0 w-full h-full rounded-3xl bg-[#FFFDEE] border-2 border-[#D3AF54]/40 flex flex-col justify-between p-4 [backface-visibility:hidden] [transform:rotateY(180deg)] text-[#181122] shadow-lg">
+                        <div id={`number-${item.num}-details`} aria-hidden={!isFlipped} className="number-reveal-face number-reveal-detail absolute inset-0 w-full h-full rounded-3xl bg-[#FFFDEE] border-2 border-[#D3AF54]/40 flex flex-col justify-between p-4 [backface-visibility:hidden] [transform:rotateY(180deg)] text-[#181122] shadow-lg">
                           <div className="space-y-1.5 text-left">
                             <div className="flex justify-between items-center border-b border-[#AB7A57]/20 pb-1">
                               <span className="font-serif font-bold text-xs sm:text-sm text-[#181122]">{item.name}</span>
@@ -549,12 +565,12 @@ export default function ServiceDetail() {
                                 <span className="text-[8px] font-bold uppercase tracking-wider">{item.planet}</span>
                               </div>
                             </div>
-                            <p className="text-[10px] sm:text-xs text-[#181122]/95 leading-relaxed font-sans font-semibold">
+                            <p className="text-sm text-[#181122]/95 leading-relaxed font-sans font-semibold">
                               {item.desc}
                             </p>
                           </div>
                           <div className="border-t border-[#AB7A57]/15 pt-1.5 text-left">
-                            <span className="text-[10px] sm:text-xs font-sans font-bold text-[#AB7A57] uppercase tracking-wide block">
+                            <span className="text-xs font-sans font-bold text-[#775137] uppercase tracking-wide block">
                               ✦ {item.tags}
                             </span>
                           </div>
@@ -744,6 +760,8 @@ export default function ServiceDetail() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-80px" }}
+                ref={benefitRef} onMouseEnter={()=>setBenefitPaused(true)} onMouseLeave={event=>setBenefitPaused(event.currentTarget.contains(document.activeElement))}
+                onFocusCapture={()=>setBenefitPaused(true)} onBlurCapture={event=>{if(!event.currentTarget.contains(event.relatedTarget))setBenefitPaused(event.currentTarget.matches(':hover'));}}
                 className="lg:col-span-8 bg-[#ECCF86] border border-[#AB7A57]/20 rounded-3xl p-6 sm:p-8 shadow-md space-y-6 text-[#181122] flex flex-col justify-between text-left"
               >
                 <div className="space-y-1.5 text-left">
@@ -767,6 +785,7 @@ export default function ServiceDetail() {
                   ].map((benefit, idx) => (
                     <button
                       key={idx}
+                      type="button" aria-pressed={activeAstrologyBenefit===idx} aria-controls="vedic-benefit-detail"
                       onClick={() => setActiveAstrologyBenefit(idx)}
                       className={`p-3 px-4 rounded-xl text-left border transition-all duration-300 flex items-center justify-between cursor-pointer group ${
                         activeAstrologyBenefit === idx
@@ -790,7 +809,7 @@ export default function ServiceDetail() {
                 </div>
 
                 {/* Purple/Dark Highlight Box Positioned BELOW the Points Grid */}
-                <div className="w-full bg-[#181122] text-white rounded-2xl p-5 sm:p-6 flex flex-col justify-start border border-[#AB7A57]/20 relative overflow-hidden shadow-inner min-h-[105px] text-left">
+                <div id="vedic-benefit-detail" role="region" aria-label="Selected Vedic reading benefit" className="w-full bg-[#181122] text-white rounded-2xl p-5 sm:p-6 flex flex-col justify-start border border-[#AB7A57]/20 relative overflow-hidden shadow-inner min-h-[105px] text-left">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#D3AF54]/5 rounded-full blur-3xl pointer-events-none" />
                   
                   {[
@@ -851,7 +870,7 @@ export default function ServiceDetail() {
               className="space-y-6"
             >
               <div className="text-center md:text-left space-y-1.5">
-                <h3 className="text-xl sm:text-2xl font-serif font-bold text-gold-aura">
+                <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#806027]">
                   Core Life Pathways Explored
                 </h3>
                 <p className="text-xs sm:text-sm text-[#181122]/70 font-sans font-medium">
@@ -887,7 +906,7 @@ export default function ServiceDetail() {
                     {/* Badge */}
                     <div className="w-12 h-12 rounded-xl border border-gold-aura/40 bg-[#FFFDEE] flex flex-col items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-all duration-300 text-center">
                       <span className="text-[8px] uppercase tracking-wider text-[#AB7A57] font-bold leading-none">Focus</span>
-                      <span className="text-[11px] font-serif font-black text-gold-aura leading-none mt-0.5">{item.direction}</span>
+                      <span className="text-xs font-serif font-black text-[#806027] leading-none mt-0.5">{item.direction}</span>
                     </div>
 
                     {/* Text Details */}
@@ -983,7 +1002,7 @@ export default function ServiceDetail() {
               animate="show"
               className="border-b border-[#AB7A57]/20 pb-0.5 flex justify-start sm:justify-center overflow-x-auto w-full scrollbar-none"
             >
-              <div className="flex gap-4 md:gap-8 min-w-max px-1">
+              <div role="tablist" aria-label="Laal Kitaab topics" className="flex gap-4 md:gap-8 min-w-max px-1">
                 {[
                   { label: 'Overview & Philosophy', icon: <BookOpen size={14} /> },
                   { label: 'Key Diagnostic Areas', icon: <Compass size={14} /> },
@@ -991,10 +1010,17 @@ export default function ServiceDetail() {
                 ].map((tab, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setActiveLalKitaabTab(idx)}
+                    type="button" role="tab" id={`laal-tab-${idx}`} aria-selected={activeLalKitaabTab===idx}
+                    aria-controls={`laal-topic-${idx}`} tabIndex={focusedTab===idx?0:-1} ref={element=>{tabRefs.current[idx]=element;}}
+                    onFocus={()=>setFocusedTab(idx)}
+                    onKeyDown={event=>{
+                      const next=event.key==='ArrowRight'?(idx+1)%3:event.key==='ArrowLeft'?(idx+2)%3:event.key==='Home'?0:event.key==='End'?2:null;
+                      if(next!==null){event.preventDefault();setFocusedTab(next);tabRefs.current[next]?.focus();}
+                    }}
+                    onClick={() => {setActiveLalKitaabTab(idx);setFocusedTab(idx);}}
                     className={`py-3 px-1.5 font-sans text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-300 border-b-2 flex items-center gap-2 cursor-pointer ${
                       activeLalKitaabTab === idx
-                        ? 'border-[#D3AF54] text-[#D3AF54] scale-105'
+                        ? 'border-[#D3AF54] text-[#806027] scale-105'
                         : 'border-transparent text-[#181122]/60 hover:text-[#181122]'
                     }`}
                   >
@@ -1019,8 +1045,7 @@ export default function ServiceDetail() {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="w-full text-left"
             >
-              {activeLalKitaabTab === 0 && (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+              <div id="laal-topic-0" role="tabpanel" aria-labelledby="laal-tab-0" tabIndex={0} hidden={activeLalKitaabTab!==0} inert={activeLalKitaabTab!==0} className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
                   {/* What is Lal Kitaab? (Left Page) */}
                   <div className="bg-[#ECCF86] border border-[#AB7A57]/20 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow duration-300 relative flex flex-col justify-between text-left">
                     <div className="space-y-3">
@@ -1085,10 +1110,8 @@ export default function ServiceDetail() {
                     </div>
                   </div>
                 </div>
-              )}
 
-              {activeLalKitaabTab === 1 && (
-                <div className="space-y-6">
+              <div id="laal-topic-1" role="tabpanel" aria-labelledby="laal-tab-1" tabIndex={0} hidden={activeLalKitaabTab!==1} inert={activeLalKitaabTab!==1} className="space-y-6">
                   <div className="text-center md:text-left space-y-1.5">
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#181122]">
                       Key Diagnostic Areas
@@ -1129,10 +1152,8 @@ export default function ServiceDetail() {
                     ))}
                   </div>
                 </div>
-              )}
 
-              {activeLalKitaabTab === 2 && (
-                <div className="space-y-6">
+              <div id="laal-topic-2" role="tabpanel" aria-labelledby="laal-tab-2" tabIndex={0} hidden={activeLalKitaabTab!==2} inert={activeLalKitaabTab!==2} className="space-y-6">
                   <div className="text-center md:text-left space-y-1.5">
                     <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#181122]">
                       Core Remedy Areas Explored
@@ -1192,7 +1213,6 @@ export default function ServiceDetail() {
                     ))}
                   </div>
                 </div>
-              )}
             </motion.div>
           </div>
         </div>
@@ -1450,7 +1470,7 @@ export default function ServiceDetail() {
                     {/* Direction Badge */}
                     <div className="w-12 h-12 rounded-xl border border-gold-aura/40 bg-[#FFFDEE] flex flex-col items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-all duration-300 text-center">
                       <span className="text-[8px] uppercase tracking-wider text-[#AB7A57] font-bold leading-none">Dir</span>
-                      <span className="text-[11px] font-serif font-black text-gold-aura leading-none mt-0.5">{item.direction}</span>
+                      <span className="text-xs font-serif font-black text-[#806027] leading-none mt-0.5">{item.direction}</span>
                     </div>
 
                     {/* Text Details */}
@@ -1688,6 +1708,7 @@ export default function ServiceDetail() {
 
 
 function PrashnaKundaliDetail({ details, navigate }) {
+  const formBound=usePublicBinding();
   const flow=useEnquiry('prashna');
   const [hoveredIdx, setHoveredIdx] = useState(null);
   const [formData, setFormData] = useState({
@@ -2040,7 +2061,7 @@ function PrashnaKundaliDetail({ details, navigate }) {
               </button>
             </motion.div>
           ) : (
-            <form id="prashna-form" onSubmit={handleSubmit} className="space-y-4 text-left">
+            <form method="post" noValidate id="prashna-form" onSubmit={handleSubmit} className="space-y-4 text-left"><fieldset disabled={!formBound} className="public-form-fields">
                   <EnquiryResume flow={flow} onResume={() => setShowOtpModal(true)} />
               {serverError && (
                 <motion.div 
@@ -2166,7 +2187,7 @@ function PrashnaKundaliDetail({ details, navigate }) {
                   )}
                 </motion.button>
               </div>
-            </form>
+            </fieldset></form>
           )}
 
         </div>

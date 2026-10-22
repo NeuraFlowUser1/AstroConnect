@@ -1,0 +1,170 @@
+[
+  {
+    "path": "/",
+    "mode": "on",
+    "bodyBytes": 149207,
+    "h1": 1
+  },
+  {
+    "path": "/about",
+    "mode": "on",
+    "bodyBytes": 54571,
+    "h1": 1
+  },
+  {
+    "path": "/services",
+    "mode": "on",
+    "bodyBytes": 36270,
+    "h1": 1
+  },
+  {
+    "path": "/services/vedic-astrology",
+    "mode": "on",
+    "bodyBytes": 31529,
+    "h1": 1
+  },
+  {
+    "path": "/services/numerology",
+    "mode": "on",
+    "bodyBytes": 98012,
+    "h1": 1
+  },
+  {
+    "path": "/services/vastu",
+    "mode": "on",
+    "bodyBytes": 52244,
+    "h1": 1
+  },
+  {
+    "path": "/services/laal-kitaab",
+    "mode": "on",
+    "bodyBytes": 36226,
+    "h1": 1
+  },
+  {
+    "path": "/services/prashna-kundali",
+    "mode": "on",
+    "bodyBytes": 47227,
+    "h1": 1
+  },
+  {
+    "path": "/services/name-change",
+    "mode": "on",
+    "bodyBytes": 19882,
+    "h1": 1
+  },
+  {
+    "path": "/testimonials",
+    "mode": "on",
+    "bodyBytes": 31843,
+    "h1": 1
+  },
+  {
+    "path": "/contact",
+    "mode": "on",
+    "bodyBytes": 31849,
+    "h1": 1
+  },
+  {
+    "path": "/privacy-policy",
+    "mode": "on",
+    "bodyBytes": 19890,
+    "h1": 1
+  },
+  {
+    "path": "/terms-and-conditions",
+    "mode": "on",
+    "bodyBytes": 17548,
+    "h1": 1
+  },
+  {
+    "path": "/refund-policy",
+    "mode": "on",
+    "bodyBytes": 16910,
+    "h1": 1
+  },
+  {
+    "path": "/",
+    "mode": "off",
+    "bodyBytes": 146673,
+    "h1": 1
+  },
+  {
+    "path": "/about",
+    "mode": "off",
+    "bodyBytes": 53563,
+    "h1": 1
+  },
+  {
+    "path": "/services",
+    "mode": "off",
+    "bodyBytes": 33189,
+    "h1": 1
+  },
+  {
+    "path": "/services/vedic-astrology",
+    "mode": "off",
+    "bodyBytes": 28510,
+    "h1": 1
+  },
+  {
+    "path": "/services/numerology",
+    "mode": "off",
+    "bodyBytes": 95404,
+    "h1": 1
+  },
+  {
+    "path": "/services/vastu",
+    "mode": "off",
+    "bodyBytes": 49654,
+    "h1": 1
+  },
+  {
+    "path": "/services/laal-kitaab",
+    "mode": "off",
+    "bodyBytes": 33214,
+    "h1": 1
+  },
+  {
+    "path": "/services/prashna-kundali",
+    "mode": "off",
+    "bodyBytes": 44619,
+    "h1": 1
+  },
+  {
+    "path": "/services/name-change",
+    "mode": "off",
+    "bodyBytes": 18068,
+    "h1": 1
+  },
+  {
+    "path": "/testimonials",
+    "mode": "off",
+    "bodyBytes": 30414,
+    "h1": 1
+  },
+  {
+    "path": "/contact",
+    "mode": "off",
+    "bodyBytes": 30979,
+    "h1": 1
+  },
+  {
+    "path": "/privacy-policy",
+    "mode": "off",
+    "bodyBytes": 17286,
+    "h1": 1
+  },
+  {
+    "path": "/terms-and-conditions",
+    "mode": "off",
+    "bodyBytes": 16798,
+    "h1": 1
+  },
+  {
+    "path": "/refund-policy",
+    "mode": "off",
+    "bodyBytes": 16160,
+    "h1": 1
+  }
+]

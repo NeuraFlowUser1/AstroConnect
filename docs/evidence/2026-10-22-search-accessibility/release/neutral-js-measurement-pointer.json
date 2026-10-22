@@ -1,0 +1,243 @@
+{
+  "root": "/tmp/astro-neutral-measurement-juJtOq",
+  "summary": {
+    "scope": "Disposable fixture instrumentation, not a deployable package or product route",
+    "source": "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification",
+    "copy": "/tmp/astro-neutral-measurement-juJtOq/package",
+    "output": "/tmp/astro-neutral-measurement-juJtOq/counters",
+    "original_release": "1bb6cb1cc00a2ead7cec70de052ea78330005d7644dfc0d2e2a40ea7c287b31f",
+    "files": {
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/booking-details-fields.mjs": {
+        "relative": "browser/booking/booking-details-fields.mjs",
+        "sha256": "952748ef802875a07db9c330e53f52739a300e91379a187a332a2611a0badd93"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/booking-details-pdf.mjs": {
+        "relative": "browser/booking/booking-details-pdf.mjs",
+        "sha256": "6ae0a78f79730d1b646e6bc0436d696d8294cb565a7696417bd7fde563e32d70"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/booking-details.mjs": {
+        "relative": "browser/booking/booking-details.mjs",
+        "sha256": "13cd0b14b9a0252784ad8b8074fe02df88510ea934722bb6af3f8289d7046ae7"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/controller.mjs": {
+        "relative": "browser/booking/controller.mjs",
+        "sha256": "d8ca5d61a4e5675cc11fe5ca2beaca5160db2f39e9a2bab567ce44796ea3bcc4"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/credentials.mjs": {
+        "relative": "browser/booking/credentials.mjs",
+        "sha256": "79b331959c95f133be8c0be77a230fffafc54ea43db689d849628dc1a1d02693"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/date-time-fields.mjs": {
+        "relative": "browser/booking/date-time-fields.mjs",
+        "sha256": "454cc7c370abcb9635c685d02c3dbd6e87b6d79b9e17018af874ccb7e9ad3d4d"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/index.mjs": {
+        "relative": "browser/booking/index.mjs",
+        "sha256": "f1e4c4cb1f3af260a9f818d212ae7d12d353715e794938b995cb5eecf1f50260"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/messages.mjs": {
+        "relative": "browser/booking/messages.mjs",
+        "sha256": "408e2672c752da20902a54126dcbfaf94dfdc05e973654fee94b8a9dab3d320c"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/payment-recovery.mjs": {
+        "relative": "browser/booking/payment-recovery.mjs",
+        "sha256": "7082eaa57aaa319f6b21b791eac991c797f55534deeb56f126b741fd0d48835d"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/protocol.mjs": {
+        "relative": "browser/booking/protocol.mjs",
+        "sha256": "d4f08581e8c4a85966f554f83ca175550cffddb2d17b2ce10290a9a027c76eaa"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/razorpay.mjs": {
+        "relative": "browser/booking/razorpay.mjs",
+        "sha256": "ca722fc8197b7ec1ea3ebe4f6084b8a7c8d55202557b7486f18a9b87f5fe71fb"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/receipt-actions.mjs": {
+        "relative": "browser/booking/receipt-actions.mjs",
+        "sha256": "8e03c7d1ab8ddf03ba2af432e7c01b6548c04eb42672fdb95582560a8842f67b"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/receipt-fields.mjs": {
+        "relative": "browser/booking/receipt-fields.mjs",
+        "sha256": "f829eb884534623540ede5bf8323305e5c735d1cc865f00b4982be45a719145e"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/receipt-pdf.mjs": {
+        "relative": "browser/booking/receipt-pdf.mjs",
+        "sha256": "3bbfe968d9538f457cc2582f1ad6720e631dc6e2799aa63278cab0e93b782b0f"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/booking/verification-fields.mjs": {
+        "relative": "browser/booking/verification-fields.mjs",
+        "sha256": "dcaff2a1fa5c20aa000a11791680ba99fe642ea8d983426933959ede49616127"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/conditional-work.mjs": {
+        "relative": "browser/conditional-work.mjs",
+        "sha256": "ca687b2b3f53496ccb0216c9d9385825b4c3d11046ffdadd30dc2636f1299a6c"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/display-formatting.mjs": {
+        "relative": "browser/display-formatting.mjs",
+        "sha256": "b3585cae84bfe1cfb636cd1481b8494c3cffcdf774d9d1be2a244841ca33a80b"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/enquiry/controller.mjs": {
+        "relative": "browser/enquiry/controller.mjs",
+        "sha256": "b52e17da3cec8071d8f40d6b43ff44ff3190589e0b2c337410f8b4ef49dda114"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/enquiry/credentials.mjs": {
+        "relative": "browser/enquiry/credentials.mjs",
+        "sha256": "595055ade2090bd020e573f639eac609b368a957e1a794c65e7b982643a1bbb1"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/enquiry/index.mjs": {
+        "relative": "browser/enquiry/index.mjs",
+        "sha256": "b30b232b0f20230f3e6415177bcb60ac49a8559dc448946e44b58313cec84c16"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/enquiry/messages.mjs": {
+        "relative": "browser/enquiry/messages.mjs",
+        "sha256": "5c0549324fb282534151895a377e751e81ef51b10dba0525085ea49a97f5baf1"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/enquiry/protocol.mjs": {
+        "relative": "browser/enquiry/protocol.mjs",
+        "sha256": "f3563c08f77ab7b97e1d0f29598cc706b7d59b848f1c186b08c22759be3eb3c1"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/product-state.mjs": {
+        "relative": "browser/product-state.mjs",
+        "sha256": "45f9f7142d7078f55d7ce4a94511033bc8c124e391b62e9dfdfd02177490ad34"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/react-bindings.mjs": {
+        "relative": "browser/react-bindings.mjs",
+        "sha256": "2758e3549110d3677bfdbdee11525cf7f8c1b91ef363dcac593673ffd40e8ff8"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/transport.mjs": {
+        "relative": "browser/transport.mjs",
+        "sha256": "c6e2e612aaaaf3a312dfcb741425d3bea8d27993e8d34f7e348e85e931c2fc71"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/visibility.js": {
+        "relative": "browser/visibility.js",
+        "sha256": "09d0a8d40aa9ec89ae4aafff421bbc79b8bcdb10fa3b0de06ffe749c85c71358"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/browser/visibility.mjs": {
+        "relative": "browser/visibility.mjs",
+        "sha256": "b4c60ab654e54386f14eeb33fbc57efeeb64f2bc5b01b4c52bfbd80bd57054ed"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/worker/index.mjs": {
+        "relative": "worker/index.mjs",
+        "sha256": "0abbdc875276e74604d17577656aaa1c41dfa90f4ffb988389426fb38ae6ec09"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/worker/installation.mjs": {
+        "relative": "worker/installation.mjs",
+        "sha256": "c76fdc2b43de3ad8f392a6a868c4345d40a63568787853b92c0902e56ffe2237"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/worker/recovery.mjs": {
+        "relative": "worker/recovery.mjs",
+        "sha256": "f7902c6034f78620dbb4237810e54fe72797d62b584ee04d08c3108ea92cc0d1"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/worker/service-state.mjs": {
+        "relative": "worker/service-state.mjs",
+        "sha256": "5721951cbc9ff01b9d7a86f11066db59409bed54138f485ca5322ce54b040de5"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/hosting/routing.mjs": {
+        "relative": "hosting/routing.mjs",
+        "sha256": "6fd318c4e990f411d80c32e5b35e75125ff409c8736ef3e2bf6d075ba88d0384"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/hosting/surface-policy.mjs": {
+        "relative": "hosting/surface-policy.mjs",
+        "sha256": "74aeac6eecf57ab9eee4250a744a229984825013c2eae0d071f53b60a7b8e0a5"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/company_assets/command-journal.js": {
+        "relative": "engine/appointment_system/company_assets/command-journal.js",
+        "sha256": "bc962dfc47b5d2451cb1265194f0312a5295ecca4ffbd0f6d3472e2158b4b22a"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/company_assets/control.js": {
+        "relative": "engine/appointment_system/company_assets/control.js",
+        "sha256": "e3358e4840d36696561898ac82770fd33ff549909a3f450f5c914c0eb94963ea"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/company_assets/google-repair.js": {
+        "relative": "engine/appointment_system/company_assets/google-repair.js",
+        "sha256": "9d0e967b0665d17740a76efc23dedecbd11268b9446d331120f4b9d2e45f74f5"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/company_assets/support.js": {
+        "relative": "engine/appointment_system/company_assets/support.js",
+        "sha256": "ada6ef7992e77c39d85853e52fecda3ce7846a8ff76bec57a222ab2506167e24"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/appointments.js": {
+        "relative": "engine/appointment_system/studio_assets/appointments.js",
+        "sha256": "7695115ab11711da6983074a7e6ef81b957d5ca0aec77c6b95adbf851e00b253"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/booking-guard.mjs": {
+        "relative": "engine/appointment_system/studio_assets/booking-guard.mjs",
+        "sha256": "fe28c1f957e459ff1bc632d2c1328141903ac9d543db4919686a8f2355aeaf1f"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/calendar.js": {
+        "relative": "engine/appointment_system/studio_assets/calendar.js",
+        "sha256": "20e199fd707b35d9a11f28a180060a2d2715019d41026c7a9606954a0d37bc97"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/enquiries.js": {
+        "relative": "engine/appointment_system/studio_assets/enquiries.js",
+        "sha256": "1db1c66305edaa6c821caf2c158ffe6fa463ad3a5d510307a52da9afe9f85a70"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/inbox.js": {
+        "relative": "engine/appointment_system/studio_assets/inbox.js",
+        "sha256": "eeef440bcfbdfd163cfb99e6b1a6bd0061035e3d85fa37704222150685a0c5df"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/interface.js": {
+        "relative": "engine/appointment_system/studio_assets/interface.js",
+        "sha256": "9ca0f4f6205e64b2f5842e2d6ec7435dd48866bcd548c218c29c4db463b2ebb2"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/engine/appointment_system/studio_assets/staff-actions.js": {
+        "relative": "engine/appointment_system/studio_assets/staff-actions.js",
+        "sha256": "bee7025a2c9d155c05c0d0124ff42a3a979cda3d0e11566188e0a92c5a86b721"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/tools/build/page-modes.mjs": {
+        "relative": "tools/build/page-modes.mjs",
+        "sha256": "1343ecdaa3c8703c6955c73fc8c3060be1493a9e5e6496814e985646a12f4f91"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/tools/build/surfaces.mjs": {
+        "relative": "tools/build/surfaces.mjs",
+        "sha256": "cea2569d299191e0a9c534338895c357b4b21d765afb0a588c4b1ba96bafb3e6"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/tools/checks/website-display.mjs": {
+        "relative": "tools/checks/website-display.mjs",
+        "sha256": "623638a21d35842aabcc92d985e50b595c0d2cd40e2130732aa08e176d54f9d2"
+      },
+      "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/releases/standard-qualification/tools/install/source.mjs": {
+        "relative": "tools/install/source.mjs",
+        "sha256": "68740d418ff5dd39e37af610638363c348a508be25c7e43c3cefb89795e61aa9"
+      }
+    },
+    "run_exit": 0,
+    "counter_observations": 271,
+    "rejections": [],
+    "summary": {
+      "lines": {
+        "total": 2601,
+        "covered": 2400,
+        "skipped": 0,
+        "pct": 92.27
+      },
+      "statements": {
+        "total": 5263,
+        "covered": 4595,
+        "skipped": 0,
+        "pct": 87.3
+      },
+      "functions": {
+        "total": 821,
+        "covered": 701,
+        "skipped": 0,
+        "pct": 85.38
+      },
+      "branches": {
+        "total": 4448,
+        "covered": 3713,
+        "skipped": 0,
+        "pct": 83.47
+      },
+      "branchesTrue": {
+        "total": 0,
+        "covered": 0,
+        "skipped": 0,
+        "pct": "Unknown"
+      }
+    },
+    "whole_working_js_files": 48,
+    "source_unchanged": true,
+    "provider_actions": 0,
+    "customer_actions": 0
+  }
+}

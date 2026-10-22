@@ -1,0 +1,20 @@
+// Execute a named, disconnected qualification supplement in its own pool.
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+const here=path.dirname(fileURLToPath(import.meta.url)),app=path.resolve(here,'../../../..'),original='/tmp/astro-neutral-measurement-juJtOq';
+const tests=process.argv.slice(2).map(file=>path.resolve(file));
+if(!tests.length||tests.some(file=>!file.startsWith(here+'/')||!file.endsWith('.test.mjs')))throw Error('Named local qualification test required');
+const root=fs.mkdtempSync('/tmp/astro-neutral-measurement-supplement-');fs.mkdirSync(path.join(root,'counters'));
+const manifest=JSON.parse(fs.readFileSync(path.join(original,'manifest.json')));manifest.output=path.join(root,'counters');
+fs.writeFileSync(path.join(root,'manifest.json'),JSON.stringify(manifest));fs.copyFileSync(path.join(original,'baseline.json'),path.join(root,'baseline.json'));
+const hashes=Object.fromEntries(tests.map(file=>[file,createHash('sha256').update(fs.readFileSync(file)).digest('hex')]));
+const env=Object.fromEntries(Object.entries(process.env).filter(([key])=>!key.startsWith('BOOKING_')&&!/^(?:PG|DATABASE_URL|GOOGLE_|RAZORPAY_|RESEND_|ASTRO_|VITE_|NODE_OPTIONS|PYTHON)/.test(key)));
+Object.assign(env,{NEUTRAL_MEASUREMENT_ROOT:root,NEUTRAL_MEASUREMENT_APP:app,BOOKING_CHROME_EXECUTABLE:'/home/anan/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome',BOOKING_BROWSER_NODE_MODULES:path.join(app,'node_modules'),BOOKING_MINIFLARE_MODULE:path.join(app,'node_modules/miniflare/dist/src/index.js')});
+const log=fs.openSync(path.join(root,'run.log'),'w');
+const run=spawnSync(process.execPath,['--import',path.join(here,'neutral-counter-preload.mjs'),'--test','--experimental-test-isolation=none','--test-reporter=spec',...tests],{cwd:manifest.copy,env,stdio:['ignore',log,log],timeout:20*60*1000});fs.closeSync(log);
+for(const [file,hash]of Object.entries(hashes))if(createHash('sha256').update(fs.readFileSync(file)).digest('hex')!==hash)throw Error('Supplement changed during execution');
+fs.writeFileSync(path.join(root,'summary.json'),JSON.stringify({run_exit:run.status,tests:hashes,original_release:manifest.original_release,measurement_only:true,provider_actions:0,customer_actions:0},null,2));
+console.log(JSON.stringify({root,run_exit:run.status,log:path.join(root,'run.log')}));process.exitCode=run.status===0?0:1;

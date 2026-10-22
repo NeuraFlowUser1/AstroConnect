@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated from src/data/page-metadata.mjs; build emits the same ordinary route set for both modes. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://astroadvicebykundansingh.com/</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://astroadvicebykundansingh.com/booking</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://astroadvicebykundansingh.com/contact</loc>
-    <lastmod>2026-08-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<url><loc>https://astroadvicebykundansingh.com/</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/about</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services/vedic-astrology</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services/numerology</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services/vastu</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services/laal-kitaab</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services/prashna-kundali</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/services/name-change</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/testimonials</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/contact</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/privacy-policy</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/terms-and-conditions</loc></url>
+<url><loc>https://astroadvicebykundansingh.com/refund-policy</loc></url>
 </urlset>

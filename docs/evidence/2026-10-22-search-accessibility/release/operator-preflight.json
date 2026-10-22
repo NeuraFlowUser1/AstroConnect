@@ -1,0 +1,18 @@
+{
+  "observed_at": "2026-10-22T16:49:57.865804+00:00",
+  "status": {
+    "installation_id": "daccb464-1036-4d35-be47-8ef0f3c4a516",
+    "project": "003",
+    "origin": "https://astroadvicebykundansingh.com",
+    "environment": "production",
+    "enabled": true,
+    "restore_generation": "5b2dd7fd-a7b4-4237-8e4c-b208a461f72f",
+    "revision": "10",
+    "requested_mode": "on",
+    "admission_mode": "on",
+    "operation_id": "de760daa-524a-4f82-a1a6-f4f9f9335dee",
+    "progress": "effective"
+  },
+  "business_settings_revision": "15",
+  "business_settings_sha256": "9d5e46a1dfa15a9fe09248773063fcc9cc0ff4349a9a590d2f50674a4a9181e0"
+}

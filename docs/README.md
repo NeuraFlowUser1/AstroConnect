@@ -1,6 +1,6 @@
 # Project 003 — documentation index
 
-Reviewed **19 October 2026**. This is the maintained application's current reading route. The original September plans and old runbooks are retained as history, not the present engine or a request to repeat setup.
+Reviewed **22 October 2026**. This is the maintained application's current reading route. The original September plans and old runbooks are retained as history, not the present engine or a request to repeat setup.
 
 The [19 October client handoff](project-003/2026-10-19-documentation/README.md) publishes the current outer working status/navigation and relevant historical notices alongside this application. Its manifest distinguishes original working text from link-adapted copies; no private storage or application duplicate is included.
 
@@ -15,6 +15,10 @@ The [19 October client handoff](project-003/2026-10-19-documentation/README.md) 
 | [Historical handover commands](../appointment-system/docs/handover-commands.md) | Exact source-layout recognition and fenced conversion when applicable, not normal daily setup. |
 
 Source owners: src/App.jsx → src/Component and src/lib; api/index.py → complete appointment-system and sibling appointment-settings; proxy/build-support → guarded hosting; workers/workflows → contained operation. Public service copy belongs in src/data/publicServices.js; protected saved policy and server quotes own current fees/availability.
+
+## Current public-page candidate
+
+The [22 October search/accessibility implementation](evidence/2026-10-22-search-accessibility/README.md) records the actual public HTML renderer, single metadata owner, responsive media and focused interface changes. It is an isolated local candidate; publication and hosted acceptance remain with the coordinating four-project release. The current source chain is `src/main.jsx` → `src/App.jsx` → `src/PublicApp.jsx`; public page identity belongs in `src/data/page-metadata.mjs`. Do not use the older title/sitemap tables as a second source.
 
 ## Historical decisions and proof
 

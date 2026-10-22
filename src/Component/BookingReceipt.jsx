@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react';
+import {useState} from 'react';
 import {useBooking} from '../lib/useBooking.js';
 import {ReceiptFields,BookingDetailsFields} from '../lib/booking-ui.jsx';
 import {bookingBrowser} from '../lib/bookingBrowser.mjs';
@@ -15,7 +15,7 @@ function SavedReceipt({onFind}){
  </div>;
 }
 export default function BookingReceipt(){
- useEffect(()=>{const previous=document.title;document.title='View my booking | AstroAdvice by Kundan Singh';return()=>{document.title=previous;};},[]);
+
  const [hasSaved]=useState(()=>{try{return !!bookingBrowser.receipts.readReceipt(window.sessionStorage);}catch{return false;}});
  const [mode,setMode]=useState(hasSaved?'saved':'find');
  return <div className="astro-booking"><section className="astro-booking-receipt booking-access-page" aria-labelledby="booking-access-title">

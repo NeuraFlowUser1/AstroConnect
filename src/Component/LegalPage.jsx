@@ -1,5 +1,4 @@
 import {BookingOnly,BookingCopy} from '../lib/BookingProduct.jsx';
-import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Lock, Eye, Database, AlertCircle, CheckCircle2, Scale, Clock } from 'lucide-react'
 import './LegalPage.css'
@@ -12,11 +11,7 @@ const policies = [
 
 export default function LegalPage({ policy }) {
   const current = policies.find(item => item.id === policy)
-  useEffect(() => {
-    const previous = document.title
-    document.title = current.title + ' | Astro Advice by Kundan Singh'
-    return () => { document.title = previous }
-  }, [current.title])
+
 
   return (
     <article className="legal-page">

@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "cases": [
+    "fast-success",
+    "release-success",
+    "fast-native-refusal",
+    "fast-history-refusal",
+    "release-target-refusal",
+    "release-prefix-refusal",
+    "cwd-refusal",
+    "failure-preserved",
+    "error-preserved",
+    "skip-preserved",
+    "expected-failure-preserved",
+    "unexpected-success-refused",
+    "entry-safe-delegation",
+    "entry-link-refusal"
+  ],
+  "source": "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/003/scripts/run-contained-tests.py",
+  "sha256": "100ac923212d56b3af3b6d69612f176a5dbdd3a31197db27882d16a031f12be1",
+  "sources": {
+    "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/003/scripts/run-contained-tests.py": "100ac923212d56b3af3b6d69612f176a5dbdd3a31197db27882d16a031f12be1",
+    "/mnt/d/coding/business/neuraflow-website-factory/04-shared-tools/003-appointment-booking-system/.local-runtime/operating-search-efficiency-20261022/003/api/index.py": "936b67fa3002a660ce1570034bd56a1f8947a53d40931e102e0af9415f71607f"
+  },
+  "totals": {
+    "covered_lines": 66,
+    "num_statements": 67,
+    "percent_covered": 97.70114942528735,
+    "percent_covered_display": "98",
+    "missing_lines": 1,
+    "excluded_lines": 0,
+    "percent_statements_covered": 98.50746268656717,
+    "percent_statements_covered_display": "99",
+    "num_branches": 20,
+    "num_partial_branches": 1,
+    "covered_branches": 19,
+    "missing_branches": 1,
+    "percent_branches_covered": 95.0,
+    "percent_branches_covered_display": "95"
+  },
+  "providerCalls": 0
+}

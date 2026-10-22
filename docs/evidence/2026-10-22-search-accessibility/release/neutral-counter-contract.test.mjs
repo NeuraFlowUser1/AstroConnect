@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {acceptCounters} from './neutral-counter-contract.mjs';
+const file='/isolated/frozen/source.mjs';
+const owner={path:file,statementMap:{0:{start:{line:1,column:0},end:{line:1,column:5}}},fnMap:{0:{name:'f',decl:{start:{line:1,column:0},end:{line:1,column:1}},loc:{start:{line:1,column:0},end:{line:1,column:5}},line:1}},branchMap:{0:{type:'if',loc:{start:{line:1,column:0},end:{line:1,column:5}},locations:[{start:{line:1,column:0},end:{line:1,column:5}},{start:{line:1,column:5},end:{line:1,column:5}}]}},s:{0:0},f:{0:0},b:{0:[0,0]}};
+const baseline={[file]:owner},owners={[file]:{sha256:'frozen-source'}};
+const raw=()=>structuredClone({[file]:owner});
+test('accepts real exact-source counters, including zero-hit branches',()=>{const data=raw();data[file].s[0]=2;data[file].f[0]=1;data[file].b[0]=[1,0];const result=acceptCounters(data,baseline,owners);assert.deepEqual(result.rejections,[]);assert.equal(result.accepted[file].b[0][1],0);});
+test('refuses unknown source and missing or changed source maps',()=>{assert.deepEqual(acceptCounters({'/other':owner},baseline,owners).rejections,['unknown_owner']);for(const mutate of [value=>{delete value.fnMap;},value=>{value.statementMap[0].start.line=9;},value=>{value.path='/other';}]){const data=raw();mutate(data[file]);assert.deepEqual(acceptCounters(data,baseline,owners).rejections,['source_map_mismatch']);}});
+test('refuses dropped or additional counter keys',()=>{for(const mutate of [value=>{delete value.s[0];},value=>{value.f[1]=0;},value=>{delete value.b;}]){const data=raw();mutate(data[file]);assert.deepEqual(acceptCounters(data,baseline,owners).rejections,['counter_keys']);}});
+test('refuses negative, fractional and wrong-arity counters and malformed roots',()=>{for(const mutate of [value=>{value.s[0]=-1;},value=>{value.f[0]=0.5;},value=>{value.b[0]=[1];},value=>{value.b[0][1]=NaN;}]){const data=raw();mutate(data[file]);assert.deepEqual(acceptCounters(data,baseline,owners).rejections,['counter_value']);}for(const value of [null,[],1])assert.deepEqual(acceptCounters(value,baseline,owners).rejections,['counter_shape']);});

@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "observations": [
+    {
+      "width": 390,
+      "actualRetainedSlider": true,
+      "manualAndAutomaticNavigation": true,
+      "allIconBranches": true
+    },
+    {
+      "width": 900,
+      "actualRetainedSlider": true,
+      "manualAndAutomaticNavigation": true,
+      "allIconBranches": true
+    },
+    {
+      "width": 1440,
+      "actualRetainedSlider": true,
+      "manualAndAutomaticNavigation": true,
+      "allIconBranches": true
+    }
+  ],
+  "fixtureOnlyExports": true,
+  "originalSourceUnchanged": true,
+  "providerCalls": 0
+}

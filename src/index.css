@@ -144,3 +144,30 @@ body {
   will-change: transform;
 }
 
+
+/* Public HTML is readable if attachment fails; existing scene transforms remain owned by Framer Motion. */
+html[data-public-bound="false"] #root :is([style*="opacity:0;"],[style="opacity:0"],[style*="opacity: 0;"],[style="opacity: 0"]) { opacity: 1 !important; }
+.skip-main { position:fixed; z-index:1000; top:8px; left:12px; transform:translateY(-160%); padding:12px 18px; min-height:44px; color:#181122; background:#fffdee; font:600 16px/1.4 "Outfit",sans-serif; border:2px solid #775137; border-radius:8px; }
+.skip-main:focus { transform:none; outline:2px solid #181122; outline-offset:2px; }
+#main-content { scroll-margin-top:110px; }
+.public-form-fields { display:contents; border:0; padding:0; margin:0; min-width:0; }
+.certificate-dot-button { display:grid; place-items:center; width:44px; height:44px; flex:0 0 44px; border:0; border-radius:50%; background:transparent; }
+.certificate-dot-button::before { content:""; width:10px; height:10px; border-radius:50%; background:#d3af5433; transition:transform 300ms,background-color 300ms,box-shadow 300ms; }
+.certificate-dot-button[data-selected="true"]::before { background:#d3af54; transform:scale(1.25); box-shadow:0 0 8px #d3af54cc; }
+.certificate-dot-button:hover::before { background:#d3af5473; }
+.certificate-dot-button:focus-visible,.home-reviews-window:focus-visible { outline:2px solid #806027; outline-offset:2px; }
+.site-header-brand:focus-visible { outline-offset:-2px; }
+.number-reveal { min-height:256px; display:grid; }
+.number-reveal-toggle { position:absolute; inset:0; z-index:3; border:0; border-radius:24px; background:transparent; cursor:pointer; }
+.number-reveal-toggle:focus-visible { outline:2px solid #775137; outline-offset:3px; }
+.number-reveal-faces { display:grid; pointer-events:none; }
+.number-reveal-face { position:relative!important; grid-area:1/1; min-height:256px; height:auto!important; }
+.number-reveal-detail { font-size:14px; line-height:1.5; }
+.number-reveal-detail p { font-size:14px; line-height:1.5; }
+.number-reveal-detail [class*="text-[8px]"],.number-reveal-face [class*="text-[8px]"],.number-reveal-face [class*="text-[9px]"] { font-size:12px; line-height:1.4; }
+.service-detail-page :is([role="tab"],[aria-pressed], [role="tabpanel"]):focus-visible { outline:2px solid #775137; outline-offset:2px; }
+/* Only text on observed pale surfaces is darkened; decorative gold/brown remains intact. */
+.service-detail-page :is(.bg-white,.bg-\[\#FFFDEE\],.bg-\[\#EDE9D7\]) .text-\[\#AB7A57\] { color:#775137; }
+.service-detail-page .bg-\[\#EDE9D7\] > div > div > .text-\[\#D3AF54\] { color:#806027; }
+@media(max-width:760px){ .contact-message-form :is(input,select,textarea){font-size:16px;} }
+@media(prefers-reduced-motion:reduce){ .number-reveal-faces{transition:none!important;} .number-reveal .number-reveal-face{transform:none!important;backface-visibility:visible!important;} .number-reveal-face[aria-hidden="true"]{visibility:hidden;} }

@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import {BookingNavigationLink as Link} from '../lib/BookingProduct.jsx';
 import { Menu, X, ChevronDown, Calendar, Phone, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
-import logoImg from "../assets/logos/Nav-Logo.webp";
+import logoImg from "../assets/logos/navigation-logo-224.webp";
 import { publicServices } from "../data/publicServices";
 import "./Navbar.css";
 
@@ -132,7 +132,7 @@ export default function Navbar() {
           {/* Logo Section */}
           <Link to="/" className="site-header-brand flex items-center gap-1 pt-3 cursor-pointer group">
             <img
-              src={logoImg}
+              src={logoImg} width="224" height="224"
               alt="Kundan Singh Logo"
               className="w-28 h-28 object-contain transition-transform duration-300 group-hover:scale-105"
             />
@@ -202,7 +202,7 @@ export default function Navbar() {
                     />
                   )}
                   <Link
-                    to={item.path}
+                    to={item.path} aria-current={location.pathname===item.path?'page':undefined}
                     className="relative z-10 px-4 py-2 block text-sm font-medium transition-colors text-slate-300 hover:text-white"
                   >
                     {item.name}

@@ -1,0 +1,29 @@
+{
+  "numberReveal": "Enter, Space, hover preview and manual close share one truthful state",
+  "numberAccessible": {
+    "expanded": "true",
+    "controlled": "number-1-details",
+    "detailHidden": "false"
+  },
+  "tabs": "Arrow keys/Home/End move focus only; Enter/Space activate correct single panel",
+  "benefitFocusPause": true,
+  "benefitContinues": true,
+  "contact": "Existing required validation focuses and links first error; optional question retained",
+  "skipFocus": true,
+  "phoneBrand": {
+    "y": 0,
+    "height": 84
+  },
+  "narrowOverflow": 0,
+  "reducedMotion": {
+    "errors": [],
+    "transition": "0s"
+  },
+  "noScript": {
+    "method": "post",
+    "disabled": true,
+    "heading": "Contact Our Studio",
+    "formY": 1036.171875,
+    "opacity": "1"
+  }
+}

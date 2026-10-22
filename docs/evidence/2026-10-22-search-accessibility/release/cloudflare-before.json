@@ -1,0 +1,166 @@
+{
+  "observed_at": "2026-10-22T14:58:13.637Z",
+  "account_id": "162c1ab1ba0619c1c78d9495f3260f18",
+  "script": "astro-advice-inquiry-delivery",
+  "settings": {
+    "placement": {},
+    "compatibility_date": "2026-09-11",
+    "compatibility_flags": [],
+    "usage_model": "standard",
+    "tags": [],
+    "tail_consumers": [],
+    "logpush": false,
+    "observability": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "redact_query_string": false,
+      "logs": {
+        "enabled": true,
+        "head_sampling_rate": 1,
+        "persist": true,
+        "invocation_logs": true
+      },
+      "traces": {
+        "enabled": false,
+        "persist": true,
+        "head_sampling_rate": 1
+      }
+    },
+    "annotations": {
+      "workers/triggered_by": "version_upload"
+    },
+    "bindings": [
+      {
+        "name": "BOOKING_CONTROL_PUBLISH_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_CONTROL_READ_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_CONTROL_RECONCILE_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_EMAIL_WORKER_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_ENVIRONMENT",
+        "text": "production",
+        "type": "plain_text"
+      },
+      {
+        "name": "BOOKING_GOOGLE_WORKER_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_INSTALLATION_ID",
+        "text": "daccb464-1036-4d35-be47-8ef0f3c4a516",
+        "type": "plain_text"
+      },
+      {
+        "name": "BOOKING_MONITOR_KEY",
+        "type": "secret_text"
+      },
+      {
+        "class_name": "BookingProductState",
+        "name": "BOOKING_PRODUCT_STATE",
+        "namespace_id": "179cd1ab364d4468a5e4c0fb78fbc70e",
+        "type": "durable_object_namespace"
+      },
+      {
+        "name": "BOOKING_PROJECT_ID",
+        "text": "003",
+        "type": "plain_text"
+      },
+      {
+        "name": "BOOKING_PUBLIC_ORIGIN",
+        "text": "https://astroadvicebykundansingh.com",
+        "type": "plain_text"
+      },
+      {
+        "class_name": "BookingRecoveryState",
+        "name": "BOOKING_RECOVERY_STATE",
+        "namespace_id": "19a70ce90f2f490a8c0dd4cc17435fff",
+        "type": "durable_object_namespace"
+      },
+      {
+        "name": "BOOKING_RECOVERY_WORKER_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_RELEASE_DIGEST",
+        "text": "54af467afbe152286f1f81f28f904a8b59b51e31111e6a81d93b1d340bd3720a",
+        "type": "plain_text"
+      },
+      {
+        "name": "BOOKING_WAKE_KEY",
+        "type": "secret_text"
+      },
+      {
+        "name": "BOOKING_WAKE_QUEUE",
+        "queue_name": "astroadvice-by-kundan-snigh-inquiries",
+        "type": "queue"
+      }
+    ]
+  },
+  "deployment": {
+    "id": "d24474aa-b985-4dff-9a24-e9c8ef7f2a5a",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "neuraflowindia@gmail.com",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "1e610384-34d9-4ac7-97fc-ef156ce4aa7f",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-11T10:27:11.138354Z"
+  },
+  "queue": {
+    "queue_id": "56cea51fb5b14ba1b133cf9b2d4f9a09",
+    "queue_name": "astroadvice-by-kundan-snigh-inquiries",
+    "settings": {
+      "delivery_delay": 0,
+      "message_retention_period": 86400
+    },
+    "created_on": "2026-09-11T08:58:25.294Z",
+    "modified_on": "2026-09-11T08:58:25.294Z",
+    "producers_total_count": 1,
+    "producers": [
+      {
+        "script": "astro-advice-inquiry-delivery",
+        "type": "worker"
+      }
+    ],
+    "consumers_total_count": 1,
+    "consumers": [
+      {
+        "script": "astro-advice-inquiry-delivery",
+        "settings": {
+          "batch_size": 1,
+          "max_retries": 5,
+          "max_wait_time_ms": 1000,
+          "max_concurrency": 1,
+          "retry_delay": 60
+        },
+        "consumer_id": "e08cf0341f244304b6823ab326903006",
+        "type": "worker"
+      }
+    ]
+  },
+  "schedules": {
+    "schedules": [
+      {
+        "cron": "*/15 * * * *",
+        "created_on": "2026-09-11T20:42:02.963925Z",
+        "modified_on": "2026-10-11T10:27:16.261265Z"
+      }
+    ]
+  }
+}

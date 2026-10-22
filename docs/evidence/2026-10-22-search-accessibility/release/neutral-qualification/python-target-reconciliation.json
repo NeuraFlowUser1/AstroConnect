@@ -1,0 +1,576 @@
+{
+  "release_digest": "1bb6cb1cc00a2ead7cec70de052ea78330005d7644dfc0d2e2a40ea7c287b31f",
+  "source_unchanged": true,
+  "manifest_files": 579,
+  "targets": {
+    "pg16": {
+      "target": "abs-implementation-pg16",
+      "discovered": 1156,
+      "executed": 1156,
+      "successful": true,
+      "seconds": 1570.48,
+      "coverage": {
+        "covered_lines": 10361,
+        "num_statements": 10837,
+        "percent_covered": 93.83475557319574,
+        "percent_covered_display": "94",
+        "missing_lines": 476,
+        "excluded_lines": 0,
+        "percent_statements_covered": 95.60764049091077,
+        "percent_statements_covered_display": "96",
+        "num_branches": 4280,
+        "num_partial_branches": 352,
+        "covered_branches": 3824,
+        "missing_branches": 456,
+        "percent_branches_covered": 89.34579439252336,
+        "percent_branches_covered_display": "89"
+      }
+    },
+    "pg18": {
+      "target": "abs-implementation-pg18",
+      "discovered": 1156,
+      "executed": 1156,
+      "successful": true,
+      "seconds": 1469.67,
+      "coverage": {
+        "covered_lines": 10421,
+        "num_statements": 10837,
+        "percent_covered": 94.41026658728583,
+        "percent_covered_display": "94",
+        "missing_lines": 416,
+        "excluded_lines": 0,
+        "percent_statements_covered": 96.16129925256067,
+        "percent_statements_covered_display": "96",
+        "num_branches": 4280,
+        "num_partial_branches": 353,
+        "covered_branches": 3851,
+        "missing_branches": 429,
+        "percent_branches_covered": 89.9766355140187,
+        "percent_branches_covered_display": "90"
+      }
+    }
+  },
+  "all_target_skips_have_actual_other_target_pass": true,
+  "counterparts": [
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_accepted_label_with_wrong_saved_amount_rolls_back_the_whole_transfer",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_checkpoint_recovers_each_committed_phase_without_repeating_commands",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_checkpoint_rejects_unknown_identity_release_and_writer_set",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_exact_published_commentless_layout_passes_complete_native_handover",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_explicit_wrong_source_layout_cannot_preview_prepare_or_read_a_checkpoint",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_first_move_preserves_original_time",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_frozen_booking_enquiry_mail_and_spent_quota_survive_native_transfer",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_inflight_verification_message_keeps_exact_body_identity_and_original_deadline",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_live_enquiry_code_finishes_after_handover_with_original_attempts_and_deadline",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_missing_first_revision_keeps_original_time_unknown",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_operating_commands_use_real_configuration_and_native_saved_checkpoints",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_owned_workbook_saved_row_and_actual_remote_event_survive_together",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_paid_records_pending_calendar_and_notification_during_pause_survive",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_preview_preserves_source_and_permissions_then_import_reads_final_delta",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_native_sarsa_handover.NativeSarsaHandover.test_saved_support_code_history_and_throttle_windows_survive_native_transfer",
+      "reason": "Owned PG18 historical 004 target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_approved_erasure_clears_both_copies_keeps_evidence_and_is_repeatable",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_canonical_only_archive_needs_no_obsolete_source_and_partial_source_is_rejected",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_changed_retained_copy_rolls_back_canonical_erase_and_completion",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_completion_does_not_permit_rewriting_retained_identity_or_recreating_content",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_independent_replay_erases_restored_old_personal_data_before_release",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_new_canonical_activity_cancels_erasure_and_keeps_both_copies",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg16",
+      "actual_pass_target": "pg18",
+      "id": "tests.test_retained_enquiry_privacy.RetainedEnquiryPrivacy.test_retired_writer_and_maintenance_cannot_change_or_delete_source_directly",
+      "reason": "Owned PG18 historical target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_bad_record_rolls_back_permissions_and_target_rows_together",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_bounded_native_verification_checks_a_changed_record_in_the_last_batch",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_checkpoint_recovers_each_committed_phase_without_repeating_commands",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_checkpoint_rejects_unknown_identity_release_and_writer_set",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_completed_enquiry_sheet_copies_transfer_without_new_writes_or_mail",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_completion_detects_a_missing_payment_record",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_completion_rechecks_actual_rows_and_never_accepts_a_saved_digest_alone",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_completion_rechecks_final_saved_source_records_after_import",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_explicit_reauthorization_preserves_calendar_event_without_unreadable_old_key",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_explicit_wrong_source_layout_cannot_preview_prepare_or_read_a_checkpoint",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_final_delta_paid_facts_and_callback_are_preserved_then_old_writer_is_denied",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_legacy_object_owner_or_schema_creator_is_refused_before_pause_or_revocation",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_live_verification_refuses_import_without_losing_source_or_writer_access",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_old_delivery_reports_preserve_acceptance_and_bounce_suppression",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_operating_commands_use_real_configuration_and_native_saved_checkpoints",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_original_frozen_booking_mail_survives_native_transfer_without_new_identity",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_pause_requires_actual_journal_login_and_abort_cannot_discard_new_notifications",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_pinned_staff_identity_calendar_permission_and_existing_event_survive_together",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_preview_preserves_source_and_permissions_then_import_reads_final_delta",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_real_daily_spending_and_existing_job_reservation_do_not_reset_or_count_twice",
+      "reason": "Owned PG16 historical 003 target required."
+    },
+    {
+      "skipped_target": "pg18",
+      "actual_pass_target": "pg16",
+      "id": "tests.test_native_handover.NativeHandover.test_retired_verification_and_unmatched_reports_never_become_current_authority",
+      "reason": "Owned PG16 historical 003 target required."
+    }
+  ],
+  "working_python_files": 138,
+  "combined_coverage": {
+    "covered_lines": 10521,
+    "num_statements": 10837,
+    "percent_covered": 95.45544750942648,
+    "percent_covered_display": "95",
+    "missing_lines": 316,
+    "excluded_lines": 0,
+    "percent_statements_covered": 97.0840638553105,
+    "percent_statements_covered_display": "97",
+    "num_branches": 4280,
+    "num_partial_branches": 347,
+    "covered_branches": 3909,
+    "missing_branches": 371,
+    "percent_branches_covered": 91.33177570093459,
+    "percent_branches_covered_display": "91"
+  },
+  "runtime_supplement_used": true,
+  "domains": {
+    "shared-runtime-security": {
+      "statements": 1337,
+      "covered_statements": 1265,
+      "branches": 388,
+      "covered_branches": 350,
+      "owners": [
+        "engine/appointment_system/__init__.py",
+        "engine/appointment_system/application.py",
+        "engine/appointment_system/configuration.py",
+        "engine/appointment_system/configuration_evidence.py",
+        "engine/appointment_system/connection.py",
+        "engine/appointment_system/credentials.py",
+        "engine/appointment_system/errors.py",
+        "engine/appointment_system/keys.py",
+        "engine/appointment_system/protected_records.py",
+        "engine/appointment_system/rate_limit.py",
+        "engine/appointment_system/runtime.py",
+        "engine/appointment_system/secret_configuration.py",
+        "engine/appointment_system/security.py",
+        "engine/appointment_system/serialization.py",
+        "engine/appointment_system/settings.py",
+        "engine/appointment_system/storage.py"
+      ],
+      "statement_percent": 94.61480927449514,
+      "branch_percent": 90.20618556701031,
+      "threshold_met": true
+    },
+    "staff-company-control": {
+      "statements": 1270,
+      "covered_statements": 1250,
+      "branches": 316,
+      "covered_branches": 296,
+      "owners": [
+        "engine/appointment_system/access.py",
+        "engine/appointment_system/company_auth.py",
+        "engine/appointment_system/company_control.py",
+        "engine/appointment_system/company_support.py",
+        "engine/appointment_system/contact_correction.py",
+        "engine/appointment_system/control_publication.py",
+        "engine/appointment_system/control_recovery.py",
+        "engine/appointment_system/service_control.py",
+        "engine/appointment_system/staff_browser.py",
+        "engine/appointment_system/studio.py",
+        "engine/appointment_system/studio_appointments.py",
+        "engine/appointment_system/studio_calendar.py",
+        "engine/appointment_system/studio_inbox.py"
+      ],
+      "statement_percent": 98.4251968503937,
+      "branch_percent": 93.67088607594937,
+      "threshold_met": true
+    },
+    "booking-scheduling-payments": {
+      "statements": 959,
+      "covered_statements": 940,
+      "branches": 354,
+      "covered_branches": 337,
+      "owners": [
+        "engine/appointment_system/availability.py",
+        "engine/appointment_system/booking_lookup.py",
+        "engine/appointment_system/checkout.py",
+        "engine/appointment_system/checkout_verification.py",
+        "engine/appointment_system/financial_resources.py",
+        "engine/appointment_system/models.py",
+        "engine/appointment_system/order_creation.py",
+        "engine/appointment_system/payment_configuration.py",
+        "engine/appointment_system/payment_evidence.py",
+        "engine/appointment_system/payment_policy.py",
+        "engine/appointment_system/policy.py",
+        "engine/appointment_system/razorpay.py",
+        "engine/appointment_system/receipt_view.py",
+        "engine/appointment_system/webhook.py"
+      ],
+      "statement_percent": 98.01876955161627,
+      "branch_percent": 95.19774011299435,
+      "threshold_met": true
+    },
+    "installation-migration-backup-privacy": {
+      "statements": 3830,
+      "covered_statements": 3718,
+      "branches": 1924,
+      "covered_branches": 1735,
+      "owners": [
+        "engine/appointment_system/backup/__init__.py",
+        "engine/appointment_system/backup/age_stream.py",
+        "engine/appointment_system/backup/database.py",
+        "engine/appointment_system/backup/drive.py",
+        "engine/appointment_system/backup/legacy.py",
+        "engine/appointment_system/backup/legacy_003.py",
+        "engine/appointment_system/backup/legacy_004.py",
+        "engine/appointment_system/backup/pipeline.py",
+        "engine/appointment_system/backup/protocol.py",
+        "engine/appointment_system/backup/retention.py",
+        "engine/appointment_system/backup/snapshot.py",
+        "engine/appointment_system/migrate.py",
+        "engine/appointment_system/privacy/__init__.py",
+        "engine/appointment_system/privacy/engine.py",
+        "engine/appointment_system/privacy/ledger.py",
+        "engine/appointment_system/privacy/store.py",
+        "engine/appointment_system/privacy_retention.py",
+        "tools/__init__.py",
+        "tools/automation/__init__.py",
+        "tools/automation/backup.py",
+        "tools/automation/eligibility.py",
+        "tools/company_recovery.py",
+        "tools/conversion/__init__.py",
+        "tools/conversion/allowance.py",
+        "tools/conversion/calendar.py",
+        "tools/conversion/configuration.py",
+        "tools/conversion/difference.py",
+        "tools/conversion/enquiry.py",
+        "tools/conversion/grants.py",
+        "tools/conversion/handover.py",
+        "tools/conversion/mail.py",
+        "tools/conversion/mail_events.py",
+        "tools/conversion/operator_settings.py",
+        "tools/conversion/reauthorization.py",
+        "tools/conversion/records.py",
+        "tools/conversion/recovery.py",
+        "tools/conversion/resources.py",
+        "tools/conversion/retained.py",
+        "tools/conversion/source.py",
+        "tools/conversion/staff_history.py",
+        "tools/conversion/support.py",
+        "tools/conversion/transport.py",
+        "tools/conversion/verification.py",
+        "tools/handover.py",
+        "tools/initialize_projection.py",
+        "tools/install/__init__.py",
+        "tools/install/host.py",
+        "tools/install/monitor.py",
+        "tools/install/package.py",
+        "tools/install/source.py",
+        "tools/install/worker.py",
+        "tools/setup.py"
+      ],
+      "statement_percent": 97.0757180156658,
+      "branch_percent": 90.17671517671518,
+      "threshold_met": true
+    },
+    "verification-enquiries-mail": {
+      "statements": 1122,
+      "covered_statements": 1095,
+      "branches": 410,
+      "covered_branches": 372,
+      "owners": [
+        "engine/appointment_system/booking_verification.py",
+        "engine/appointment_system/booking_verification_delivery.py",
+        "engine/appointment_system/contact.py",
+        "engine/appointment_system/contact_delivery.py",
+        "engine/appointment_system/contact_messages.py",
+        "engine/appointment_system/contact_records.py",
+        "engine/appointment_system/contact_routes.py",
+        "engine/appointment_system/email_configuration.py",
+        "engine/appointment_system/email_delivery.py",
+        "engine/appointment_system/email_events.py",
+        "engine/appointment_system/email_messages.py",
+        "engine/appointment_system/mail_identity.py",
+        "engine/appointment_system/mail_outcomes.py",
+        "engine/appointment_system/receipt_copy.py",
+        "engine/appointment_system/resend_email.py"
+      ],
+      "statement_percent": 97.59358288770053,
+      "branch_percent": 90.73170731707317,
+      "threshold_met": true
+    },
+    "recovery-diagnostics": {
+      "statements": 698,
+      "covered_statements": 679,
+      "branches": 262,
+      "covered_branches": 245,
+      "owners": [
+        "engine/appointment_system/diagnostics.py",
+        "engine/appointment_system/job_authority.py",
+        "engine/appointment_system/provider_ingress.py",
+        "engine/appointment_system/recovery.py",
+        "engine/appointment_system/recovery_contract.py",
+        "engine/appointment_system/request_budget.py",
+        "engine/appointment_system/wake.py",
+        "engine/appointment_system/worker_access.py",
+        "engine/appointment_system/worker_authority.py",
+        "tools/automation/monitor.py",
+        "tools/automation/trigger.py"
+      ],
+      "statement_percent": 97.27793696275072,
+      "branch_percent": 93.5114503816794,
+      "threshold_met": true
+    },
+    "google-records": {
+      "statements": 1232,
+      "covered_statements": 1197,
+      "branches": 492,
+      "covered_branches": 446,
+      "owners": [
+        "engine/appointment_system/google_access.py",
+        "engine/appointment_system/google_delivery.py",
+        "engine/appointment_system/google_oauth.py",
+        "engine/appointment_system/google_records.py",
+        "engine/appointment_system/google_resources.py",
+        "engine/appointment_system/google_sharing.py",
+        "engine/appointment_system/google_workspace.py",
+        "engine/appointment_system/resource_consent.py",
+        "engine/appointment_system/sheet_layout.py",
+        "engine/appointment_system/sheet_projection.py"
+      ],
+      "statement_percent": 97.1590909090909,
+      "branch_percent": 90.65040650406505,
+      "threshold_met": true
+    },
+    "hosting-visibility": {
+      "statements": 259,
+      "covered_statements": 257,
+      "branches": 76,
+      "covered_branches": 72,
+      "owners": [
+        "engine/appointment_system/hosting.py",
+        "engine/appointment_system/projection.py",
+        "engine/appointment_system/retired_routes.py",
+        "engine/appointment_system/surfaces.py",
+        "engine/appointment_system/visibility.py"
+      ],
+      "statement_percent": 99.22779922779922,
+      "branch_percent": 94.73684210526316,
+      "threshold_met": true
+    },
+    "test-infrastructure": {
+      "statements": 130,
+      "covered_statements": 120,
+      "branches": 58,
+      "covered_branches": 56,
+      "owners": [
+        "tools/checks/__init__.py",
+        "tools/checks/sql_target.py"
+      ],
+      "statement_percent": 92.3076923076923,
+      "branch_percent": 96.55172413793103,
+      "threshold_met": true
+    }
+  },
+  "all_original_domains_meet_90_statements_and_branches": true,
+  "coverage_denominator": "Every working Python owner under engine and tools, including zero-hit owners. No exclusions.",
+  "provider_actions": 0,
+  "customer_actions": 0,
+  "qualification_complete": false
+}

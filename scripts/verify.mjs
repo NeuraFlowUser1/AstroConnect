@@ -33,6 +33,7 @@ export function commandPlan(mode,source=process.env,project=root){
  return [
   {name:'lint',command:'npm',args:['run','lint'],cwd:project,env},
   {name:'production build',command:'npm',args:['run','build'],cwd:project,env},
+  {name:'public HTML, metadata and proof-isolation checks',command:process.execPath,args:['--test','--experimental-test-isolation=none','tests/public-page-rendering.test.mjs','tests/contained-runner.test.mjs'],cwd:project,env},
   {name:'contained common Python checks',command:python,args:[resolve(project,'scripts/run-contained-tests.py'),mode,
    resolve(project,'verification-results/contained-'+mode+'.json')],cwd:packageRoot,env},
   {name:'contained common Node checks',command:process.execPath,args:['--test','--experimental-test-isolation=none',...tests],cwd:packageRoot,env},

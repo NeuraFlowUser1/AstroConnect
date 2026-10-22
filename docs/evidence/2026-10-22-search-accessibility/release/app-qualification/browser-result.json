@@ -1,0 +1,427 @@
+{
+  "passed": true,
+  "observations": [
+    {
+      "route": "/",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vedic-astrology",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/numerology",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vastu",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/laal-kitaab",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/prashna-kundali",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/name-change",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/testimonials",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/terms-and-conditions",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/refund-policy",
+      "width": 390,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vedic-astrology",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/numerology",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vastu",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/laal-kitaab",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/prashna-kundali",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/name-change",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/testimonials",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/terms-and-conditions",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/refund-policy",
+      "width": 1440,
+      "enabled": true,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/about",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vedic-astrology",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/numerology",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vastu",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/laal-kitaab",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/prashna-kundali",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/name-change",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/testimonials",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/contact",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/terms-and-conditions",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/refund-policy",
+      "width": 390,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vedic-astrology",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/numerology",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/vastu",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/laal-kitaab",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/prashna-kundali",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/services/name-change",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/testimonials",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/contact",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/privacy-policy",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/terms-and-conditions",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/refund-policy",
+      "width": 1440,
+      "enabled": false,
+      "reduced": true,
+      "errors": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "enabled": true,
+      "reduced": false,
+      "visibilityAndResize": true
+    },
+    {
+      "route": "/about",
+      "width": 1440,
+      "enabled": true,
+      "reduced": false,
+      "visibilityAndResize": true
+    },
+    {
+      "route": "/services/vedic-astrology",
+      "width": 1440,
+      "enabled": true,
+      "reduced": false,
+      "visibilityAndResize": true
+    },
+    {
+      "route": "/testimonials",
+      "width": 1440,
+      "enabled": true,
+      "reduced": false,
+      "visibilityAndResize": true
+    }
+  ],
+  "providerCalls": 0,
+  "externalCallsBlocked": true
+}

@@ -1,3 +1,4 @@
+import {usePublicBinding} from '../lib/usePublicBinding.js';
 import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { 
@@ -42,6 +43,7 @@ const faqs = [
 ];
 
 function Contact() {
+  const formBound=usePublicBinding();
   const {enabled}=useBookingProduct()
   const helpFormRef = useRef(null)
   const flow=useEnquiry('contact')
@@ -81,7 +83,7 @@ function Contact() {
     })
   }
 
-  const validateContactForm = () => {
+  const validateContactForm = ({ moveFocus = false } = {}) => {
     let isValid = true
     const newErrors = {
       name: "",
@@ -119,6 +121,7 @@ function Contact() {
     }
 
     setErrors(newErrors)
+    if(!isValid && moveFocus)requestAnimationFrame(()=>document.getElementById(Object.keys(newErrors).find(key=>newErrors[key]))?.focus());
     return isValid
   }
 
@@ -133,7 +136,7 @@ function Contact() {
     setAttemptedSubmit(true)
     setServerError("")
     
-    if (!validateContactForm()) {
+    if (!validateContactForm({ moveFocus: true })) {
       return
     }
 
@@ -356,7 +359,7 @@ function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleContactSubmit} className="contact-message-form text-left flex flex-col justify-between h-full">
+              <form method="post" noValidate onSubmit={handleContactSubmit} className="contact-message-form text-left flex flex-col justify-between h-full"><fieldset disabled={!formBound} className="public-form-fields">
                   <EnquiryResume flow={flow} onResume={() => setShowOtpModal(true)} />
                 {serverError && (
                   <div role="alert" className="p-3 bg-red-50 border border-red-300 rounded-xl text-red-900 text-sm text-center font-sans leading-relaxed">
@@ -381,7 +384,7 @@ function Contact() {
                     <User size={13} className="absolute left-3.5 top-3.5 text-[#AB7A57]" />
                     <input 
                       type="text" 
-                      id="name"
+                      id="name" required autoComplete="name" aria-invalid={errors.name?true:undefined} aria-describedby={errors.name?'name-error':undefined}
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
@@ -390,7 +393,7 @@ function Contact() {
                     />
                   </div>
                   {errors.name && (
-                    <p className="text-red-500 text-[10px] font-sans font-medium mt-1">⚠️ {errors.name}</p>
+                    <p id="name-error" className="text-red-700 text-sm font-sans font-medium mt-1">⚠️ {errors.name}</p>
                   )}
                 </div>
 
@@ -403,8 +406,8 @@ function Contact() {
                     <div className="relative">
                       <Mail size={13} className="absolute left-3.5 top-3.5 text-[#AB7A57]" />
                       <input 
-                        type="text" 
-                        id="email"
+                        type="email"
+                        id="email" required autoComplete="email" aria-invalid={errors.email?true:undefined} aria-describedby={errors.email?'email-error':undefined}
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
@@ -413,7 +416,7 @@ function Contact() {
                       />
                     </div>
                     {errors.email && (
-                      <p className="text-red-500 text-[10px] font-sans font-medium mt-1">⚠️ {errors.email}</p>
+                      <p id="email-error" className="text-red-700 text-sm font-sans font-medium mt-1">⚠️ {errors.email}</p>
                     )}
                   </div>
 
@@ -425,7 +428,7 @@ function Contact() {
                       <Phone size={13} className="absolute left-3.5 top-3.5 text-[#AB7A57]" />
                       <input 
                         type="tel" 
-                        id="phone"
+                        id="phone" required autoComplete="tel" aria-invalid={errors.phone?true:undefined} aria-describedby={errors.phone?'phone-error':undefined}
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
@@ -434,7 +437,7 @@ function Contact() {
                       />
                     </div>
                     {errors.phone && (
-                      <p className="text-red-500 text-[10px] font-sans font-medium mt-1">⚠️ {errors.phone}</p>
+                      <p id="phone-error" className="text-red-700 text-sm font-sans font-medium mt-1">⚠️ {errors.phone}</p>
                     )}
                   </div>
                 </div>
@@ -447,7 +450,7 @@ function Contact() {
                   <div className="relative">
                     <MessageSquare size={13} className="absolute left-3.5 top-3.5 text-[#AB7A57]" />
                     <select 
-                      id="subject"
+                      id="subject" required aria-invalid={errors.subject?true:undefined} aria-describedby={errors.subject?'subject-error':undefined}
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
@@ -461,6 +464,7 @@ function Contact() {
                     </select>
                     <ChevronDown size={14} className="absolute right-3.5 top-3.5 text-[#AB7A57] pointer-events-none" />
                   </div>
+                  {errors.subject&&<p id="subject-error" className="text-red-700 text-sm">{errors.subject}</p>}
                 </div>
 
                 {/* Message Box */}
@@ -469,7 +473,7 @@ function Contact() {
                     Your Message / Question <span className="text-slate-600 text-[10px] normal-case font-normal italic">(Optional)</span>
                   </label>
                   <textarea 
-                    id="message"
+                    id="message" aria-invalid={errors.message?true:undefined} aria-describedby={errors.message?'message-error':undefined}
                     name="message"
                     rows={4}
                     value={formData.message}
@@ -481,7 +485,7 @@ function Contact() {
 
                 <div className="pt-2">
                   <button 
-                    type="submit"
+                    type="submit" disabled={submitting||!formBound}
                     className="w-full bg-[#181122] hover:bg-[#D3AF54] text-white hover:text-[#181122] font-semibold py-3 rounded-xl transition duration-300 flex items-center justify-center gap-1.5 text-xs sm:text-sm uppercase tracking-wider cursor-pointer shadow"
                   >
                     <Send size={13} />
@@ -489,7 +493,7 @@ function Contact() {
                   </button>
                 </div>
 
-              </form>
+              </fieldset></form>
             )}
           </div>
 

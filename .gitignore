@@ -66,3 +66,10 @@ temp/
 .impeccable/*
 !.impeccable/design.json
 !.impeccable/surfaces/
+
+# Build-only server renderer, never deployed.
+.public-renderer/
+
+# Local installer coordination and preserved return copies.
+/.appointment-install.lock
+/.appointment-rollbacks/

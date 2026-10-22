@@ -3,7 +3,7 @@ import React from 'react'
 import {BookingNavigationLink as Link} from '../lib/BookingProduct.jsx';
 import { Phone, CalendarClock } from "lucide-react";
 import { motion } from 'framer-motion'
-import logoImg from "../assets/logos/Nav-Logo.webp";
+import logoImg from "../assets/logos/navigation-logo-224.webp";
 import fbLogo from "../assets/logos/facebook.webp";
 import instaLogo from "../assets/logos/Instagram.webp";
 import ytLogo from "../assets/logos/Youtube.webp";

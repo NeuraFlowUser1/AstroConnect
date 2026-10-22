@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "observations": [
+    "Booking access redirect, receipt mode, failed/retried/cached real PDF",
+    "Hash-link compatibility, skip focus, all service back controls, missing service/global page"
+  ],
+  "providerCalls": 0
+}

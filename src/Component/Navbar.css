@@ -33,3 +33,6 @@
 @media (min-width: 2560px) { .site-header { --header-unit: 26px; } }
 @media (min-width: 3840px) { .site-header { --header-unit: 36px; } }
 @media (prefers-reduced-motion: reduce) { .site-header .site-service-link { transition: none; } }
+
+/* Keep the link focus box inside its header row while retaining the existing logo overflow/centering. */
+.site-header-brand { block-size:calc(var(--header-unit)*5.25); }

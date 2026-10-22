@@ -1,0 +1,816 @@
+[
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/",
+    "title": "Astrology Consultations in New Delhi | AstroAdvice by Kundan Singh",
+    "description": "Explore astrology, Numerology and Vastu consultations with Kundan Singh in New Delhi. Read about the services and contact the practice with your questions.",
+    "canonical": "https://astroadvicebykundansingh.com/",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [
+      {
+        "method": "post",
+        "disabled": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/about",
+    "title": "About Kundan Singh | AstroAdvice",
+    "description": "Read about Kundan Singh's astrology studies, experience and approach to consultations, and find the service that fits your question.",
+    "canonical": "https://astroadvicebykundansingh.com/about",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services",
+    "title": "Astrology Services | AstroAdvice by Kundan Singh",
+    "description": "Compare Vedic Astrology, Numerology, Vastu, Laal Kitaab, Prashna Kundali and name-change consultations with Kundan Singh.",
+    "canonical": "https://astroadvicebykundansingh.com/services",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services/vedic-astrology",
+    "title": "Vedic Astrology Consultation | AstroAdvice",
+    "description": "Read about a Vedic Astrology consultation with Kundan Singh, the questions you can bring and the information requested when arranging a consultation.",
+    "canonical": "https://astroadvicebykundansingh.com/services/vedic-astrology",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services/numerology",
+    "title": "Numerology Consultation | AstroAdvice",
+    "description": "Read about Numerology consultations with Kundan Singh and how names and dates are discussed. Contact the practice if you need help choosing a service.",
+    "canonical": "https://astroadvicebykundansingh.com/services/numerology",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services/vastu",
+    "title": "Vastu Consultation | AstroAdvice",
+    "description": "Read about discussing your home or workplace with Kundan Singh through a Vastu consultation, including the information to prepare.",
+    "canonical": "https://astroadvicebykundansingh.com/services/vastu",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services/laal-kitaab",
+    "title": "Laal Kitaab Consultation | AstroAdvice",
+    "description": "Learn what a Laal Kitaab consultation with Kundan Singh covers and how to bring your questions to the discussion.",
+    "canonical": "https://astroadvicebykundansingh.com/services/laal-kitaab",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services/prashna-kundali",
+    "title": "Prashna Kundali Consultation | AstroAdvice",
+    "description": "Read about bringing a specific question to a Prashna Kundali consultation with Kundan Singh and how question-based booking works.",
+    "canonical": "https://astroadvicebykundansingh.com/services/prashna-kundali",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [
+      {
+        "method": "post",
+        "disabled": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/services/name-change",
+    "title": "Name Change Consultation | AstroAdvice",
+    "description": "Read about a name-change consultation with Kundan Singh and discuss your questions about names and Numerology with the practice.",
+    "canonical": "https://astroadvicebykundansingh.com/services/name-change",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/testimonials",
+    "title": "Client Experiences | AstroAdvice by Kundan Singh",
+    "description": "Read the experiences shared on the AstroAdvice website about consultations with Kundan Singh.",
+    "canonical": "https://astroadvicebykundansingh.com/testimonials",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/contact",
+    "title": "Contact AstroAdvice | Kundan Singh, New Delhi",
+    "description": "Find AstroAdvice's contact details and send the practice a question about consultations or an existing appointment.",
+    "canonical": "https://astroadvicebykundansingh.com/contact",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [
+      {
+        "method": "post",
+        "disabled": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/privacy-policy",
+    "title": "Privacy Policy | AstroAdvice by Kundan Singh",
+    "description": "Read how AstroAdvice handles enquiry and appointment information, including contact details and practice records.",
+    "canonical": "https://astroadvicebykundansingh.com/privacy-policy",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/terms-and-conditions",
+    "title": "Terms & Conditions | AstroAdvice by Kundan Singh",
+    "description": "Read the terms for AstroAdvice consultations, booking and support, and contact the practice if you have a question.",
+    "canonical": "https://astroadvicebykundansingh.com/terms-and-conditions",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "path": "/refund-policy",
+    "title": "Refund Policy | AstroAdvice by Kundan Singh",
+    "description": "Read AstroAdvice's information about appointment changes, cancellations and refund review. Contact the practice for help with an existing booking.",
+    "canonical": "https://astroadvicebykundansingh.com/refund-policy",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 74,
+      "y": 0,
+      "width": 273.640625,
+      "height": 89.25,
+      "top": 0,
+      "right": 347.640625,
+      "bottom": 89.25,
+      "left": 74
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/",
+    "title": "Astrology Consultations in New Delhi | AstroAdvice by Kundan Singh",
+    "description": "Explore astrology, Numerology and Vastu consultations with Kundan Singh in New Delhi. Read about the services and contact the practice with your questions.",
+    "canonical": "https://astroadvicebykundansingh.com/",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [
+      {
+        "method": "post",
+        "disabled": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/about",
+    "title": "About Kundan Singh | AstroAdvice",
+    "description": "Read about Kundan Singh's astrology studies, experience and approach to consultations, and find the service that fits your question.",
+    "canonical": "https://astroadvicebykundansingh.com/about",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services",
+    "title": "Astrology Services | AstroAdvice by Kundan Singh",
+    "description": "Compare Vedic Astrology, Numerology, Vastu, Laal Kitaab, Prashna Kundali and name-change consultations with Kundan Singh.",
+    "canonical": "https://astroadvicebykundansingh.com/services",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services/vedic-astrology",
+    "title": "Vedic Astrology Consultation | AstroAdvice",
+    "description": "Read about a Vedic Astrology consultation with Kundan Singh, the questions you can bring and the information requested when arranging a consultation.",
+    "canonical": "https://astroadvicebykundansingh.com/services/vedic-astrology",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services/numerology",
+    "title": "Numerology Consultation | AstroAdvice",
+    "description": "Read about Numerology consultations with Kundan Singh and how names and dates are discussed. Contact the practice if you need help choosing a service.",
+    "canonical": "https://astroadvicebykundansingh.com/services/numerology",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services/vastu",
+    "title": "Vastu Consultation | AstroAdvice",
+    "description": "Read about discussing your home or workplace with Kundan Singh through a Vastu consultation, including the information to prepare.",
+    "canonical": "https://astroadvicebykundansingh.com/services/vastu",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services/laal-kitaab",
+    "title": "Laal Kitaab Consultation | AstroAdvice",
+    "description": "Learn what a Laal Kitaab consultation with Kundan Singh covers and how to bring your questions to the discussion.",
+    "canonical": "https://astroadvicebykundansingh.com/services/laal-kitaab",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services/prashna-kundali",
+    "title": "Prashna Kundali Consultation | AstroAdvice",
+    "description": "Read about bringing a specific question to a Prashna Kundali consultation with Kundan Singh and how question-based booking works.",
+    "canonical": "https://astroadvicebykundansingh.com/services/prashna-kundali",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [
+      {
+        "method": "post",
+        "disabled": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/services/name-change",
+    "title": "Name Change Consultation | AstroAdvice",
+    "description": "Read about a name-change consultation with Kundan Singh and discuss your questions about names and Numerology with the practice.",
+    "canonical": "https://astroadvicebykundansingh.com/services/name-change",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/testimonials",
+    "title": "Client Experiences | AstroAdvice by Kundan Singh",
+    "description": "Read the experiences shared on the AstroAdvice website about consultations with Kundan Singh.",
+    "canonical": "https://astroadvicebykundansingh.com/testimonials",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/contact",
+    "title": "Contact AstroAdvice | Kundan Singh, New Delhi",
+    "description": "Find AstroAdvice's contact details and send the practice a question about consultations or an existing appointment.",
+    "canonical": "https://astroadvicebykundansingh.com/contact",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [
+      {
+        "method": "post",
+        "disabled": false
+      }
+    ],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/privacy-policy",
+    "title": "Privacy Policy | AstroAdvice by Kundan Singh",
+    "description": "Read how AstroAdvice handles enquiry and appointment information, including contact details and practice records.",
+    "canonical": "https://astroadvicebykundansingh.com/privacy-policy",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/terms-and-conditions",
+    "title": "Terms & Conditions | AstroAdvice by Kundan Singh",
+    "description": "Read the terms for AstroAdvice consultations, booking and support, and contact the practice if you have a question.",
+    "canonical": "https://astroadvicebykundansingh.com/terms-and-conditions",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "path": "/refund-policy",
+    "title": "Refund Policy | AstroAdvice by Kundan Singh",
+    "description": "Read AstroAdvice's information about appointment changes, cancellations and refund review. Contact the practice for help with an existing booking.",
+    "canonical": "https://astroadvicebykundansingh.com/refund-policy",
+    "robots": "index, follow",
+    "h1": 1,
+    "main": 1,
+    "overflow": 0,
+    "bound": "true",
+    "brand": {
+      "x": 16,
+      "y": 0,
+      "width": 243.390625,
+      "height": 84,
+      "top": 0,
+      "right": 259.390625,
+      "bottom": 84,
+      "left": 16
+    },
+    "forms": [],
+    "errors": [],
+    "failed": []
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "scope": "Project003 app-local public HTML, metadata, safe static forms and interface refinements. No production/provider/customer action.",
+  "build": {
+    "command": "npm run build",
+    "status": "passed",
+    "candidate_package": "1.0.1-rc.1",
+    "proof_aliases_removed": true
+  },
+  "lint": {
+    "command": "npm run lint",
+    "status": "passed_with_existing_warnings",
+    "errors": 0
+  },
+  "tests": {
+    "command": "node --test --experimental-test-isolation=none --test-reporter=spec --experimental-test-coverage --test-coverage-include=src/data/page-metadata.mjs tests/public-page-rendering.test.mjs",
+    "passed": 31,
+    "failed": 0,
+    "coverage_scope": "src/data/page-metadata.mjs only; not whole website coverage",
+    "coverage": {
+      "lines": 100,
+      "branches": 100,
+      "functions": 100
+    }
+  },
+  "page_matrix": {
+    "ordinary_routes": 14,
+    "viewports": [
+      "1440x900",
+      "390x844"
+    ],
+    "completed_navigations": 28,
+    "hydration_or_page_errors": 0,
+    "local_failed_responses": 0,
+    "horizontal_overflow": 0,
+    "primary_heading_or_main_errors": 0
+  },
+  "remaining": "Root coordinates full approved release checks, compatible app/worker/binding publication, hosted readback and Search Console. D07 factual timing/accreditation claims were preserved, not expanded or confirmed."
+}
