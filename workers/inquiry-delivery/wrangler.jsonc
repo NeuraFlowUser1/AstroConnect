@@ -10,7 +10,7 @@
     "BOOKING_PROJECT_ID": "003",
     "BOOKING_ENVIRONMENT": "production",
     "BOOKING_PUBLIC_ORIGIN": "https://astroadvicebykundansingh.com",
-    "BOOKING_RELEASE_DIGEST": "241ea2b367777fbb26afea0637abbfbaad5478af614c35507abdec3e24d1d302"
+    "BOOKING_RELEASE_DIGEST": "83ef88490f73e24e363a19e71e282b188df3ef8a79c8243b65286429562e022c"
   },
   "triggers": {
     "crons": [
